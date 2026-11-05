@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Webinar: La Nueva Ley de Datos Personales en Clínicas Veterinarias | LegalDatos</title>
+  <meta name="description" content="Jueves 10 de diciembre a las 19:30 hrs. Seminario online exclusivo para clínicas veterinarias en Chile sobre fichas clínicas, microchip, redes sociales, softwares (DPA) y Ley 21.719." />
+  <link rel="canonical" href="https://www.legaldatos.cl/publicaciones/webinar-ley-datos-clinicas-veterinarias" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.legaldatos.cl/favicon.png" />
+
+  <!-- =================================================================
+       METADATOS AUTOMÁTICOS PARA EL REPOSITORIO (publicaciones.html)
+       Conectado exactamente a tu archivo: WEBINAR VETERINARIAS.png
+       ================================================================= -->
+  <meta name="article-title" content="Webinar para Clínicas Veterinarias: Aplicación práctica de la nueva Ley de Datos Personales" />
+  <meta name="article-date" content="2026-12-10" />
+  <meta name="article-date-label" content="Jueves 10 Dic 2026 · 19:30 hrs" />
+  <meta name="article-category" content="Seminarios · Clínicas Veterinarias" />
+  <meta name="article-image" content="/publicaciones/WEBINAR%20VETERINARIAS.png" />
+
+  <!-- Open Graph (Para compartir en WhatsApp, Instagram y LinkedIn) -->
+  <meta property="og:title" content="Webinar para Clínicas Veterinarias: Nueva Ley de Datos Personales | LegalDatos" />
+  <meta property="og:description" content="Jueves 10 de diciembre a las 19:30 hrs. Fichas clínicas históricas, microchip, redes sociales y contratos DPA con softwares en la nube. Inscripción: $20.000 CLP (100% descontable)." />
+  <meta property="og:image" content="https://www.legaldatos.cl/publicaciones/WEBINAR%20VETERINARIAS.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- Tipografías: Misma línea editorial del sitio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy-deep: #0b132b;
+      --navy-primary: #132247;
+      --navy-muted: #1e3264;
+      --blue-brand: #1d5bd6;
+      --cyan-accent: #0091d5;
+      --emerald-event: #047857;
+      --emerald-light: #ecfdf5;
+      
+      --paper-bg: #f8f9fb;
+      --paper-warm: #f1f4f9;
+      --white: #ffffff;
+      
+      --ink-dark: #0f172a;
+      --ink-body: #334155;
+      --ink-muted: #64748b;
+      
+      --rule-solid: #cbd5e1;
+      --rule-light: #e2e8f0;
+      
+      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--ink-dark);
+      background-color: var(--paper-bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ==========================================
+       HEADER (Intacto)
+       ========================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 19, 43, 0.98);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-fallback {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 21px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      background: var(--blue-brand);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--white);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      padding: 6px 0;
+      position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.is-active {
+      color: var(--white);
+    }
+
+    .nav-link.is-active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--cyan-accent);
+    }
+
+    .menu-button {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-icon {
+      width: 18px;
+      height: 2px;
+      background: var(--white);
+      position: relative;
+      display: block;
+    }
+
+    .menu-icon::before,
+    .menu-icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background: var(--white);
+    }
+
+    .menu-icon::before { top: -6px; }
+    .menu-icon::after { top: 6px; }
+
+    .mobile-panel {
+      background: var(--navy-deep);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 16px 0 24px;
+    }
+
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-link {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* ==========================================
+       1. CABECERA EDITORIAL DEL WEBINAR
+       ========================================== */
+    .article-hero {
+      background-color: var(--navy-deep);
+      color: var(--white);
+      padding: 64px 0 56px;
+      border-bottom: 4px solid var(--emerald-event);
+    }
+
+    .article-hero-inner {
+      max-width: 880px;
+    }
+
+    .breadcrumb {
+      font-size: 13.5px;
+      color: #94a3b8;
+      margin-bottom: 24px;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .breadcrumb a {
+      color: #cbd5e1;
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--white);
+    }
+
+    .breadcrumb .sep {
+      color: #64748b;
+    }
+
+    .event-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .event-pill {
+      background-color: rgba(16, 185, 129, 0.18);
+      border: 1px solid rgba(52, 211, 153, 0.45);
+      color: #6ee7b7;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 5px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .article-kicker {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 19px;
+      color: #cbd5e1;
+    }
+
+    .article-hero h1 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+
+    .article-byline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+
+    .article-byline strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* ==========================================
+       2. CUERPO DE LA PUBLICACIÓN Y TEMARIO
+       ========================================== */
+    .article-wrapper {
+      padding: 68px 0 88px;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 52px;
+      align-items: start;
+    }
+
+    .article-sheet {
+      background-color: var(--white);
+      border: 1px solid var(--rule-solid);
+      border-top: 3px solid var(--emerald-event);
+      padding: 48px 52px;
+    }
+
+    /* Afiche del Webinar centrado con elegancia */
+    .featured-poster-frame {
+      max-width: 520px;
+      margin: 0 auto 38px;
+      border: 1px solid var(--rule-solid);
+      background-color: var(--navy-deep);
+      box-shadow: 0 16px 36px -12px rgba(11, 19, 43, 0.18);
+    }
+
+    .featured-poster-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .article-lead {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      line-height: 1.6;
+      color: var(--navy-deep);
+      margin-bottom: 32px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid var(--rule-solid);
+    }
+
+    .article-content h2 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--navy-deep);
+      line-height: 1.25;
+      margin: 40px 0 16px;
+      padding-top: 26px;
+      border-top: 1px solid var(--rule-light);
+    }
+
+    .article-content h2:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .article-content p {
+      font-size: 16.5px;
+      color: var(--ink-body);
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .article-content p strong {
+      color: var(--ink-dark);
+      font-weight: 600;
+    }
+
+    /* Bloques del Temario Veterinario */
+    .modules-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin: 26px 0 34px;
+    }
+
+    .module-box {
+      background-color: var(--paper-bg);
+      border: 1px solid var(--rule-solid);
+      border-left: 3px solid var(--emerald-event);
+      padding: 22px 26px;
+    }
+
+    .module-num {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--emerald-event);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .module-box h3 {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+    }
+
+    .module-box p {
+      font-size: 15px;
+      color: var(--ink-body);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* Cuadro de Beneficio de Inscripción Descontable */
+    .discount-callout {
+      background-color: var(--emerald-light);
+      border: 1px solid #a7f3d0;
+      border-left: 4px solid var(--emerald-event);
+      padding: 26px 30px;
+      margin: 32px 0;
+    }
+
+    .discount-callout h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+      color: #064e3b;
+      margin-bottom: 8px;
+    }
+
+    .discount-callout p {
+      font-size: 15px;
+      color: #065f46;
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* Columna Lateral (Ficha de Inscripción al Webinar) */
+    .article-sidebar {
+      position: sticky;
+      top: 104px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .back-link-box {
+      background-color: var(--paper-warm);
+      border: 1px solid var(--rule-solid);
+      padding: 16px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: border-color 0.2s ease;
+    }
+
+    .back-link-box:hover {
+      border-color: var(--blue-brand);
+      color: var(--blue-brand);
+    }
+
+    .registration-card {
+      background-color: var(--white);
+      border: 1px solid var(--rule-solid);
+      border-top: 4px solid var(--emerald-event);
+      padding: 30px 26px;
+      box-shadow: 0 12px 28px -12px rgba(11, 19, 43, 0.1);
+    }
+
+    .reg-tag {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--emerald-event);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .registration-card h3 {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 16px;
+      line-height: 1.22;
+    }
+
+    .reg-details-list {
+      list-style: none;
+      border-top: 1px solid var(--rule-light);
+      border-bottom: 1px solid var(--rule-light);
+      padding: 14px 0;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .reg-details-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--ink-body);
+    }
+
+    .reg-details-list li strong {
+      color: var(--navy-deep);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .btn-register {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: var(--emerald-event);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 14px 20px;
+      transition: background-color 0.2s ease;
+      margin-bottom: 10px;
+    }
+
+    .btn-register:hover {
+      background-color: #065f46;
+    }
+
+    .btn-whatsapp-reg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: var(--paper-bg);
+      color: var(--navy-deep);
+      border: 1px solid var(--rule-solid);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 18px;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-whatsapp-reg:hover {
+      border-color: var(--navy-deep);
+      background-color: var(--paper-warm);
+    }
+
+    .reg-note {
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    /* ==========================================
+       FOOTER (Intacto con "Santiago")
+       ========================================== */
+    .site-footer {
+      background: #070d1f;
+      color: rgba(255, 255, 255, 0.75);
+      padding: 64px 0 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .site-footer .col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .site-footer .desc {
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.65;
+      margin: 8px 0 12px;
+      max-width: 38ch;
+    }
+
+    .site-footer .title {
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .site-footer .link {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    .site-footer .link:hover {
+      color: var(--cyan-accent);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-item .icon {
+      color: var(--cyan-accent);
+      flex-shrink: 0;
+    }
+
+    .site-footer .bottom {
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ==========================================
+       RESPONSIVE
+       ========================================== */
+    @media (max-width: 980px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .article-sidebar {
+        position: static;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+      .menu-button {
+        display: inline-flex;
+      }
+      .article-sheet {
+        padding: 32px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="LegalDatos">
+        <img src="https://www.legaldatos.cl/logo-legaldatos.png" width="136" alt="LegalDatos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="brand-fallback" style="display: none;">
+          <span class="brand-mark">LD</span>
+          <span>LegalDatos</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav-link" href="/">Inicio</a>
+        <a class="nav-link" href="/nosotros/">Nosotros</a>
+        <a class="nav-link" href="/servicios/">Servicios</a>
+        <a class="nav-link is-active" href="/publicaciones/">Publicaciones</a>
+        <a class="nav-link" href="/contacto/">Contacto</a>
+      </nav>
+      <button id="mobile-menu-button" type="button" class="menu-button" aria-label="Abrir menú" aria-controls="mobile-menu-panel" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="mobile-menu-panel" class="mobile-panel" hidden>
+      <div class="container mobile-panel-inner">
+        <nav class="mobile-nav" aria-label="Navegación móvil">
+          <a class="mobile-link" href="/">Inicio</a>
+          <a class="mobile-link" href="/nosotros/">Nosotros</a>
+          <a class="mobile-link" href="/servicios/">Servicios</a>
+          <a class="mobile-link is-active" href="/publicaciones/">Publicaciones</a>
+          <a class="mobile-link" href="/contacto/">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. CABECERA DEL WEBINAR -->
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Inicio</a> <span class="sep">/</span></li>
+              <li><a href="/publicaciones/">Publicaciones</a> <span class="sep">/</span></li>
+              <li><span aria-current="page">Webinar Clínicas Veterinarias</span></li>
+            </ol>
+          </nav>
+
+          <div class="event-badge-row">
+            <span class="event-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>Jueves 10 de Diciembre de 2026 · 19:30 hrs.</span>
+            </span>
+            <span class="article-kicker">Medicina Veterinaria y Ley N° 21.719</span>
+          </div>
+
+          <h1>Webinar para Clínicas Veterinarias: Aplicación práctica de la nueva Ley de Datos Personales</h1>
+
+          <div class="article-byline">
+            <span>Expone: <strong>Daniel Manríquez Sansigolo</strong> (Abogado Director de LegalDatos)</span>
+            <span>·</span>
+            <span>Modalidad Online en Vivo (Google Meet)</span>
+            <span>·</span>
+            <span>Duración: 60 minutos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONTENIDO DEL WEBINAR Y CONVOCATORIA -->
+    <section class="article-wrapper">
+      <div class="container article-layout">
+
+        <article class="article-sheet">
+          
+          <!-- Afiche oficial del Webinar conectado a tu archivo WEBINAR VETERINARIAS.png -->
+          <div class="featured-poster-frame" id="webinar-img-wrapper">
+            <img 
+              src="/publicaciones/WEBINAR%20VETERINARIAS.png" 
+              alt="Afiche Webinar para Clínicas Veterinarias - Jueves 10 de Diciembre 19:30 hrs" 
+              onerror="document.getElementById('webinar-img-wrapper').style.display='none';" 
+            />
+          </div>
+
+          <p class="article-lead">
+            Existe un mito frecuente en el sector veterinario: creer que, como los pacientes son animales, las clínicas veterinarias no estarían sujetas a las exigencias de la nueva <strong>Ley N° 21.719 de Protección de Datos Personales</strong>. La realidad jurídica es exactamente la opuesta: detrás de cada paciente hay un tutor humano cuyos datos identificativos, de contacto, financieros e incluso de ubicación son recolectados y almacenados a diario.
+          </p>
+
+          <div class="article-content">
+            <h2>¿Por qué una Clínica Veterinaria necesita adecuar sus procesos con anticipación?</h2>
+            <p>
+              Toda clínica u hospital veterinario —sin importar su tamaño— ejecuta decenas de actividades de tratamiento de datos personales todos los días: agendamiento de horas, creación de fichas clínicas, envío de recetas y presupuestos por WhatsApp o correo electrónico, almacenamiento en softwares de gestión en la nube, grabación con cámaras de seguridad en recepción y publicación de casos clínicos en redes sociales.
+            </p>
+            <p>
+              Frente a un cliente disconforme o una denuncia ante la futura Agencia de Protección de Datos Personales, no contar con los respaldos de consentimiento, las políticas de privacidad y los contratos de encargo con sus proveedores tecnológicos expone innecesariamente la estabilidad financiera de su clínica.
+            </p>
+
+            <h2>Temario Práctico del Webinar: Las preguntas reales del sector veterinario</h2>
+            <p>
+              En esta sesión práctica de 60 minutos —diseñada específicamente para directores médicos, dueños de clínicas, administradores y médicos veterinarios— resolveremos las principales zonas grises de la ley aplicadas a la práctica clínica diaria:
+            </p>
+
+            <div class="modules-grid">
+              <div class="module-box">
+                <span class="module-num">MÓDULO 01 · EL PACIENTE Y EL TUTOR</span>
+                <h3>¿Es el nombre de la mascota o su microchip un dato personal?</h3>
+                <p>
+                  Analizaremos cuándo el nombre de un paciente (especialmente cuando se registra con los apellidos de la familia) o el código vinculado al Registro Nacional de Mascotas permite identificar a una persona natural, y por qué está estrictamente prohibido anotar antecedentes de salud del tutor humano dentro de la ficha clínica veterinaria.
+                </p>
+              </div>
+
+              <div class="module-box">
+                <span class="module-num">MÓDULO 02 · REDES SOCIALES Y CASOS CLÍNICOS</span>
+                <h3>Publicación de fotos, cirugías («antes y después») y mascotas en Instagram</h3>
+                <p>
+                  ¿Cuándo basta con anonimizar la información para fines académicos o estadísticos y cuándo es obligatorio contar con un documento de consentimiento expreso firmado por el tutor antes de subir un video o etiquetar a un paciente en las redes sociales de la clínica?
+                </p>
+              </div>
+
+              <div class="module-box">
+                <span class="module-num">MÓDULO 03 · FICHAS HISTÓRICAS Y PLAZOS DE RETENCIÓN</span>
+                <h3>¿Qué hacer con bases de datos de hace 10 o 20 años y pacientes fallecidos?</h3>
+                <p>
+                  A diferencia de la medicina humana (donde la ley exige conservar la ficha por 15 años), en medicina veterinaria rige la regla de prescripción general de 5 años y el principio de finalidad. Explicaremos cómo justificar legalmente la conservación del historial clínico mediante el Interés Legítimo o la renovación de consentimiento, y cómo proceder a la anonimización.
+                </p>
+              </div>
+
+              <div class="module-box">
+                <span class="module-num">MÓDULO 04 · SOFTWARES EN LA NUBE Y PROVEEDORES EXTERNOS</span>
+                <h3>AgendaPro, softwares de gestión veterinaria extranjeros y Contratos DPA</h3>
+                <p>
+                  Si su clínica aloja las fichas y datos de sus clientes en un software externo en la nube, ese proveedor actúa como su «Encargado de Tratamiento», pero el responsable legal ante el cliente sigue siendo usted. Le enseñaremos cómo exigir y revisar el Contrato de Encargo (DPA) y cómo transparentarlo en su Política de Privacidad.
+                </p>
+              </div>
+
+              <div class="module-box">
+                <span class="module-num">MÓDULO 05 · PROTOCOLOS INTERNOS Y VIDEOVIGILANCIA</span>
+                <h3>Uso de WhatsApp con tutores, secreto del personal y cámaras de seguridad</h3>
+                <p>
+                  Cómo regular las comunicaciones del equipo médico y recepcionistas con los tutores, prohibir la extracción de bases de datos de clientes y justificar legalmente las cámaras de seguridad de su clínica mediante el Test de Interés Legítimo (LIA).
+                </p>
+              </div>
+            </div>
+
+            <div class="discount-callout">
+              <h3>Beneficio exclusivo para clínicas asistentes: Inscripción 100% descontable</h3>
+              <p>
+                Con el fin de asegurar el compromiso de los participantes y una ronda de preguntas personalizada, el seminario cuenta con un valor de inscripción de <strong>$20.000 CLP</strong> por clínica o profesional. Si posteriormente su clínica decide contratar nuestros servicios de adecuación legal o levantamiento de RAT, <strong>el 100% del valor de su inscripción será descontado de su propuesta</strong>.
+              </p>
+            </div>
+
+            <h2>¿A quién está dirigido este encuentro?</h2>
+            <p>
+              Exclusivamente a <strong>dueños y socios de clínicas veterinarias, directores médicos, administradores de hospitales veterinarios y médicos veterinarios independientes</strong> que deseen comprender qué exige realmente la Ley 21.719 y cómo ordenarse paso a paso con el mínimo roce operativo para su clínica.
+            </p>
+          </div>
+        </article>
+
+        <!-- BARRA LATERAL DE INSCRIPCIÓN -->
+        <aside class="article-sidebar">
+          <a href="/publicaciones/" class="back-link-box">
+            <span>← Volver al Repositorio</span>
+          </a>
+
+          <div class="registration-card">
+            <span class="reg-tag">Inscripciones Abiertas · Cupos Limitados</span>
+            <h3>Reserve el cupo de su Clínica Veterinaria</h3>
+
+            <ul class="reg-details-list">
+              <li>
+                <span>Fecha:</span>
+                <strong>Jueves 10 Dic 2026</strong>
+              </li>
+              <li>
+                <span>Horario:</span>
+                <strong>19:30 hrs. (60 min)</strong>
+              </li>
+              <li>
+                <span>Modalidad:</span>
+                <strong>Online en vivo (Meet)</strong>
+              </li>
+              <li>
+                <span>Expositor:</span>
+                <strong>Abogado Daniel Manríquez</strong>
+              </li>
+              <li>
+                <span>Inscripción:</span>
+                <strong>$20.000 CLP*</strong>
+              </li>
+            </ul>
+
+            <a href="/contacto/" class="btn-register">
+              Inscribirme mediante formulario →
+            </a>
+
+            <a href="mailto:contacto@legaldatos.cl?subject=Inscripci%C3%B3n%20Webinar%20Cl%C3%ADnicas%20Veterinarias%20(10%20Dic)%20-%20LegalDatos" class="btn-whatsapp-reg">
+              Solicitar cupo por correo electrónico
+            </a>
+
+            <p class="reg-note">
+              *Valor 100% descontable al contratar servicios de implementación o levantamiento de RAT con LegalDatos.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (Intacto con "Santiago") -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <a class="brand" href="/" aria-label="LegalDatos">
+          <img src="https://www.legaldatos.cl/logo-legaldatos.png" width="136" alt="LegalDatos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="brand-fallback" style="display: none;">
+            <span class="brand-mark">LD</span>
+            <span>LegalDatos</span>
+          </div>
+        </a>
+        <p class="desc" style="font-size: 16px;">
+          Nuestra consultora ofrece asesorías a todo tipo de organizaciones en la adopción de mejores prácticas para la protección de datos, integrando la actual normativa de datos personales y compliance de datos en el núcleo de su gobernanza.
+        </p>
+        <a class="link" href="/nosotros/">Nosotros</a>
+      </div>
+
+      <div class="col">
+        <h3 class="title">Nuestros servicios</h3>
+        <a class="link" href="/servicios/">Ver servicios</a>
+        <a class="link" href="/contacto/">Solicitar asesoría</a>
+        <a class="link" href="/publicaciones/">Publicaciones</a>
+      </div>
+
+      <div class="col">
+        <h3 class="title">Datos de contacto</h3>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <a class="link" href="tel:+56968434272">+56 9 6843 4272</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <a class="link" href="mailto:contacto@legaldatos.cl">contacto@legaldatos.cl</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span class="link">Santiago</span>
+        </div>
+
+        <h3 class="title" style="padding-top: 24px;">Redes Sociales</h3>
+        <a class="link" href="https://www.linkedin.com/company/legaldatoscl/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="link" href="https://www.instagram.com/legaldatos" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+
+    <div class="container bottom">
+      <p class="copyright">© 2026 LegalDatos · División de Manríquez Sansigolo Abogados</p>
+      <a class="link" href="/politica-de-privacidad/">Política de Privacidad</a>
+    </div>
+  </footer>
+
+  <!-- Script Menú Móvil -->
+  <script>
+    const menuBtn = document.getElementById("mobile-menu-button");
+    const mobilePanel = document.getElementById("mobile-menu-panel");
+    if (menuBtn && mobilePanel) {
+      const closeMenu = () => {
+        menuBtn.setAttribute("aria-expanded", "false");
+        mobilePanel.setAttribute("hidden", "");
+      };
+      const openMenu = () => {
+        menuBtn.setAttribute("aria-expanded", "true");
+        mobilePanel.removeAttribute("hidden");
+      };
+      menuBtn.addEventListener("click", () => {
+        menuBtn.getAttribute("aria-expanded") === "true" ? closeMenu() : openMenu();
+      });
+      mobilePanel.addEventListener("click", (e) => {
+        if (e.target instanceof Element && e.target.tagName === "A") closeMenu();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+    }
+  </script>
+</body>
+</html>
