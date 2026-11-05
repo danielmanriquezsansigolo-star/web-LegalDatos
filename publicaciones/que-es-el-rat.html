@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Qué es el RAT? (Registro de Actividades de Tratamiento): Una guía práctica | LegalDatos</title>
+  <meta name="description" content="El RAT es el corazón para prevenir infracciones en la Ley 21.719. En este registro se mapean todos los tipos de datos que trata la empresa, su finalidad y su justificación legal." />
+  <link rel="canonical" href="https://www.legaldatos.cl/publicaciones/que-es-el-rat" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.legaldatos.cl/favicon.png" />
+
+  <!-- Metadatos para el Detector Automático de publicaciones.html -->
+  <meta name="article-title" content="¿Qué es el RAT? (Registro de Actividades de Tratamiento): Una guía práctica" />
+  <meta name="article-date" content="2026-05-14" />
+  <meta name="article-date-label" content="14 de mayo de 2026" />
+  <meta name="article-category" content="Guía Práctica · Ley 21.719" />
+  <meta name="article-image" content="" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="¿Qué es el RAT? (Registro de Actividades de Tratamiento): Una guía práctica" />
+  <meta property="og:description" content="El RAT es el corazón para prevenir infracciones. En este registro se mapean todos los tipos de datos que trata la empresa y su justificación." />
+  <meta property="og:image" content="https://www.legaldatos.cl/logo-legaldatos.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- Tipografías: Misma línea editorial del sitio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy-deep: #0b132b;
+      --navy-primary: #132247;
+      --navy-muted: #1e3264;
+      --blue-brand: #1d5bd6;
+      --cyan-accent: #0091d5;
+      
+      --paper-bg: #f8f9fb;
+      --paper-warm: #f1f4f9;
+      --white: #ffffff;
+      
+      --ink-dark: #0f172a;
+      --ink-body: #334155;
+      --ink-muted: #64748b;
+      
+      --rule-solid: #cbd5e1;
+      --rule-light: #e2e8f0;
+      
+      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--ink-dark);
+      background-color: var(--paper-bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ==========================================
+       HEADER (Intacto)
+       ========================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 19, 43, 0.98);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-fallback {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 21px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      background: var(--blue-brand);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--white);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      padding: 6px 0;
+      position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.is-active {
+      color: var(--white);
+    }
+
+    .nav-link.is-active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--cyan-accent);
+    }
+
+    .menu-button {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-icon {
+      width: 18px;
+      height: 2px;
+      background: var(--white);
+      position: relative;
+      display: block;
+    }
+
+    .menu-icon::before,
+    .menu-icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background: var(--white);
+    }
+
+    .menu-icon::before { top: -6px; }
+    .menu-icon::after { top: 6px; }
+
+    .mobile-panel {
+      background: var(--navy-deep);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 16px 0 24px;
+    }
+
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-link {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* ==========================================
+       1. CABECERA EDITORIAL DEL ARTÍCULO
+       ========================================== */
+    .article-hero {
+      background-color: var(--navy-deep);
+      color: var(--white);
+      padding: 64px 0 56px;
+      border-bottom: 4px solid var(--blue-brand);
+    }
+
+    .article-hero-inner {
+      max-width: 860px;
+    }
+
+    .breadcrumb {
+      font-size: 13.5px;
+      color: #94a3b8;
+      margin-bottom: 24px;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .breadcrumb a {
+      color: #cbd5e1;
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--white);
+    }
+
+    .breadcrumb .sep {
+      color: #64748b;
+    }
+
+    .article-kicker {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 19px;
+      color: #93c5fd;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .article-hero h1 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+
+    .article-byline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+
+    .article-byline strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* ==========================================
+       2. CUERPO DEL ARTÍCULO (FORMATO DOSSIER)
+       ========================================== */
+    .article-wrapper {
+      padding: 72px 0 88px;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 310px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .article-sheet {
+      background-color: var(--white);
+      border: 1px solid var(--rule-solid);
+      border-top: 3px solid var(--navy-deep);
+      padding: 52px 56px;
+    }
+
+    .article-lead {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      line-height: 1.6;
+      color: var(--navy-deep);
+      margin-bottom: 36px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--rule-solid);
+    }
+
+    .article-content h2 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--navy-deep);
+      line-height: 1.25;
+      margin: 44px 0 18px;
+      padding-top: 28px;
+      border-top: 1px solid var(--rule-light);
+    }
+
+    .article-content h2:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .article-content p {
+      font-size: 16.5px;
+      color: var(--ink-body);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .article-content p strong {
+      color: var(--ink-dark);
+      font-weight: 600;
+    }
+
+    /* Bloques de puntos clave dentro del artículo */
+    .key-points-list {
+      list-style: none;
+      margin: 24px 0 28px;
+      border-top: 1px solid var(--rule-light);
+    }
+
+    .key-points-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--rule-light);
+      font-size: 15.5px;
+      color: var(--ink-body);
+      line-height: 1.7;
+    }
+
+    .key-points-list li strong {
+      color: var(--navy-deep);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* Tarjetas numeradas para los 9 ejemplos prácticos */
+    .examples-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin: 28px 0 36px;
+    }
+
+    .example-box {
+      background-color: var(--paper-bg);
+      border: 1px solid var(--rule-solid);
+      border-left: 3px solid var(--blue-brand);
+      padding: 22px 26px;
+    }
+
+    .example-box h3 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+    }
+
+    .example-box p {
+      font-size: 15px;
+      color: var(--ink-body);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* Columna Lateral (Sidebar del Estudio) */
+    .article-sidebar {
+      position: sticky;
+      top: 108px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .sidebar-box {
+      background-color: var(--white);
+      border: 1px solid var(--rule-solid);
+      border-top: 3px solid var(--blue-brand);
+      padding: 28px 26px;
+    }
+
+    .sidebar-box h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--navy-deep);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .sidebar-box p {
+      font-size: 14px;
+      color: var(--ink-body);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .btn-sidebar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: var(--blue-brand);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 13px 20px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-sidebar:hover {
+      background-color: #1e40af;
+    }
+
+    .back-link-box {
+      background-color: var(--paper-warm);
+      border: 1px solid var(--rule-solid);
+      padding: 18px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: border-color 0.2s ease;
+    }
+
+    .back-link-box:hover {
+      border-color: var(--blue-brand);
+      color: var(--blue-brand);
+    }
+
+    /* ==========================================
+       FOOTER (Intacto con "Santiago")
+       ========================================== */
+    .site-footer {
+      background: #070d1f;
+      color: rgba(255, 255, 255, 0.75);
+      padding: 64px 0 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .site-footer .col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .site-footer .desc {
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.65;
+      margin: 8px 0 12px;
+      max-width: 38ch;
+    }
+
+    .site-footer .title {
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .site-footer .link {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    .site-footer .link:hover {
+      color: var(--cyan-accent);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-item .icon {
+      color: var(--cyan-accent);
+      flex-shrink: 0;
+    }
+
+    .site-footer .bottom {
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ==========================================
+       RESPONSIVE
+       ========================================== */
+    @media (max-width: 980px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .article-sidebar {
+        position: static;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+      .menu-button {
+        display: inline-flex;
+      }
+      .article-sheet {
+        padding: 32px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="LegalDatos">
+        <img src="https://www.legaldatos.cl/logo-legaldatos.png" width="136" alt="LegalDatos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="brand-fallback" style="display: none;">
+          <span class="brand-mark">LD</span>
+          <span>LegalDatos</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav-link" href="/">Inicio</a>
+        <a class="nav-link" href="/nosotros/">Nosotros</a>
+        <a class="nav-link" href="/servicios/">Servicios</a>
+        <a class="nav-link is-active" href="/publicaciones/">Publicaciones</a>
+        <a class="nav-link" href="/contacto/">Contacto</a>
+      </nav>
+      <button id="mobile-menu-button" type="button" class="menu-button" aria-label="Abrir menú" aria-controls="mobile-menu-panel" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="mobile-menu-panel" class="mobile-panel" hidden>
+      <div class="container mobile-panel-inner">
+        <nav class="mobile-nav" aria-label="Navegación móvil">
+          <a class="mobile-link" href="/">Inicio</a>
+          <a class="mobile-link" href="/nosotros/">Nosotros</a>
+          <a class="mobile-link" href="/servicios/">Servicios</a>
+          <a class="mobile-link is-active" href="/publicaciones/">Publicaciones</a>
+          <a class="mobile-link" href="/contacto/">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. CABECERA DEL ARTÍCULO -->
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Inicio</a> <span class="sep">/</span></li>
+              <li><a href="/publicaciones/">Publicaciones</a> <span class="sep">/</span></li>
+              <li><span aria-current="page">¿Qué es el RAT?</span></li>
+            </ol>
+          </nav>
+
+          <span class="article-kicker">Guía Práctica · Ley 21.719</span>
+          <h1>¿Qué es el RAT? (Registro de Actividades de Tratamiento): Una guía práctica</h1>
+
+          <div class="article-byline">
+            <span>Por <strong>Daniel Manríquez Sansigolo</strong></span>
+            <span>·</span>
+            <span>14 de mayo de 2026</span>
+            <span>·</span>
+            <span>LegalDatos Chile</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONTENIDO DEL ARTÍCULO -->
+    <section class="article-wrapper">
+      <div class="container article-layout">
+
+        <article class="article-sheet">
+          <p class="article-lead">
+            El <strong>Registro de Actividades de Tratamiento (RAT)</strong> es, sin lugar a duda, la brújula que guiará el cumplimiento normativo de su empresa frente a la nueva <strong>Ley de Protección de Datos Personales (Ley 21.719)</strong>. Frecuentemente se comete el error de asumir que este registro es un mero trámite burocrático o un documento legal más que debe firmarse y archivarse. Para despejar cualquier duda, a continuación explicamos su impacto real y estratégico en el negocio junto con ejemplos concretos.
+          </p>
+
+          <div class="article-content">
+            <h2>1. El RAT en la Teoría: Las exigencias legales</h2>
+            <p>
+              En términos estrictamente jurídicos, el RAT es un instrumento fundamental que constituye el corazón de los Modelos de Prevención de Infracciones o programas de <em>compliance</em>. En teoría, es un registro formal que debe caracterizar detalladamente todas las operaciones que su empresa realiza con la información nominativa.
+            </p>
+            <p>
+              Para cumplir con el estándar normativo, este registro debe responder a preguntas clave y contener, al menos, la siguiente información por cada proceso:
+            </p>
+
+            <ul class="key-points-list">
+              <li>
+                <strong>Qué datos se tratan</strong>
+                Indicar el tipo de datos personales, especificando expresamente si se incluyen datos sensibles o categorías especiales (como la huella dactilar o datos de salud).
+              </li>
+              <li>
+                <strong>Para qué se utilizan</strong>
+                Los fines concretos y específicos de las operaciones de tratamiento.
+              </li>
+              <li>
+                <strong>Por qué es lícito tenerlos (base de licitud)</strong>
+                Cuál es la fuente de procedencia de los datos y su «base de licitud» legal (si se procesan porque se cuenta con el consentimiento del cliente, por la ejecución de un contrato o por un interés legítimo).
+              </li>
+              <li>
+                <strong>Con quién se comparten</strong>
+                Las categorías de terceros a quienes se prevé comunicar o ceder los datos, incluyendo si se realizan transferencias internacionales a servidores en el extranjero.
+              </li>
+              <li>
+                <strong>Cuánto tiempo se resguardan</strong>
+                Los plazos o condiciones previstos para la eliminación o supresión definitiva de la información.
+              </li>
+              <li>
+                <strong>Decisiones automatizadas</strong>
+                Se debe declarar si se utilizan los datos para tomar decisiones automáticas o para la elaboración de perfiles comerciales, detallando la lógica aplicada.
+              </li>
+            </ul>
+
+            <p>
+              En la práctica fiscalizadora, si la Agencia de Protección de Datos Personales revisa su entidad, el RAT será el primer antecedente exigido para comprobar que su organización actúa con responsabilidad proactiva.
+            </p>
+
+            <h2>2. El RAT en la Práctica: El inventario de su «bodega»</h2>
+            <p>
+              La teoría puede sonar compleja, pero en la práctica el RAT es un mapa operacional transversal que une a todas las áreas de su negocio. Para entenderlo de forma didáctica, imagine que su empresa es una gran bodega: durante años, los departamentos de Recursos Humanos, Ventas, Marketing y TI han estado almacenando cajas (datos) sin etiquetarlas correctamente. Nadie sabe con certeza qué hay al fondo, a quién pertenecen esas cajas ni cuál es su utilidad. Elaborar el RAT en la práctica significa entrar a esa bodega, abrir caja por caja, limpiar e inventariar su activo más valioso.
+            </p>
+            <p>
+              <strong>Para desarrollar este levantamiento en el mundo real, es necesario seguir estos pasos estratégicos:</strong>
+            </p>
+
+            <ul class="key-points-list">
+              <li>
+                <strong>Crear un glosario común</strong>
+                El primer obstáculo es el idioma corporativo. El primer paso práctico es lograr que toda la empresa comparta los mismos conceptos y entienda qué significa exactamente un dato personal.
+              </li>
+              <li>
+                <strong>Asignar Responsables</strong>
+                El RAT no puede ser tarea exclusiva del departamento legal; de ser así, el proyecto podría fracasar. Se debe dividir la empresa por áreas (Recursos Humanos, Operaciones, Comercial, Marketing, etc.) y nombrar a un líder en cada una que mapee qué datos entran, cómo se usan y por dónde salen en su respectivo departamento.
+              </li>
+              <li>
+                <strong>De lo macro a lo micro</strong>
+                Lo ideal es que en este Registro exista rigurosidad y detalle. Sin embargo, cuando recién se comienza, se debe iniciar identificando los procesos generales (por ejemplo, «campaña de correos de marketing» o «control biométrico de asistencia») para luego descender al detalle paulatinamente.
+              </li>
+            </ul>
+
+            <h2>3. El Gran Riesgo Operativo: El «RAT de papel»</h2>
+            <p>
+              Un error gravísimo en la práctica empresarial es creer que el RAT es un archivo Excel gigante que se llena una vez, genera decenas de versiones desactualizadas donde nadie sabe quién modificó qué columna, y luego se abandona en una carpeta compartida.
+            </p>
+            <p>
+              Para que el modelo funcione verdaderamente, <strong>el RAT debe ser una herramienta en movimiento</strong>. Esto significa que, en el día a día, si su empresa decide lanzar un nuevo servicio, contrata un nuevo software en la nube o planea una campaña comercial, el RAT debe revisarse y actualizarse antes de ejecutar la acción. Un RAT integrado en sus decisiones de gestión deja de ser una carga burocrática y se transforma en una ventaja competitiva, permitiéndole identificar riesgos y operar bajo control jurídico.
+            </p>
+
+            <h2>4. Ejemplos prácticos de procesos que debe inscribir y gestionar en su RAT</h2>
+            <p>
+              Para entender la transversalidad de esta obligación, a continuación presentamos casos concretos de distintas áreas de una empresa que deben estar documentados en el registro:
+            </p>
+
+            <div class="examples-grid">
+              <div class="example-box">
+                <h3>1. Envío de campañas de correos de marketing o newsletters</h3>
+                <p>Si su área comercial envía correos masivos con promociones, el RAT debe identificar esta actividad señalando qué datos utiliza (nombre y correo electrónico), el departamento responsable de la campaña y la base de licitud legal que le permite hacerlo (como el consentimiento previo o interés legítimo debidamente ponderado).</p>
+              </div>
+
+              <div class="example-box">
+                <h3>2. Control de asistencia laboral con biometría</h3>
+                <p>Si utiliza huellas dactilares o reconocimiento facial para marcar la entrada y salida de sus trabajadores, esto constituye un tratamiento de datos altamente sensibles. En su RAT debe registrar esta actividad, evaluando los riesgos, justificando la proporcionalidad de la medida y asegurando las garantías exigidas por la normativa laboral y de datos.</p>
+              </div>
+
+              <div class="example-box">
+                <h3>3. Gestión de compras y despachos en E-commerce</h3>
+                <p>Para procesar una compra online, su empresa recopila datos como la dirección, el nombre y el medio de pago. El RAT documentará que la finalidad es ejecutar el contrato de compraventa y señalará a qué terceros comunica esos datos, como la empresa de logística encargada de despachar el producto.</p>
+              </div>
+
+              <div class="example-box">
+                <h3>4. Almacenamiento de bases de datos en la nube (Cloud Computing)</h3>
+                <p>Si aloja la información de sus clientes en servidores externos o en la nube (como Amazon Web Services, Google Workspace o softwares de gestión), su RAT debe reflejar que ese proveedor tecnológico actúa jurídicamente como su «encargado de tratamiento» o mandatario. Si esos servidores están ubicados fuera de Chile, debe registrarlo expresamente como una operación de transferencia internacional de datos.</p>
+              </div>
+
+              <div class="example-box">
+                <h3>5. Administración de fichas clínicas en un centro de salud</h3>
+                <p>Si dirige una clínica o centro médico, trata datos de salud que la ley califica como sensibles y de alto riesgo. El RAT de esta actividad debe detallar las medidas de seguridad reforzadas adoptadas, los estrictos controles de acceso al personal y los plazos legales de conservación para resguardar la confidencialidad del paciente.</p>
+              </div>
+
+              <div class="example-box">
+                <h3>6. Evaluación de riesgo comercial o financiero (Scoring)</h3>
+                <p>Si su empresa evalúa el comportamiento de pago de un cliente para decidir si le otorga un crédito comercial, el RAT debe caracterizar detalladamente este tratamiento. Si utiliza decisiones individuales automatizadas para elaborar perfiles financieros, debe registrar y explicar la lógica aplicada y sus consecuencias para el titular.</p>
+              </div>
+
+              <div class="example-box">
+                <h3>7. Captación de imágenes mediante videovigilancia (CCTV)</h3>
+                <p>La instalación de cámaras de seguridad en sus sucursales o lugares de trabajo captura la imagen física de las personas, lo cual constituye un dato personal. Su RAT debe documentar esta actividad justificando que su finalidad estricta es la seguridad de las instalaciones mediante el respectivo Test de Interés Legítimo (LIA).</p>
+              </div>
+
+              <div class="example-box">
+                <h3>8. Procesamiento de datos de menores de edad en educación</h3>
+                <p>Si administra un colegio o institución educativa, trata continuamente datos de niños, niñas y adolescentes, los cuales poseen un estándar de protección reforzada bajo la Ley 21.719. El RAT debe reflejar la base de licitud aplicable, las autorizaciones de padres o apoderados y la prohibición de ceder esta información a terceros sin justificación legal.</p>
+              </div>
+
+              <div class="example-box">
+                <h3>9. Desarrollo tecnológico de una nueva aplicación o plataforma</h3>
+                <p>Antes de lanzar un nuevo producto digital al mercado, el RAT permite aplicar el deber de «protección desde el diseño y por defecto», inventariando previamente qué datos estrictamente necesarios solicitará la plataforma y con qué fines específicos los recopilará.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- BARRA LATERAL -->
+        <aside class="article-sidebar">
+          <a href="/publicaciones/" class="back-link-box">
+            <span>← Volver a Publicaciones</span>
+          </a>
+
+          <div class="sidebar-box">
+            <h3>¿Necesita levantar el RAT de su empresa?</h3>
+            <p>
+              En LegalDatos realizamos el levantamiento completo de su Registro de Actividades de Tratamiento mediante entrevistas por área, determinando sus bases de licitud y redactando sus Tests de Interés Legítimo.
+            </p>
+            <a href="/contacto/" class="btn-sidebar">Solicitar diagnóstico →</a>
+          </div>
+
+          <div class="sidebar-box">
+            <h3>Servicio Relacionado</h3>
+            <p>
+              Conozca en detalle qué incluye nuestro servicio especializado de elaboración de RAT para medianas empresas.
+            </p>
+            <a href="/servicios/" class="btn-sidebar" style="background-color: var(--navy-deep); border-color: var(--navy-deep);">Ver Servicios Jurídicos →</a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (Intacto con "Santiago") -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <a class="brand" href="/" aria-label="LegalDatos">
+          <img src="https://www.legaldatos.cl/logo-legaldatos.png" width="136" alt="LegalDatos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="brand-fallback" style="display: none;">
+            <span class="brand-mark">LD</span>
+            <span>LegalDatos</span>
+          </div>
+        </a>
+        <p class="desc" style="font-size: 16px;">
+          Nuestra consultora ofrece asesorías a todo tipo de organizaciones en la adopción de mejores prácticas para la protección de datos, integrando la actual normativa de datos personales y compliance de datos en el núcleo de su gobernanza.
+        </p>
+        <a class="link" href="/nosotros/">Nosotros</a>
+      </div>
+
+      <div class="col">
+        <h3 class="title">Nuestros servicios</h3>
+        <a class="link" href="/servicios/">Ver servicios</a>
+        <a class="link" href="/contacto/">Solicitar asesoría</a>
+        <a class="link" href="/publicaciones/">Publicaciones</a>
+      </div>
+
+      <div class="col">
+        <h3 class="title">Datos de contacto</h3>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <a class="link" href="tel:+56968434272">+56 9 6843 4272</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <a class="link" href="mailto:contacto@legaldatos.cl">contacto@legaldatos.cl</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span class="link">Santiago</span>
+        </div>
+
+        <h3 class="title" style="padding-top: 24px;">Redes Sociales</h3>
+        <a class="link" href="https://www.linkedin.com/company/legaldatoscl/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="link" href="https://www.instagram.com/legaldatos" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+
+    <div class="container bottom">
+      <p class="copyright">© 2026 LegalDatos · División de Manríquez Sansigolo Abogados</p>
+      <a class="link" href="/politica-de-privacidad/">Política de Privacidad</a>
+    </div>
+  </footer>
+
+  <!-- Script Menú Móvil -->
+  <script>
+    const menuBtn = document.getElementById("mobile-menu-button");
+    const mobilePanel = document.getElementById("mobile-menu-panel");
+    if (menuBtn && mobilePanel) {
+      const closeMenu = () => {
+        menuBtn.setAttribute("aria-expanded", "false");
+        mobilePanel.setAttribute("hidden", "");
+      };
+      const openMenu = () => {
+        menuBtn.setAttribute("aria-expanded", "true");
+        mobilePanel.removeAttribute("hidden");
+      };
+      menuBtn.addEventListener("click", () => {
+        menuBtn.getAttribute("aria-expanded") === "true" ? closeMenu() : openMenu();
+      });
+      mobilePanel.addEventListener("click", (e) => {
+        if (e.target instanceof Element && e.target.tagName === "A") closeMenu();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+    }
+  </script>
+</body>
+</html>
