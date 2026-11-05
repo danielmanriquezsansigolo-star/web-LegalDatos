@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publicaciones y Artículos | LegalDatos · Protección de Datos Chile</title>
+  <meta name="description" content="Artículos, análisis jurídicos, guías prácticas y seminarios sobre la Ley 21.719 de Protección de Datos Personales y compliance corporativo en Chile." />
+  <link rel="canonical" href="https://www.legaldatos.cl/publicaciones/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.legaldatos.cl/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Publicaciones y Análisis Jurídico | LegalDatos" />
+  <meta property="og:description" content="Criterio legal aplicado, columnas de opinión y convocatorias a seminarios sobre la nueva Ley 21.719 en Chile." />
+  <meta property="og:image" content="https://www.legaldatos.cl/logo-legaldatos.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- Tipografías: Misma línea editorial del sitio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy-deep: #0b132b;
+      --navy-primary: #132247;
+      --navy-muted: #1e3264;
+      --blue-brand: #1d5bd6;
+      --cyan-accent: #0091d5;
+      
+      --paper-bg: #f8f9fb;
+      --paper-warm: #f1f4f9;
+      --white: #ffffff;
+      
+      --ink-dark: #0f172a;
+      --ink-body: #334155;
+      --ink-muted: #64748b;
+      
+      --rule-solid: #cbd5e1;
+      --rule-light: #e2e8f0;
+      
+      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--ink-dark);
+      background-color: var(--paper-bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ==========================================
+       HEADER (Intacto)
+       ========================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 19, 43, 0.98);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-fallback {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 21px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      background: var(--blue-brand);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--white);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      padding: 6px 0;
+      position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.is-active {
+      color: var(--white);
+    }
+
+    .nav-link.is-active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--cyan-accent);
+    }
+
+    .menu-button {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-icon {
+      width: 18px;
+      height: 2px;
+      background: var(--white);
+      position: relative;
+      display: block;
+    }
+
+    .menu-icon::before,
+    .menu-icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background: var(--white);
+    }
+
+    .menu-icon::before { top: -6px; }
+    .menu-icon::after { top: 6px; }
+
+    .mobile-panel {
+      background: var(--navy-deep);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 16px 0 24px;
+    }
+
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-link {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* ==========================================
+       1. APERTURA DE PUBLICACIONES (HERO SOBRIO)
+       ========================================== */
+    .publications-hero {
+      background-color: var(--navy-deep);
+      color: var(--white);
+      padding: 72px 0 64px;
+      border-bottom: 4px solid var(--blue-brand);
+    }
+
+    .publications-hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 64px;
+      align-items: end;
+    }
+
+    .firm-kicker {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 20px;
+      font-weight: 400;
+      color: #e2e8f0;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .publications-hero h1 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(36px, 4.2vw, 52px);
+      line-height: 1.14;
+      letter-spacing: -0.015em;
+      color: var(--white);
+      margin-bottom: 22px;
+    }
+
+    .publications-hero h1 em {
+      font-style: italic;
+      color: #93c5fd;
+    }
+
+    .publications-hero-lead {
+      font-size: 17.5px;
+      line-height: 1.7;
+      color: #cbd5e1;
+      max-width: 60ch;
+    }
+
+    .publications-hero-aside {
+      border-left: 1px solid rgba(255, 255, 255, 0.18);
+      padding-left: 36px;
+    }
+
+    .aside-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .aside-text {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      line-height: 1.5;
+      color: #f1f5f9;
+      font-style: italic;
+      margin-bottom: 14px;
+    }
+
+    .aside-author {
+      font-size: 13.5px;
+      color: #94a3b8;
+    }
+
+    /* ==========================================
+       2. LISTADO AUTOMÁTICO DE PUBLICACIONES
+       ========================================== */
+    .publications-section {
+      padding: 80px 0 96px;
+      background-color: var(--paper-bg);
+      min-height: 460px;
+    }
+
+    .publications-toolbar {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 20px;
+      margin-bottom: 44px;
+      border-bottom: 2px solid var(--navy-deep);
+    }
+
+    .publications-toolbar h2 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--navy-deep);
+    }
+
+    .publications-count {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink-muted);
+    }
+
+    /* Grilla de Artículos */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .article-card {
+      background-color: var(--white);
+      border: 1px solid var(--rule-solid);
+      border-top: 3px solid var(--navy-deep);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .article-card:hover {
+      border-top-color: var(--blue-brand);
+      background-color: #fcfdfe;
+    }
+
+    .article-thumb-wrap {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--rule-light);
+      background-color: var(--navy-deep);
+    }
+
+    .article-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .article-card:hover .article-thumb-wrap img {
+      transform: scale(1.02);
+    }
+
+    .article-body {
+      padding: 32px 34px 24px;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule-light);
+      font-size: 13px;
+    }
+
+    .article-category {
+      font-weight: 700;
+      color: var(--blue-brand);
+    }
+
+    .article-date {
+      color: var(--ink-muted);
+      font-weight: 500;
+    }
+
+    .article-card h3 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--navy-deep);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .article-excerpt {
+      font-size: 15.5px;
+      color: var(--ink-body);
+      line-height: 1.68;
+    }
+
+    .article-footer {
+      padding: 18px 34px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--navy-primary);
+      border-top: 1px solid var(--rule-light);
+      margin-top: 8px;
+    }
+
+    .article-card:hover .article-footer {
+      color: var(--blue-brand);
+    }
+
+    .article-arrow {
+      transition: transform 0.2s ease;
+    }
+
+    .article-card:hover .article-arrow {
+      transform: translateX(4px);
+    }
+
+    /* Estado de carga y estado vacío */
+    .status-box {
+      grid-column: 1 / -1;
+      background-color: var(--white);
+      border: 1px solid var(--rule-solid);
+      padding: 48px 36px;
+      text-align: center;
+    }
+
+    .status-box h3 {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+    }
+
+    .status-box p {
+      font-size: 15px;
+      color: var(--ink-muted);
+      max-width: 52ch;
+      margin: 0 auto;
+    }
+
+    /* ==========================================
+       3. CIERRE DE CONSULTA DIRECTA
+       ========================================== */
+    .consultation-cta {
+      background-color: var(--paper-warm);
+      padding: 72px 0;
+      border-top: 1px solid var(--rule-solid);
+    }
+
+    .consultation-box {
+      background-color: var(--navy-deep);
+      color: var(--white);
+      padding: 56px 64px;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 48px;
+      align-items: center;
+      border-top: 4px solid var(--cyan-accent);
+    }
+
+    .consultation-box h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 3vw, 36px);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .consultation-box p {
+      font-size: 16px;
+      color: #cbd5e1;
+      line-height: 1.65;
+    }
+
+    .consultation-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
+      padding-left: 40px;
+    }
+
+    .btn-firm {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background-color: var(--blue-brand);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 15px 28px;
+      border: 1px solid #3b82f6;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-firm:hover {
+      background-color: #1e40af;
+    }
+
+    .consultation-meta {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-top: 6px;
+    }
+
+    /* ==========================================
+       FOOTER (Intacto con "Santiago")
+       ========================================== */
+    .site-footer {
+      background: #070d1f;
+      color: rgba(255, 255, 255, 0.75);
+      padding: 64px 0 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .site-footer .col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .site-footer .desc {
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.65;
+      margin: 8px 0 12px;
+      max-width: 38ch;
+    }
+
+    .site-footer .title {
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .site-footer .link {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    .site-footer .link:hover {
+      color: var(--cyan-accent);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-item .icon {
+      color: var(--cyan-accent);
+      flex-shrink: 0;
+    }
+
+    .site-footer .bottom {
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ==========================================
+       RESPONSIVE
+       ========================================== */
+    @media (max-width: 980px) {
+      .publications-hero-grid,
+      .articles-grid,
+      .consultation-box {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .publications-hero-aside {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        padding-left: 0;
+        padding-top: 24px;
+      }
+
+      .consultation-box {
+        padding: 36px 28px;
+      }
+
+      .consultation-actions {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding-left: 0;
+        padding-top: 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+      .menu-button {
+        display: inline-flex;
+      }
+      .article-body,
+      .article-footer {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER (Con pestaña "Publicaciones" activa) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="LegalDatos">
+        <img src="https://www.legaldatos.cl/logo-legaldatos.png" width="136" alt="LegalDatos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="brand-fallback" style="display: none;">
+          <span class="brand-mark">LD</span>
+          <span>LegalDatos</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav-link" href="/">Inicio</a>
+        <a class="nav-link" href="/nosotros/">Nosotros</a>
+        <a class="nav-link" href="/servicios/">Servicios</a>
+        <a class="nav-link is-active" href="/publicaciones/">Publicaciones</a>
+        <a class="nav-link" href="/contacto/">Contacto</a>
+      </nav>
+      <button id="mobile-menu-button" type="button" class="menu-button" aria-label="Abrir menú" aria-controls="mobile-menu-panel" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="mobile-menu-panel" class="mobile-panel" hidden>
+      <div class="container mobile-panel-inner">
+        <nav class="mobile-nav" aria-label="Navegación móvil">
+          <a class="mobile-link" href="/">Inicio</a>
+          <a class="mobile-link" href="/nosotros/">Nosotros</a>
+          <a class="mobile-link" href="/servicios/">Servicios</a>
+          <a class="mobile-link is-active" href="/publicaciones/">Publicaciones</a>
+          <a class="mobile-link" href="/contacto/">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO DE PUBLICACIONES -->
+    <section class="publications-hero">
+      <div class="container publications-hero-grid">
+        <div>
+          <span class="firm-kicker">Análisis Jurídico y Actualidad Normativa</span>
+          <h1>
+            Publicaciones, artículos y <em>seminarios.</em>
+          </h1>
+          <p class="publications-hero-lead">
+            Compartimos nuestro criterio legal sobre la implementación práctica de la Ley N° 21.719, análisis de casos reales en empresas chilenas, guías sobre bases de licitud y convocatorias a nuestros próximos webinars sectoriales.
+          </p>
+        </div>
+
+        <aside class="publications-hero-aside" aria-label="Criterio del Estudio">
+          <span class="aside-title">Doctrina Práctica</span>
+          <p class="aside-text">
+            “Analizamos las zonas grises de la norma para traducirlas en decisiones claras para gerencias, clínicas, colegios y medianas empresas.”
+          </p>
+          <div class="aside-author">
+            Dirección Editorial · Daniel Manríquez Sansigolo
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 2. CONTENEDOR AUTOMÁTICO DE ARTÍCULOS -->
+    <section class="publications-section">
+      <div class="container">
+        <div class="publications-toolbar">
+          <h2>Artículos y convocatorias recientes</h2>
+          <span id="publications-count" class="publications-count">Cargando publicaciones...</span>
+        </div>
+
+        <!-- Aquí se insertan automáticamente todos los HTML subidos a la carpeta /publicaciones/ -->
+        <div id="articles-container" class="articles-grid">
+          <div class="status-box">
+            <h3>Buscando publicaciones recientes...</h3>
+            <p>Conectando con el archivo editorial de LegalDatos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. LLAMADO A LA ACCIÓN SOBRIO -->
+    <section class="consultation-cta">
+      <div class="container">
+        <div class="consultation-box">
+          <div>
+            <span class="firm-kicker">Aplicación a su Caso</span>
+            <h2>¿Tiene dudas sobre cómo aplica alguno de estos criterios en su empresa?</h2>
+            <p>
+              Coordine una reunión con nuestro equipo jurídico para analizar sus flujos de datos personales y estructurar un plan de adecuación a medida.
+            </p>
+          </div>
+          <div class="consultation-actions">
+            <a class="btn-firm" href="/contacto/">Solicitar reunión de diagnóstico →</a>
+            <div class="consultation-meta">
+              O escríbanos directamente a <strong>contacto@legaldatos.cl</strong><br>
+              Santiago.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (Intacto con "Santiago") -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <a class="brand" href="/" aria-label="LegalDatos">
+          <img src="https://www.legaldatos.cl/logo-legaldatos.png" width="136" alt="LegalDatos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="brand-fallback" style="display: none;">
+            <span class="brand-mark">LD</span>
+            <span>LegalDatos</span>
+          </div>
+        </a>
+        <p class="desc" style="font-size: 16px;">
+          Nuestra consultora ofrece asesorías a todo tipo de organizaciones en la adopción de mejores prácticas para la protección de datos, integrando la actual normativa de datos personales y compliance de datos en el núcleo de su gobernanza.
+        </p>
+        <a class="link" href="/nosotros/">Nosotros</a>
+      </div>
+
+      <div class="col">
+        <h3 class="title">Nuestros servicios</h3>
+        <a class="link" href="/servicios/">Ver servicios</a>
+        <a class="link" href="/contacto/">Solicitar asesoría</a>
+        <a class="link" href="/publicaciones/">Publicaciones</a>
+      </div>
+
+      <div class="col">
+        <h3 class="title">Datos de contacto</h3>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <a class="link" href="tel:+56968434272">+56 9 6843 4272</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <a class="link" href="mailto:contacto@legaldatos.cl">contacto@legaldatos.cl</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span class="link">Santiago</span>
+        </div>
+
+        <h3 class="title" style="padding-top: 24px;">Redes Sociales</h3>
+        <a class="link" href="https://www.linkedin.com/company/legaldatoscl/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="link" href="https://www.instagram.com/legaldatos" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+
+    <div class="container bottom">
+      <p class="copyright">© 2026 LegalDatos · División de Manríquez Sansigolo Abogados</p>
+      <a class="link" href="/politica-de-privacidad/">Política de Privacidad</a>
+    </div>
+  </footer>
+
+  <!-- Script Menú Móvil + Detector Automático de Artículos en GitHub -->
+  <script>
+    // 1. Menú móvil
+    const menuBtn = document.getElementById("mobile-menu-button");
+    const mobilePanel = document.getElementById("mobile-menu-panel");
+    if (menuBtn && mobilePanel) {
+      const closeMenu = () => {
+        menuBtn.setAttribute("aria-expanded", "false");
+        mobilePanel.setAttribute("hidden", "");
+      };
+      const openMenu = () => {
+        menuBtn.setAttribute("aria-expanded", "true");
+        mobilePanel.removeAttribute("hidden");
+      };
+      menuBtn.addEventListener("click", () => {
+        menuBtn.getAttribute("aria-expanded") === "true" ? closeMenu() : openMenu();
+      });
+      mobilePanel.addEventListener("click", (e) => {
+        if (e.target instanceof Element && e.target.tagName === "A") closeMenu();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+    }
+
+    // 2. Detector Automático de Publicaciones desde la carpeta /publicaciones/ de tu repositorio
+    const GITHUB_OWNER = "danielmanriquezsansigolo-star";
+    const GITHUB_REPO = "web-LegalDatos";
+    const FOLDER_PATH = "publicaciones";
+
+    async function cargarPublicacionesAutomaticas() {
+      const container = document.getElementById("articles-container");
+      const countEl = document.getElementById("publications-count");
+
+      try {
+        const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${FOLDER_PATH}`;
+        const response = await fetch(apiUrl);
+
+        if (!response.ok) {
+          throw new Error("Aún no existe la carpeta publicaciones");
+        }
+
+        const files = await response.json();
+        const htmlFiles = files.filter(
+          (f) => f.type === "file" && f.name.endsWith(".html") && f.name !== "index.html"
+        );
+
+        if (htmlFiles.length === 0) {
+          throw new Error("Carpeta sin artículos aún");
+        }
+
+        // Leemos cada artículo subido para extraer su Título, Fecha, Categoría, Resumen e Imagen automáticamente
+        const articlesData = await Promise.all(
+          htmlFiles.map(async (file) => {
+            const slug = file.name.replace(/\.html$/i, "");
+            const cleanUrl = `/publicaciones/${slug}`;
+            
+            try {
+              const rawRes = await fetch(file.download_url);
+              const htmlText = await rawRes.text();
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(htmlText, "text/html");
+
+              const title =
+                doc.querySelector('meta[name="article-title"]')?.content ||
+                doc.querySelector("h1")?.textContent?.trim() ||
+                doc.querySelector("title")?.textContent?.split("|")[0]?.trim() ||
+                slug.replace(/-/g, " ");
+
+              const excerpt =
+                doc.querySelector('meta[name="description"]')?.content ||
+                doc.querySelector("article p")?.textContent?.trim() ||
+                "Leer análisis jurídico completo.";
+
+              const dateStr =
+                doc.querySelector('meta[name="article-date"]')?.content || "2026-11-05";
+
+              const dateLabel =
+                doc.querySelector('meta[name="article-date-label"]')?.content || dateStr;
+
+              const category =
+                doc.querySelector('meta[name="article-category"]')?.content ||
+                "Análisis Ley 21.719";
+
+              const image =
+                doc.querySelector('meta[name="article-image"]')?.content || "";
+
+              return {
+                title,
+                excerpt,
+                dateStr,
+                dateLabel,
+                category,
+                image,
+                url: cleanUrl
+              };
+            } catch (err) {
+              return {
+                title: slug.replace(/-/g, " "),
+                excerpt: "Ver publicación completa.",
+                dateStr: "2026-01-01",
+                dateLabel: "Publicación",
+                category: "Análisis Jurídico",
+                image: "",
+                url: cleanUrl
+              };
+            }
+          })
+        );
+
+        // Ordenar desde la fecha más nueva a la más antigua
+        articlesData.sort((a, b) => b.dateStr.localeCompare(a.dateStr));
+
+        countEl.textContent = `${articlesData.length} ${articlesData.length === 1 ? "publicación disponible" : "publicaciones disponibles"}`;
+
+        container.innerHTML = articlesData
+          .map(
+            (art) => `
+          <a href="${art.url}" class="article-card">
+            <div>
+              ${
+                art.image
+                  ? `<div class="article-thumb-wrap"><img src="${art.image}" alt="${art.title}" loading="lazy" /></div>`
+                  : ""
+              }
+              <div class="article-body">
+                <div class="article-meta">
+                  <span class="article-category">${art.category}</span>
+                  <span class="article-date">${art.dateLabel}</span>
+                </div>
+                <h3>${art.title}</h3>
+                <p class="article-excerpt">${art.excerpt}</p>
+              </div>
+            </div>
+            <div class="article-footer">
+              <span>Leer publicación completa</span>
+              <span class="article-arrow">→</span>
+            </div>
+          </a>
+        `
+          )
+          .join("");
+      } catch (error) {
+        countEl.textContent = "Archivo editorial";
+        container.innerHTML = `
+          <div class="status-box">
+            <h3>Próximas publicaciones y seminarios</h3>
+            <p>Estamos actualizando nuestro repositorio de artículos técnicos y convocatorias a webinars sobre la Ley N° 21.719.</p>
+          </div>
+        `;
+      }
+    }
+
+    cargarPublicacionesAutomaticas();
+  </script>
+</body>
+</html>
