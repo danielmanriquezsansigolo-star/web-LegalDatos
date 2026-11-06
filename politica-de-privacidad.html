@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad y Tratamiento de Datos Personales | LegalDatos</title>
+  <meta name="description" content="Política de Tratamiento de Datos Personales y Privacidad de LegalDatos conforme al Artículo 14 ter de la Ley N° 19.628, reformada por la Ley N° 21.719 en Chile." />
+  <link rel="canonical" href="https://www.legaldatos.cl/politica-de-privacidad/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.legaldatos.cl/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Política de Privacidad y Tratamiento de Datos Personales | LegalDatos" />
+  <meta property="og:description" content="Conozca qué datos personales tratamos, con qué finalidad, bajo qué base de licitud, por cuánto tiempo los conservamos y cómo ejercer sus derechos ARSOP+." />
+  <meta property="og:image" content="https://www.legaldatos.cl/logo-legaldatos.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- Tipografías: Misma línea editorial del sitio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy-deep: #0b132b;
+      --navy-primary: #132247;
+      --navy-muted: #1e3264;
+      --blue-brand: #1d5bd6;
+      --cyan-accent: #0091d5;
+      
+      --paper-bg: #f8f9fb;
+      --paper-warm: #f1f4f9;
+      --white: #ffffff;
+      
+      --ink-dark: #0f172a;
+      --ink-body: #334155;
+      --ink-muted: #64748b;
+      
+      --rule-solid: #cbd5e1;
+      --rule-light: #e2e8f0;
+      
+      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--ink-dark);
+      background-color: var(--paper-bg);
+      line-height: 1.72;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ==========================================
+       HEADER (Intacto)
+       ========================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 19, 43, 0.98);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-fallback {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 21px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      background: var(--blue-brand);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--white);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      padding: 6px 0;
+      position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.is-active {
+      color: var(--white);
+    }
+
+    .nav-link.is-active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--cyan-accent);
+    }
+
+    .menu-button {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-icon {
+      width: 18px;
+      height: 2px;
+      background: var(--white);
+      position: relative;
+      display: block;
+    }
+
+    .menu-icon::before,
+    .menu-icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background: var(--white);
+    }
+
+    .menu-icon::before { top: -6px; }
+    .menu-icon::after { top: 6px; }
+
+    .mobile-panel {
+      background: var(--navy-deep);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 16px 0 24px;
+    }
+
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-link {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* ==========================================
+       1. CABECERA DE LA POLÍTICA (HERO)
+       ========================================== */
+    .policy-hero {
+      background-color: var(--navy-deep);
+      color: var(--white);
+      padding: 64px 0 56px;
+      border-bottom: 4px solid var(--blue-brand);
+    }
+
+    .breadcrumb {
+      font-size: 13.5px;
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .breadcrumb a {
+      color: #cbd5e1;
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--white);
+    }
+
+    .breadcrumb .sep {
+      color: #64748b;
+    }
+
+    .policy-hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 56px;
+      align-items: end;
+    }
+
+    .policy-kicker {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 19px;
+      color: #93c5fd;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .policy-hero h1 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.14;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+
+    .policy-hero-lead {
+      font-size: 17px;
+      line-height: 1.68;
+      color: #cbd5e1;
+      max-width: 64ch;
+    }
+
+    /* Ficha de Control Documental en el Hero */
+    .doc-control-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-left: 3px solid var(--cyan-accent);
+      padding: 22px 26px;
+      font-size: 13.5px;
+    }
+
+    .doc-control-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #93c5fd;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .doc-control-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .doc-control-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: #cbd5e1;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 6px;
+    }
+
+    .doc-control-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .doc-control-list li strong {
+      color: var(--white);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    /* ==========================================
+       2. ESTRUCTURA DEL DOCUMENTO + ÍNDICE LATERAL
+       ========================================== */
+    .policy-wrapper {
+      padding: 68px 0 96px;
+    }
+
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 290px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* Índice Lateral Sticky */
+    .policy-toc {
+      position: sticky;
+      top: 102px;
+      background-color: var(--white);
+      border: 1px solid var(--rule-solid);
+      border-top: 3px solid var(--navy-deep);
+      padding: 24px 22px;
+    }
+
+    .toc-title {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .toc-list a {
+      display: block;
+      font-size: 13px;
+      color: var(--ink-body);
+      padding: 7px 8px;
+      border-left: 2px solid transparent;
+      transition: all 0.18s ease;
+      line-height: 1.35;
+    }
+
+    .toc-list a:hover {
+      color: var(--blue-brand);
+      background-color: var(--paper-bg);
+      border-left-color: var(--blue-brand);
+    }
+
+    .toc-contact-mini {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--rule-light);
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    .toc-contact-mini strong {
+      color: var(--navy-deep);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .toc-contact-mini a {
+      color: var(--blue-brand);
+      font-weight: 600;
+    }
+
+    /* Hoja Principal del Documento */
+    .policy-sheet {
+      background-color: var(--white);
+      border: 1px solid var(--rule-solid);
+      border-top: 3px solid var(--blue-brand);
+      padding: 52px 58px;
+    }
+
+    .policy-section {
+      scroll-margin-top: 104px;
+      margin-bottom: 44px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    .policy-section:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .policy-section h2 {
+      font-family: var(--font-serif);
+      font-size: 27px;
+      font-weight: 500;
+      color: var(--navy-deep);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .policy-section h3 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin: 26px 0 10px;
+    }
+
+    .policy-section p {
+      font-size: 15.8px;
+      color: var(--ink-body);
+      line-height: 1.78;
+      margin-bottom: 16px;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section p strong {
+      color: var(--ink-dark);
+      font-weight: 700;
+    }
+
+    /* Ficha de Identificación del Responsable (Sección 2) */
+    .controller-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 22px 0;
+      background-color: var(--paper-bg);
+      border: 1px solid var(--rule-solid);
+      padding: 24px 26px;
+    }
+
+    .controller-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .controller-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--ink-muted);
+    }
+
+    .controller-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy-deep);
+    }
+
+    .controller-value a {
+      color: var(--blue-brand);
+    }
+
+    /* Tablas Jurídicas (Matriz de Tratamientos y Plazos / Cookies) */
+    .table-scroll {
+      margin: 22px 0 24px;
+      border: 1px solid var(--rule-solid);
+      overflow-x: auto;
+    }
+
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      background-color: var(--white);
+      min-width: 680px;
+    }
+
+    .policy-table thead th {
+      background-color: var(--navy-deep);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 13px 16px;
+      border-bottom: 2px solid var(--blue-brand);
+    }
+
+    .policy-table tbody tr {
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    .policy-table tbody tr:nth-child(even) {
+      background-color: var(--paper-bg);
+    }
+
+    .policy-table tbody td {
+      padding: 14px 16px;
+      font-size: 13.8px;
+      color: var(--ink-body);
+      line-height: 1.55;
+      vertical-align: top;
+    }
+
+    .policy-table tbody td:first-child {
+      font-weight: 700;
+      color: var(--navy-deep);
+      width: 165px;
+      border-right: 1px solid var(--rule-light);
+    }
+
+    .policy-table tbody td strong {
+      color: var(--ink-dark);
+      font-weight: 700;
+    }
+
+    /* Grilla de Principios y Derechos */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .principle-card {
+      background-color: var(--paper-bg);
+      border: 1px solid var(--rule-solid);
+      padding: 18px 20px;
+    }
+
+    .principle-card h4 {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 6px;
+    }
+
+    .principle-card p {
+      font-size: 14px;
+      color: var(--ink-body);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* Listas con viñetas limpias */
+    .policy-list {
+      list-style: none;
+      margin: 16px 0 20px;
+      border-top: 1px solid var(--rule-light);
+    }
+
+    .policy-list li {
+      padding: 13px 0;
+      border-bottom: 1px solid var(--rule-light);
+      font-size: 15px;
+      color: var(--ink-body);
+      line-height: 1.65;
+    }
+
+    .policy-list li strong {
+      color: var(--ink-dark);
+      font-weight: 700;
+    }
+
+    /* Nota destacada */
+    .callout-note {
+      background-color: var(--paper-warm);
+      border: 1px solid var(--rule-solid);
+      border-left: 4px solid var(--blue-brand);
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 14.8px;
+      color: var(--ink-body);
+    }
+
+    .callout-note strong {
+      color: var(--ink-dark);
+      font-weight: 700;
+    }
+
+    /* Bloque Final de Firma y Vigencia (Fondo Oscuro con Contraste de Strong Corregido) */
+    .signature-box {
+      margin-top: 36px;
+      background-color: var(--navy-deep);
+      color: var(--white);
+      padding: 32px 36px;
+      border-top: 4px solid var(--blue-brand);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .signature-text p {
+      font-size: 14.5px;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+
+    .signature-text p strong,
+    .signature-box strong {
+      color: #93c5fd !important;
+      font-weight: 600;
+    }
+
+    .signature-author {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--white);
+      margin-top: 8px;
+    }
+
+    .btn-firm {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--blue-brand);
+      color: var(--white);
+      font-size: 14.5px;
+      font-weight: 600;
+      padding: 13px 24px;
+      border: 1px solid #3b82f6;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-firm:hover {
+      background-color: #1e40af;
+    }
+
+    /* ==========================================
+       FOOTER (Intacto con "Santiago")
+       ========================================== */
+    .site-footer {
+      background: #070d1f;
+      color: rgba(255, 255, 255, 0.75);
+      padding: 64px 0 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .site-footer .col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .site-footer .desc {
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.65;
+      margin: 8px 0 12px;
+      max-width: 38ch;
+    }
+
+    .site-footer .title {
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .site-footer .link {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    .site-footer .link:hover {
+      color: var(--cyan-accent);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-item .icon {
+      color: var(--cyan-accent);
+      flex-shrink: 0;
+    }
+
+    .site-footer .bottom {
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ==========================================
+       RESPONSIVE
+       ========================================== */
+    @media (max-width: 1020px) {
+      .policy-hero-grid,
+      .policy-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .policy-toc {
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+      .menu-button {
+        display: inline-flex;
+      }
+      .policy-sheet {
+        padding: 32px 22px;
+      }
+      .controller-grid,
+      .principles-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="LegalDatos">
+        <img src="https://www.legaldatos.cl/logo-legaldatos.png" width="136" alt="LegalDatos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="brand-fallback" style="display: none;">
+          <span class="brand-mark">LD</span>
+          <span>LegalDatos</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav-link" href="/">Inicio</a>
+        <a class="nav-link" href="/nosotros/">Nosotros</a>
+        <a class="nav-link" href="/servicios/">Servicios</a>
+        <a class="nav-link" href="/publicaciones/">Publicaciones</a>
+        <a class="nav-link" href="/contacto/">Contacto</a>
+      </nav>
+      <button id="mobile-menu-button" type="button" class="menu-button" aria-label="Abrir menú" aria-controls="mobile-menu-panel" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="mobile-menu-panel" class="mobile-panel" hidden>
+      <div class="container mobile-panel-inner">
+        <nav class="mobile-nav" aria-label="Navegación móvil">
+          <a class="mobile-link" href="/">Inicio</a>
+          <a class="mobile-link" href="/nosotros/">Nosotros</a>
+          <a class="mobile-link" href="/servicios/">Servicios</a>
+          <a class="mobile-link" href="/publicaciones/">Publicaciones</a>
+          <a class="mobile-link" href="/contacto/">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. CABECERA DE LA POLÍTICA -->
+    <section class="policy-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Inicio</a> <span class="sep">/</span></li>
+            <li><span aria-current="page">Política de Privacidad y Tratamiento de Datos</span></li>
+          </ol>
+        </nav>
+
+        <div class="policy-hero-grid">
+          <div>
+            <span class="policy-kicker">Transparencia e Información · Artículo 14 ter Ley N° 21.719</span>
+            <h1>Política de Tratamiento de Datos Personales y Privacidad</h1>
+            <p class="policy-hero-lead">
+              En <strong>LegalDatos</strong> informamos de manera clara, permanente y accesible qué datos personales tratamos, respecto de qué titulares, con qué finalidades específicas, bajo qué base de licitud, por cuánto tiempo los conservamos y cómo puede usted ejercer sus derechos legales.
+            </p>
+          </div>
+
+          <aside class="doc-control-card" aria-label="Control del Documento">
+            <span class="doc-control-title">Control del Documento</span>
+            <ul class="doc-control-list">
+              <li>
+                <span>Instrumento:</span>
+                <strong>Política de Datos Personales</strong>
+              </li>
+              <li>
+                <span>Versión vigente:</span>
+                <strong>Versión 2.0 · Noviembre 2026</strong>
+              </li>
+              <li>
+                <span>Normativa:</span>
+                <strong>Ley N° 19.628 y Ley N° 21.719</strong>
+              </li>
+              <li>
+                <span>Publicación oficial:</span>
+                <strong>www.legaldatos.cl</strong>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONTENIDO COMPLETO DE LA POLÍTICA -->
+    <section class="policy-wrapper">
+      <div class="container policy-layout">
+
+        <!-- Índice de Navegación Lateral -->
+        <aside class="policy-toc" aria-label="Índice de la Política">
+          <div class="toc-title">Contenido</div>
+          <ul class="toc-list">
+            <li><a href="#sec-1">1. Propósito y ámbito de aplicación</a></li>
+            <li><a href="#sec-2">2. Identidad del Responsable</a></li>
+            <li><a href="#sec-3">3. Matriz de datos, fines y licitud</a></li>
+            <li><a href="#sec-4">4. Tratamientos por cuenta de clientes</a></li>
+            <li><a href="#sec-5">5. Principios rectores del tratamiento</a></li>
+            <li><a href="#sec-6">6. Destinatarios y encargados</a></li>
+            <li><a href="#sec-7">7. Transferencias internacionales</a></li>
+            <li><a href="#sec-8">8. Plazos de conservación</a></li>
+            <li><a href="#sec-9">9. Seguridad y gestión de incidentes</a></li>
+            <li><a href="#sec-10">10. Infraestructura web y cookies</a></li>
+            <li><a href="#sec-11">11. Decisiones automatizadas</a></li>
+            <li><a href="#sec-12">12. Derechos del titular (ARSOP+)</a></li>
+            <li><a href="#sec-13">13. Procedimiento y reclamo ante Agencia</a></li>
+            <li><a href="#sec-14">14. Vigencia y actualizaciones</a></li>
+          </ul>
+          <div class="toc-contact-mini">
+            <strong>Canal de Privacidad y Derechos:</strong>
+            <a href="mailto:contacto@legaldatos.cl">contacto@legaldatos.cl</a><br>
+            Huérfanos 757, Of. 614, Santiago
+          </div>
+        </aside>
+
+        <!-- Cuerpo de la Política -->
+        <article class="policy-sheet">
+
+          <!-- SECCIÓN 1 -->
+          <section id="sec-1" class="policy-section">
+            <h2>1. ¿Cuál es el propósito y ámbito de aplicación de esta política?</h2>
+            <p>
+              <strong>LegalDatos</strong> es una consultora jurídica especializada en protección de datos personales, cumplimiento normativo (<em>compliance</em>) y adecuación a la Ley N° 21.719. El presente instrumento tiene por objeto dar estricto cumplimiento al deber de información y transparencia previsto en el artículo 14 ter de la Ley N° 19.628 sobre Protección de la Vida Privada, modificada por la Ley N° 21.719 (en adelante, la «Ley»).
+            </p>
+            <p>
+              Esta política se aplica a todas las operaciones de tratamiento de datos personales en las que LegalDatos actúa en calidad de <strong>responsable del tratamiento</strong>: atención de consultas jurídicas y solicitudes de diagnóstico, envío de propuestas de servicios, relación con clientes y proveedores, inscripción y participación en cursos, seminarios o webinars, difusión de publicaciones jurídicas y navegación en el sitio web <strong>www.legaldatos.cl</strong>. En la sección 4 se explica el régimen aplicable cuando accedemos a información por encargo de nuestros clientes corporativos.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 2 -->
+          <section id="sec-2" class="policy-section">
+            <h2>2. Identificación del Responsable de los Datos y Canal de Contacto</h2>
+            <p>
+              El responsable del tratamiento es la persona natural o jurídica que decide acerca de los fines y medios del tratamiento de los datos personales. Respecto de los tratamientos regulados en esta política, los datos de identificación y contacto oficial del responsable son los siguientes:
+            </p>
+
+            <div class="controller-grid">
+              <div class="controller-item">
+                <span class="controller-label">Responsable del Tratamiento</span>
+                <span class="controller-value">Daniel Manríquez Sansigolo</span>
+              </div>
+              <div class="controller-item">
+                <span class="controller-label">RUT</span>
+                <span class="controller-value">17.700.585-1</span>
+              </div>
+              <div class="controller-item">
+                <span class="controller-label">Domicilio Postal y Profesional</span>
+                <span class="controller-value">Huérfanos 757, oficina 614, Santiago, Chile</span>
+              </div>
+              <div class="controller-item">
+                <span class="controller-label">Teléfono / WhatsApp Corporativo</span>
+                <span class="controller-value"><a href="tel:+56968434272">+56 9 6843 4272</a></span>
+              </div>
+              <div class="controller-item">
+                <span class="controller-label">Correo Electrónico Oficial</span>
+                <span class="controller-value"><a href="mailto:contacto@legaldatos.cl">contacto@legaldatos.cl</a></span>
+              </div>
+              <div class="controller-item">
+                <span class="controller-label">Formulario Web de Contacto</span>
+                <span class="controller-value"><a href="/contacto/">www.legaldatos.cl/contacto</a></span>
+              </div>
+            </div>
+
+            <p>
+              A través de cualquiera de estos canales, los titulares pueden dirigir sus consultas sobre privacidad, retirar su consentimiento cuando proceda o presentar solicitudes de ejercicio de derechos legales. Atendido el tamaño y estructura de nuestra práctica, la gestión directa de las solicitudes de protección de datos recae directamente en el abogado director individualizado precedentemente.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 3 -->
+          <section id="sec-3" class="policy-section">
+            <h2>3. ¿Qué datos personales tratamos, para qué finalidad y bajo qué base de licitud?</h2>
+            <p>
+              A continuación detallamos de forma transparente cada una de las actividades de tratamiento que realizamos como responsables, indicando las categorías de datos, los titulares concernidos, la finalidad específica, la fuente de origen y el fundamento jurídico (base de licitud) que legitima la operación conforme a los artículos 12 y 13 de la Ley:
+            </p>
+
+            <div class="table-scroll">
+              <table class="policy-table">
+                <thead>
+                  <tr>
+                    <th>Actividad</th>
+                    <th>Datos y Titulares</th>
+                    <th>Finalidad Específica</th>
+                    <th>Base de Licitud (Ley 21.719)</th>
+                    <th>Origen</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Consultas y solicitudes de diagnóstico</td>
+                    <td>Nombre, correo electrónico, teléfono, empresa/cargo y mensaje de quienes nos escriben por el formulario web, correo o WhatsApp.</td>
+                    <td>Atender la consulta jurídica, coordinar reuniones diagnósticas y elaborar propuestas de honorarios solicitadas.</td>
+                    <td>Aplicación de medidas precontractuales a solicitud del titular (art. 13 letra c)).</td>
+                    <td>El propio titular.</td>
+                  </tr>
+                  <tr>
+                    <td>Prestación de servicios a clientes</td>
+                    <td>Nombre, RUT, cargo, correo, teléfono y antecedentes de facturación de clientes o de los representantes y contrapartes designados por ellos.</td>
+                    <td>Ejecutar las asesorías jurídicas contratadas (RAT, políticas, EIPD, DPD), coordinar entregas, emitir documentos tributarios y gestionar cobros.</td>
+                    <td>Ejecución de contrato de servicios profesionales (art. 13 letra c)) y cumplimiento de obligaciones legales tributarias (art. 13 letra b)).</td>
+                    <td>El propio titular o la empresa cliente.</td>
+                  </tr>
+                  <tr>
+                    <td>Cursos, charlas y webinars</td>
+                    <td>Nombre, correo electrónico, teléfono, organización/clínica, cargo y comprobante de inscripción de los participantes.</td>
+                    <td>Gestionar el registro al curso o seminario, enviar enlaces de conexión (Google Meet), remitir material de estudio y emitir certificados de participación.</td>
+                    <td>Ejecución de la relación contractual originada con la inscripción (art. 13 letra c)) y cumplimiento de obligaciones tributarias (art. 13 letra b)).</td>
+                    <td>El propio participante o la entidad que lo inscribe.</td>
+                  </tr>
+                  <tr>
+                    <td>Boletines, alertas y convocatorias</td>
+                    <td>Nombre, correo electrónico y sector o rubro de quienes solicitan recibir nuestras publicaciones o invitaciones a nuevos seminarios.</td>
+                    <td>Remitir análisis jurídicos sobre la Ley 21.719, guías prácticas e invitaciones a próximos cursos sectoriales.</td>
+                    <td>Consentimiento libre, informado y específico del titular (art. 12), revocable en cualquier momento.</td>
+                    <td>El propio titular.</td>
+                  </tr>
+                  <tr>
+                    <td>Proveedores y colaboradores</td>
+                    <td>Nombre, RUT, datos de contacto y datos bancarios/tributarios de proveedores o profesionales externos.</td>
+                    <td>Gestionar la contratación de insumos o apoyos profesionales, efectuar pagos y declarar impuestos.</td>
+                    <td>Ejecución contractual (art. 13 letra c)) y cumplimiento de obligaciones legales (art. 13 letra b)).</td>
+                    <td>El propio proveedor o colaborador.</td>
+                  </tr>
+                  <tr>
+                    <td>Contacto profesional B2B (LinkedIn)</td>
+                    <td>Nombre, cargo y organización publicados por profesionales o directivos en sus perfiles de LinkedIn o sitios corporativos.</td>
+                    <td>Presentar nuestras soluciones jurídicas o extender invitaciones a seminarios sectoriales a través de canales profesionales.</td>
+                    <td>Interés legítimo del responsable en dar a conocer sus servicios especializados a organizaciones (art. 13 letra d)).</td>
+                    <td>Perfil público profesional del titular.</td>
+                  </tr>
+                  <tr>
+                    <td>Seguridad y navegación web</td>
+                    <td>Dirección IP, tipo de navegador, fecha/hora de solicitud y metadatos técnicos de red de los visitantes del sitio.</td>
+                    <td>Entregar el contenido del sitio web, proveer cifrado HTTPS, prevenir ataques automatizados (bots) y resguardar la estabilidad técnica.</td>
+                    <td>Interés legítimo en garantizar la seguridad de la red y de la información del sitio web (art. 13 letra d)).</td>
+                    <td>Dispositivo del visitante.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout-note">
+              <strong>Regla sobre Datos Personales Sensibles:</strong> LegalDatos no solicita ni requiere datos personales sensibles (tales como estado de salud, biometría, ideología o creencias) a través de su sitio web ni para la inscripción a sus cursos. Solicitamos expresamente a los usuarios no incluir antecedentes sensibles innecesarios en los campos de texto libre del formulario de contacto; en caso de recibirlos inadvertidamente sin que sean pertinentes para el encargo jurídico, procederemos a su inmediata supresión.
+            </div>
+          </section>
+
+          <!-- SECCIÓN 4 -->
+          <section id="sec-4" class="policy-section">
+            <h2>4. ¿Qué ocurre cuando tratamos datos por cuenta de nuestros clientes corporativos?</h2>
+            <p>
+              Durante el desarrollo de nuestras asesorías especializadas —tales como el levantamiento de Registros de Actividades de Tratamiento (RAT), auditorías de cumplimiento, Evaluaciones de Impacto (EIPD), capacitaciones internas o el ejercicio del cargo de Delegado de Protección de Datos (DPD)— nuestros clientes pueden darnos acceso a información contenida en sus propias bases de datos.
+            </p>
+            <p>
+              En todos esos escenarios, el <strong>responsable del tratamiento</strong> sigue siendo exclusivamente la empresa o clínica cliente. <strong>LegalDatos actúa únicamente en calidad de encargado o mandatario del tratamiento</strong> (conforme al artículo 15 bis de la Ley), procesando la información estrictamente bajo las instrucciones documentadas del cliente, al amparo del respectivo Contrato de Encargo de Tratamiento de Datos (DPA) y bajo riguroso secreto profesional de abogado. Al concluir el servicio, dichos antecedentes son devueltos o suprimidos según lo instruido por el cliente. Si un titular perteneciente a la base de datos de un cliente nos envía directamente una solicitud de ejercicio de derechos, la derivaremos al cliente responsable dentro de un plazo máximo de 3 días hábiles.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 5 -->
+          <section id="sec-5" class="policy-section">
+            <h2>5. Principios rectores que garantizamos en cada tratamiento</h2>
+            <p>
+              Todo tratamiento de datos ejecutado por LegalDatos se sujeta estrictamente a los principios consagrados en la Ley N° 19.628 y sus reformas introducidas por la Ley N° 21.719:
+            </p>
+
+            <div class="principles-grid">
+              <div class="principle-card">
+                <h4>5.1 Licitud y Lealtad</h4>
+                <p>Solo tratamos datos personales cuando concurre una base legal habilitante (consentimiento, medidas precontractuales/contrato, obligación legal o interés legítimo ponderado), sin emplear medios fraudulentos o engañosos.</p>
+              </div>
+              <div class="principle-card">
+                <h4>5.2 Finalidad Específica</h4>
+                <p>Los datos son recolectados exclusivamente para los fines determinados, explícitos y lícitos informados en la sección 3, sin ser utilizados posteriormente para propósitos incompatibles.</p>
+              </div>
+              <div class="principle-card">
+                <h4>5.3 Proporcionalidad y Minimización</h4>
+                <p>Recabamos únicamente los datos estrictamente necesarios en relación con la finalidad perseguida (por ejemplo, nombre, correo y teléfono en nuestro formulario de contacto).</p>
+              </div>
+              <div class="principle-card">
+                <h4>5.4 Calidad y Exactitud</h4>
+                <p>Adoptamos medidas razonables para que los datos personales que tratamos sean veraces, exactos, completos y se mantengan actualizados según la realidad del titular.</p>
+              </div>
+              <div class="principle-card">
+                <h4>5.5 Limitación en el Tiempo</h4>
+                <p>Conservamos los datos solo durante el lapso necesario para cumplir su finalidad o las exigencias legales aplicables, procediendo luego a su supresión o anonimización segura.</p>
+              </div>
+              <div class="principle-card">
+                <h4>5.6 Confidencialidad y Secreto Profesional</h4>
+                <p>Además del deber legal de confidencialidad del artículo 14 bis de la Ley, toda consulta y antecedente recibido se encuentra amparado por el secreto profesional propio del ejercicio de la abogacía.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECCIÓN 6 -->
+          <section id="sec-6" class="policy-section">
+            <h2>6. ¿A quién comunicamos sus datos personales? (Destinatarios y Encargados)</h2>
+            <p>
+              <strong>LegalDatos jamás vende, arrienda ni cede bases de datos personales a terceros.</strong> Para el soporte tecnológico y administrativo de nuestra operación, nos apoyamos en proveedores de infraestructura de primer nivel que actúan como encargados de tratamiento por cuenta nuestra (artículo 15 bis), sujetos a términos contractuales de seguridad y confidencialidad:
+            </p>
+            <ul class="policy-list">
+              <li>
+                <strong>Google LLC (Google Workspace y Google Apps Script):</strong> Provee nuestra infraestructura de correo electrónico corporativo (<code>@legaldatos.cl</code>), almacenamiento documental cifrado en la nube (Google Drive), sesiones de videoconferencia para reuniones y cursos (Google Meet) y automatización segura de recepción de formularios de contacto en nuestras planillas internas de gestión.
+              </li>
+              <li>
+                <strong>Cloudflare, Inc. (Cloudflare Workers / Pages y CDN):</strong> Provee el alojamiento de nuestro sitio web estático, la red de distribución de contenidos, el cifrado SSL/TLS y la mitigación de ataques informáticos.
+              </li>
+              <li>
+                <strong>GitHub, Inc. (Infraestructura de código fuente):</strong> Aloja el código fuente estático (HTML/CSS) de nuestro sitio web público. Ningún dato personal de formularios ni de clientes se almacena en dicho repositorio.
+              </li>
+              <li>
+                <strong>Abogados y consultores asociados:</strong> Profesionales que colaboran directamente con LegalDatos en la ejecución de proyectos específicos, sujetos a cláusulas expresas de confidencialidad y secreto profesional.
+              </li>
+            </ul>
+            <p>
+              Fuera de estos encargados operacionales, únicamente comunicaremos datos personales cuando exista un mandato legal expreso o requerimiento de los Tribunales de Justicia o de organismos públicos dentro del ámbito de sus competencias legales (como el Servicio de Impuestos Internos en materia tributaria o la Agencia de Protección de Datos Personales).
+            </p>
+          </section>
+
+          <!-- SECCIÓN 7 -->
+          <section id="sec-7" class="policy-section">
+            <h2>7. Transferencias Internacionales de Datos</h2>
+            <p>
+              Nuestros proveedores tecnológicos principales (<strong>Google LLC</strong> y <strong>Cloudflare, Inc.</strong>) procesan y alojan información en centros de datos ubicados fuera del territorio de la República de Chile, principalmente en los Estados Unidos de América.
+            </p>
+            <p>
+              Conforme a lo dispuesto en el artículo 27 inciso primero letra b) de la Ley, dichas transferencias internacionales se encuentran amparadas en garantías adecuadas mediante la suscripción de los anexos corporativos de procesamiento de datos (<em>Data Processing Addendum</em> y cláusulas contractuales tipo) de Google Workspace y Cloudflare, los cuales exigen estándares de seguridad, cifrado, confidencialidad y respeto a los derechos de los titulares equivalentes a los exigidos por la legislación chilena y a las cláusulas modelo aprobadas por la Resolución Exenta N° 3.748, de 2025, de la Subsecretaría de Economía y Empresas de Menor Tamaño.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 8 -->
+          <section id="sec-8" class="policy-section">
+            <h2>8. ¿Por cuánto tiempo conservamos sus datos personales?</h2>
+            <p>
+              Conservamos los datos personales únicamente durante el tiempo indispensable para cumplir la finalidad para la cual fueron recolectados y para atender las responsabilidades legales o tributarias que deriven de la relación:
+            </p>
+
+            <div class="table-scroll">
+              <table class="policy-table">
+                <thead>
+                  <tr>
+                    <th>Categoría de Tratamiento</th>
+                    <th>Plazo de Conservación y Criterio de Supresión</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Consultas y solicitudes de propuestas</td>
+                    <td><strong>1 año</strong> contado desde la última comunicación con el interesado, salvo que la consulta dé lugar a la contratación de un servicio, caso en el cual pasa a regirse por el plazo de clientes.</td>
+                  </tr>
+                  <tr>
+                    <td>Clientes y proveedores</td>
+                    <td>Mientras se mantenga vigente la prestación del servicio y, una vez concluida, hasta por <strong>6 años</strong> para dar cumplimiento a las obligaciones tributarias ante el SII (art. 200 del Código Tributario) y cubrir los plazos de prescripción civil ordinarios (5 años).</td>
+                  </tr>
+                  <tr>
+                    <td>Inscritos en cursos, charlas y webinars</td>
+                    <td><strong>1 año</strong> desde la realización de la actividad para efectos de seguimiento académico, envío de material complementario y aplicación del descuento en contrataciones posteriores. Los registros contables de inscripción se conservan por el plazo tributario legal.</td>
+                  </tr>
+                  <tr>
+                    <td>Suscriptores de boletines y alertas</td>
+                    <td>Mientras el titular no revoque su consentimiento. En cuanto solicita su baja por correo electrónico, su dirección es eliminada de inmediato de la lista de difusión.</td>
+                  </tr>
+                  <tr>
+                    <td>Registros técnicos de seguridad (Cloudflare)</td>
+                    <td>Por el período estrictamente necesario para fines de mitigación de amenazas y diagnóstico técnico de red, el cual no excede de <strong>12 meses</strong>.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- SECCIÓN 9 -->
+          <section id="sec-9" class="policy-section">
+            <h2>9. Medidas de Seguridad y Gestión de Incidentes</h2>
+            <p>
+              En cumplimiento de los artículos 14 quinquies y 14 septies de la Ley, LegalDatos aplica medidas técnicas y organizativas apropiadas al riesgo de sus operaciones para proteger los datos contra el acceso no autorizado, pérdida, adulteración, filtración o destrucción:
+            </p>
+            <ul class="policy-list">
+              <li>
+                <strong>Cifrado en tránsito y en reposo:</strong> Toda comunicación con nuestro sitio web se realiza bajo protocolo seguro HTTPS (TLS 1.3 gestionado por Cloudflare) y la documentación de trabajo se resguarda en entornos corporativos cifrados de Google Workspace.
+              </li>
+              <li>
+                <strong>Control de acceso y autenticación reforzada:</strong> Las cuentas institucionales cuentan con autenticación multifactor (2FA) obligatoria y privilegios de acceso restringidos bajo el principio de mínimo privilegio.
+              </li>
+              <li>
+                <strong>Arquitectura web sin bases de datos vulnerables:</strong> Nuestro sitio web está desarrollado en código HTML5 estático limpio, prescindiendo de gestores de contenido tradicionales (como WordPress) y de bases de datos SQL expuestas en servidor público, lo que reduce drásticamente la superficie de ataque informático.
+              </li>
+              <li>
+                <strong>Protocolo ante vulneraciones de seguridad:</strong> Ante cualquier incidente que comprometa datos personales y genere un riesgo razonable para los derechos de los titulares, LegalDatos registrará el evento y lo notificará sin dilación indebida a la Agencia de Protección de Datos Personales y a los afectados cuando corresponda conforme al artículo 14 sexies de la Ley.
+              </li>
+            </ul>
+          </section>
+
+          <!-- SECCIÓN 10 -->
+          <section id="sec-10" class="policy-section">
+            <h2>10. Funcionamiento del Sitio Web y Uso de Cookies</h2>
+            <p>
+              Este sitio web está construido en código HTML propio y se distribuye a través de la red global de <strong>Cloudflare</strong>. Para garantizar su seguridad, correcto despliegue tipográfico y la recepción de nuestro formulario de contacto, intervienen únicamente los siguientes recursos técnicos:
+            </p>
+
+            <div class="table-scroll">
+              <table class="policy-table">
+                <thead>
+                  <tr>
+                    <th>Tecnología / Recurso</th>
+                    <th>Proveedor y Propósito Técnico</th>
+                    <th>Clasificación</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>cf_clearance / __cf_bm</td>
+                    <td>Gestionadas por <strong>Cloudflare</strong> para distinguir tráfico humano legítimo de tráfico automatizado malicioso (bots), mitigar ataques DDoS y asegurar la disponibilidad del sitio.</td>
+                    <td>Técnica y de Seguridad (Estrictamente necesaria)</td>
+                  </tr>
+                  <tr>
+                    <td>Google Fonts</td>
+                    <td>Carga de las familias tipográficas editoriales (<em>Newsreader</em> y <em>Plus Jakarta Sans</em>) desde los servidores de Google LLC para la correcta visualización de los textos, sin instalar cookies de perfilamiento.</td>
+                    <td>Funcionalidad visual</td>
+                  </tr>
+                  <tr>
+                    <td>Endpoint Formulario (Google Apps Script)</td>
+                    <td>Transmisión cifrada de los datos ingresados voluntariamente por el usuario en la página de Contacto hacia nuestra planilla interna de gestión en Google Workspace.</td>
+                    <td>Técnica operacional a solicitud del usuario</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              El usuario puede configurar su navegador web en cualquier momento para bloquear o eliminar cookies; no obstante, bloquear las cookies técnicas de seguridad de Cloudflare podría impedir la visualización de ciertas páginas protegidas del sitio.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 11 -->
+          <section id="sec-11" class="policy-section">
+            <h2>11. Inexistencia de Decisiones Automatizadas y Elaboración de Perfiles</h2>
+            <p>
+              LegalDatos <strong>no adopta decisiones individuales basadas únicamente en el tratamiento automatizado de datos personales</strong> ni elabora perfiles comerciales o predictivos de los visitantes ni de sus clientes (artículo 8° bis de la Ley). Toda consulta legal, diagnóstico normativo y documento jurídico elaborado por nuestra firma cuenta siempre con la intervención, revisión y criterio profesional directo de un abogado habilitado.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 12 -->
+          <section id="sec-12" class="policy-section">
+            <h2>12. ¿Cuáles son sus Derechos como Titular de Datos (ARSOP+)?</h2>
+            <p>
+              Conforme a los artículos 4° a 10 de la Ley N° 19.628 (reformada por la Ley N° 21.719), toda persona natural titular de datos goza de los siguientes derechos irrenunciables y gratuitos:
+            </p>
+            <ul class="policy-list">
+              <li>
+                <strong>Derecho de Acceso:</strong> Solicitar confirmación acerca de si sus datos personales están siendo tratados por LegalDatos y obtener copia de ellos, junto con información sobre su origen, finalidad, destinatarios y plazos de conservación.
+              </li>
+              <li>
+                <strong>Derecho de Rectificación:</strong> Exigir que se modifiquen o completen los datos personales que resulten inexactos, incompletos, equívocos o desactualizados.
+              </li>
+              <li>
+                <strong>Derecho de Supresión (Cancelación):</strong> Solicitar la eliminación definitiva de sus datos cuando ya no sean necesarios para los fines que motivaron su recolección, cuando retire su consentimiento o cuando el tratamiento sea ilícito, salvo que concurra un deber legal de conservación o sea necesario para el ejercicio o defensa de acciones legales.
+              </li>
+              <li>
+                <strong>Derecho de Oposición:</strong> Oponerse a que se lleve a cabo un tratamiento determinado basado en el interés legítimo o destinado a comunicaciones informativas o de prospección.
+              </li>
+              <li>
+                <strong>Derecho a la Portabilidad:</strong> Solicitar y recibir copia de los datos personales que nos haya entregado en un formato electrónico estructurado, de uso común y lectura mecánica, cuando el tratamiento se efectúe de forma automatizada y se base en el consentimiento o en un contrato.
+              </li>
+              <li>
+                <strong>Derecho de Bloqueo Temporal:</strong> Solicitar la suspensión temporal de cualquier operación de tratamiento respecto de sus datos mientras se tramita y resuelve una solicitud de rectificación, supresión u oposición.
+              </li>
+              <li>
+                <strong>Revocación del Consentimiento:</strong> Retirar en cualquier momento, sin expresión de causa y con efecto hacia el futuro, el consentimiento otorgado para el envío de boletines o comunicaciones.
+              </li>
+            </ul>
+          </section>
+
+          <!-- SECCIÓN 13 -->
+          <section id="sec-13" class="policy-section">
+            <h2>13. Procedimiento para Ejercer sus Derechos y Reclamo ante la Agencia</h2>
+            <p>
+              Para ejercer cualquiera de los derechos señalados en la sección anterior, el titular o su representante legal debidamente acreditado puede enviar una comunicación escrita al correo electrónico <strong><a href="mailto:contacto@legaldatos.cl" style="color: var(--blue-brand);">contacto@legaldatos.cl</a></strong> o ingresarla a través de nuestro <a href="/contacto/" style="color: var(--blue-brand); font-weight: 600;">formulario de contacto web</a>, indicando (artículo 11 de la Ley):
+            </p>
+            <ul class="policy-list">
+              <li>
+                <strong>1. Identificación:</strong> Nombre completo, número de cédula de identidad o documento equivalente del titular (y de su representante, adjuntando el poder respectivo si actúa a nombre de otro).
+              </li>
+              <li>
+                <strong>2. Medio de notificación:</strong> Dirección de correo electrónico o domicilio postal donde desea recibir nuestra respuesta formal.
+              </li>
+              <li>
+                <strong>3. Petición concreta:</strong> Descripción clara del derecho que desea ejercer (acceso, rectificación, supresión, oposición, portabilidad o bloqueo) y los datos específicos a los que se refiere, acompañando los antecedentes que sustenten la rectificación o causal invocada cuando corresponda.
+              </li>
+            </ul>
+            <p>
+              Acusaremos recibo de su requerimiento y emitiremos una respuesta fundada y por escrito dentro del plazo legal máximo de <strong>30 días corridos</strong> contados desde el ingreso de la solicitud (prorrogables por una sola vez hasta por otros 30 días corridos cuando la complejidad del caso lo justifique, lo cual le será comunicado oportunamente). Si solicita fundadamente el <strong>bloqueo temporal</strong> de sus datos junto con un requerimiento de rectificación, supresión u oposición, resolveremos dicha solicitud de bloqueo dentro de los <strong>2 días hábiles</strong> siguientes.
+            </p>
+            <p>
+              <strong>Derecho a reclamar ante la Autoridad:</strong> Si su solicitud no es respondida dentro del plazo legal o es denegada total o parcialmente, usted tiene derecho a deducir reclamo ante la <strong>Agencia de Protección de Datos Personales</strong> dentro del plazo de 30 días corridos contados desde la notificación de la respuesta negativa o desde el vencimiento del plazo para responder, conforme a los artículos 11 y 41 de la Ley.
+            </p>
+          </section>
+
+          <!-- SECCIÓN 14 -->
+          <section id="sec-14" class="policy-section">
+            <h2>14. Vigencia, Control de Versiones y Modificaciones</h2>
+            <p>
+              La presente Política de Tratamiento de Datos Personales y Privacidad corresponde a la <strong>Versión 1.0</strong>, aprobada y publicada en <strong>noviembre de 2026</strong>. LegalDatos revisará periódicamente este instrumento para mantenerlo alineado con las instrucciones generales que dicte la Agencia de Protección de Datos Personales y con cualquier evolución en nuestros servicios. Toda actualización será publicada oportunamente en la dirección permanente <strong>www.legaldatos.cl/politica-de-privacidad/</strong> indicando su número de versión y fecha de entrada en vigor.
+            </p>
+
+            <!-- Bloque de Cierre y Firma Institucional -->
+            <div class="signature-box">
+              <div class="signature-text">
+                <p>Responsable del Tratamiento · <strong>LegalDatos Chile</strong></p>
+                <p>Huérfanos 757, oficina 614, Santiago · RUT 17.700.585-1 · <strong>contacto@legaldatos.cl</strong></p>
+                <div class="signature-author">Daniel Manríquez Sansigolo · Abogado Director</div>
+              </div>
+              <a href="/contacto/" class="btn-firm">
+                Ir al Canal de Contacto →
+              </a>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (Intacto con "Santiago") -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <a class="brand" href="/" aria-label="LegalDatos">
+          <img src="https://www.legaldatos.cl/logo-legaldatos.png" width="136" alt="LegalDatos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="brand-fallback" style="display: none;">
+            <span class="brand-mark">LD</span>
+            <span>LegalDatos</span>
+          </div>
+        </a>
+        <p class="desc" style="font-size: 16px;">
+          Nuestra consultora ofrece asesorías a todo tipo de organizaciones en la adopción de mejores prácticas para la protección de datos, integrando la actual normativa de datos personales y compliance de datos en el núcleo de su gobernanza.
+        </p>
+        <a class="link" href="/nosotros/">Nosotros</a>
+      </div>
+
+      <div class="col">
+        <h3 class="title">Nuestros servicios</h3>
+        <a class="link" href="/servicios/">Ver servicios</a>
+        <a class="link" href="/contacto/">Solicitar asesoría</a>
+        <a class="link" href="/publicaciones/">Publicaciones</a>
+      </div>
+
+      <div class="col">
+        <h3 class="title">Datos de contacto</h3>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <a class="link" href="tel:+56968434272">+56 9 6843 4272</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <a class="link" href="mailto:contacto@legaldatos.cl">contacto@legaldatos.cl</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span class="link">Santiago</span>
+        </div>
+
+        <h3 class="title" style="padding-top: 24px;">Redes Sociales</h3>
+        <a class="link" href="https://www.linkedin.com/company/legaldatoscl/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="link" href="https://www.instagram.com/legaldatos" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+
+    <div class="container bottom">
+      <p class="copyright">© 2026 LegalDatos · División de Manríquez Sansigolo Abogados</p>
+      <a class="link" href="/politica-de-privacidad/">Política de Privacidad</a>
+    </div>
+  </footer>
+
+  <!-- Script Menú Móvil -->
+  <script>
+    const menuBtn = document.getElementById("mobile-menu-button");
+    const mobilePanel = document.getElementById("mobile-menu-panel");
+    if (menuBtn && mobilePanel) {
+      const closeMenu = () => {
+        menuBtn.setAttribute("aria-expanded", "false");
+        mobilePanel.setAttribute("hidden", "");
+      };
+      const openMenu = () => {
+        menuBtn.setAttribute("aria-expanded", "true");
+        mobilePanel.removeAttribute("hidden");
+      };
+      menuBtn.addEventListener("click", () => {
+        menuBtn.getAttribute("aria-expanded") === "true" ? closeMenu() : openMenu();
+      });
+      mobilePanel.addEventListener("click", (e) => {
+        if (e.target instanceof Element && e.target.tagName === "A") closeMenu();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+    }
+  </script>
+</body>
+</html>
