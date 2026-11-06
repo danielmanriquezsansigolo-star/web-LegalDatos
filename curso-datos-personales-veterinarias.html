@@ -816,6 +816,101 @@
         grid-template-columns: 1fr;
       }
     }
+    /* ==========================================
+       CONTADOR DINÁMICO DE CUPOS EN VIVO
+       ========================================== */
+    .live-spots-banner {
+      background-color: var(--emerald-light);
+      border: 1px solid #a7f3d0;
+      border-left: 4px solid var(--emerald-event);
+      padding: 14px 18px;
+      margin-bottom: 22px;
+      transition: all 0.3s ease;
+    }
+
+    .live-spots-banner.is-low {
+      background-color: #fffbeb;
+      border-color: #fde68a;
+      border-left-color: #d97706;
+    }
+
+    .live-spots-banner.is-full {
+      background-color: #fef2f2;
+      border-color: #fecaca;
+      border-left-color: #dc2626;
+    }
+
+    .spots-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 13.5px;
+    }
+
+    .spots-status-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      color: var(--emerald-dark);
+    }
+
+    .live-spots-banner.is-low .spots-status-text {
+      color: #92400e;
+    }
+
+    .live-spots-banner.is-full .spots-status-text {
+      color: #991b1b;
+    }
+
+    .pulse-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: var(--emerald-event);
+      box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.2);
+      display: inline-block;
+    }
+
+    .live-spots-banner.is-low .pulse-dot {
+      background-color: #d97706;
+      box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.22);
+    }
+
+    .live-spots-banner.is-full .pulse-dot {
+      background-color: #dc2626;
+      box-shadow: none;
+    }
+
+    .spots-fraction {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink-muted);
+    }
+
+    .spots-progress-track {
+      width: 100%;
+      height: 6px;
+      background-color: rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+    }
+
+    .spots-progress-fill {
+      height: 100%;
+      width: 15%;
+      background-color: var(--emerald-event);
+      transition: width 0.5s ease;
+    }
+
+    .live-spots-banner.is-low .spots-progress-fill {
+      background-color: #d97706;
+    }
+
+    .live-spots-banner.is-full .spots-progress-fill {
+      background-color: #dc2626;
+    }
   </style>
 </head>
 <body>
@@ -920,7 +1015,19 @@
             <span>Registro de Participante</span>
             <h2>Complete sus datos de inscripción</h2>
           </div>
-
+          <!-- CONTADOR EN TIEMPO REAL CONECTADO A GOOGLE SHEETS -->
+          <div id="live-spots-banner" class="live-spots-banner" aria-live="polite">
+            <div class="spots-top-row">
+              <span class="spots-status-text">
+                <span class="pulse-dot"></span>
+                <span id="spots-main-label">Verificando cupos disponibles...</span>
+              </span>
+              <span id="spots-fraction" class="spots-fraction">Capacidad: 30 cupos</span>
+            </div>
+            <div class="spots-progress-track">
+              <div id="spots-progress-fill" class="spots-progress-fill"></div>
+            </div>
+          </div>
           <form id="course-registration-form" class="course-form">
             <div class="form-row-2">
               <div class="form-group">
@@ -951,6 +1058,7 @@
               <label class="checkbox-label" for="reg-politica">
                 <input type="checkbox" id="reg-politica" name="politica" value="SI" required />
                 <span>
+                  
                   He leído y acepto la <button type="button" id="open-policy-modal" class="policy-trigger-btn">Política de Tratamiento de Datos para esta actividad en específico</button>. <strong style="color:#dc2626;">*</strong>
                 </span>
               </label>
@@ -1136,7 +1244,7 @@
     // =========================================================================
     // PEGA AQUÍ LA URL DE TU APPS SCRIPT (terminada en /exec)
     // =========================================================================
-    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwovM6VJQ5VJ7eWIzvMA-D5GKtgaKexAjtXOp7txPFzQ1la-59hnAmEr8iG7tdYbK4ShQ/exec";
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzJEdR97S03LTt_bhC1NsJdavDO5ha3b_d67A8-Gnm5aoV0J2gnog3HCR-JyQWQyeVltQ/exec";
 
     // 1. Menú móvil
     const menuBtn = document.getElementById("mobile-menu-button");
@@ -1269,6 +1377,55 @@
         });
       });
     }
+    // 5. Contador en vivo de cupos disponibles desde Google Sheets
+    async function actualizarCuposDisponibles() {
+      const banner = document.getElementById("live-spots-banner");
+      const mainLabel = document.getElementById("spots-main-label");
+      const fractionLabel = document.getElementById("spots-fraction");
+      const progressFill = document.getElementById("spots-progress-fill");
+      const sidebarLabel = document.getElementById("sidebar-spots-label");
+
+      if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes("PEGA_AQUI")) {
+        if (mainLabel) mainLabel.textContent = "Quedan 25 cupos disponibles";
+        return;
+      }
+
+      try {
+        const res = await fetch(APPS_SCRIPT_URL, { method: "GET" });
+        const data = await res.json();
+
+        const max = data.maxCupos || 30;
+        const disp = typeof data.disponibles === "number" ? data.disponibles : 30;
+        const ocupados = max - disp;
+        const porcentajeOcupado = Math.min(100, Math.max(8, Math.round((ocupados / max) * 100)));
+
+        if (progressFill) progressFill.style.width = `${porcentajeOcupado}%`;
+        if (fractionLabel) fractionLabel.textContent = `${disp} de ${max} disponibles`;
+
+        banner.classList.remove("is-low", "is-full");
+
+        if (disp <= 0) {
+          banner.classList.add("is-full");
+          mainLabel.textContent = "Cupos agotados para esta edición";
+          if (sidebarLabel) sidebarLabel.textContent = "0 disponibles (Agotado)";
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Cupos Agotados";
+          }
+        } else if (disp <= 10) {
+          banner.classList.add("is-low");
+          mainLabel.textContent = disp === 1 ? "¡Último cupo disponible!" : `¡Últimos cupos! Quedan ${disp} cupos disponibles`;
+          if (sidebarLabel) sidebarLabel.textContent = `Quedan ${disp} de ${max} cupos`;
+        } else {
+          mainLabel.textContent = `Quedan ${disp} cupos disponibles`;
+          if (sidebarLabel) sidebarLabel.textContent = `Quedan ${disp} de ${max} cupos`;
+        }
+      } catch (err) {
+        if (mainLabel) mainLabel.textContent = "Inscripciones abiertas · Máximo 30 cupos";
+      }
+    }
+
+    actualizarCuposDisponibles();
   </script>
 </body>
 </html>
