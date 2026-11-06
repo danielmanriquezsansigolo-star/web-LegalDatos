@@ -20,6 +20,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Script de Google reCAPTCHA v2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   <style>
     :root {
       --navy-deep: #0b132b;
@@ -527,6 +530,24 @@
       line-height: 1.6;
     }
 
+    /* Campo Honeypot oculto para bots */
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .recaptcha-wrapper {
+      display: flex;
+      align-items: center;
+      min-height: 78px;
+    }
+
     .privacy-clause {
       background-color: var(--paper-warm);
       border: 1px solid var(--rule-light);
@@ -562,12 +583,17 @@
       padding: 16px 32px;
       border: 1px solid #3b82f6;
       cursor: pointer;
-      transition: background-color 0.2s ease;
+      transition: background-color 0.2s ease, opacity 0.2s ease;
       width: 100%;
     }
 
     .btn-submit:hover {
       background-color: #1e40af;
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
     }
 
     .security-note {
@@ -586,11 +612,22 @@
     .form-status {
       display: none;
       padding: 16px 18px;
+      font-size: 14.5px;
+      font-weight: 500;
+    }
+
+    .form-status.is-success {
+      display: block;
       background-color: #ecfdf5;
       border: 1px solid #10b981;
       color: #065f46;
-      font-size: 14.5px;
-      font-weight: 500;
+    }
+
+    .form-status.is-error {
+      display: block;
+      background-color: #fef2f2;
+      border: 1px solid #ef4444;
+      color: #991b1b;
     }
 
     /* ==========================================
@@ -871,10 +908,12 @@
             Complete sus datos y descríbanos brevemente el requerimiento de su organización. Nos pondremos en contacto con usted a la brevedad.
           </p>
 
-          <form id="legaldatos-contact-form" class="contact-form" action="https://formsubmit.co/contacto@legaldatos.cl" method="POST">
-            <!-- Configuración opcional para envío limpio -->
-            <input type="hidden" name="_subject" value="Nueva consulta web - LegalDatos.cl" />
-            <input type="hidden" name="_captcha" value="false" />
+          <form id="legaldatos-contact-form" class="contact-form">
+            <!-- Honeypot oculto anti-bots -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="website_hp">Deje este campo en blanco</label>
+              <input type="text" id="website_hp" name="website_hp" tabindex="-1" autocomplete="off" />
+            </div>
 
             <div class="field-group">
               <label for="nombre">Nombre <span class="req">*</span></label>
@@ -902,9 +941,14 @@
               <strong>Información sobre el tratamiento de sus datos:</strong> Los datos personales proporcionados en este formulario serán tratados por LegalDatos exclusivamente con la finalidad de responder su consulta y preparar la propuesta de servicios jurídicos solicitada (medidas precontractuales conforme al Art. 13 letra c de la Ley 21.719). Puede revisar nuestra <a href="/politica-de-privacidad/">Política de Privacidad</a>.
             </div>
 
+            <!-- Google reCAPTCHA v2 -->
+            <div class="recaptcha-wrapper">
+              <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_DE_RECAPTCHA_AQUI"></div>
+            </div>
+
             <div class="submit-row">
-              <button type="submit" class="btn-submit">
-                <span>Enviar Mensaje</span>
+              <button type="submit" id="submit-btn" class="btn-submit">
+                <span id="submit-btn-text">Enviar Mensaje</span>
                 <span aria-hidden="true">→</span>
               </button>
 
@@ -917,9 +961,7 @@
               </div>
             </div>
 
-            <div id="form-status" class="form-status" role="status">
-              Su mensaje ha sido preparado correctamente. Muchas gracias por contactar a LegalDatos.
-            </div>
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
           </form>
         </div>
 
@@ -986,8 +1028,9 @@
     </div>
   </footer>
 
-  <!-- Script Menú Móvil -->
+  <!-- Script Menú Móvil + Envío de Formulario a Google Apps Script -->
   <script>
+    // 1. Menú Móvil
     const menuBtn = document.getElementById("mobile-menu-button");
     const mobilePanel = document.getElementById("mobile-menu-panel");
     if (menuBtn && mobilePanel) {
@@ -1007,6 +1050,66 @@
       });
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeMenu();
+      });
+    }
+
+    // 2. Envío del Formulario a Google Sheets y Correo mediante Apps Script
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbym-zpAwW3IRD39S9ptjhhiXEQJOA6NXKRsrFXoSerwg4lhLlmD7wg5NvmPb0vN1lZ0/exec";
+    const contactForm = document.getElementById("legaldatos-contact-form");
+    const submitBtn = document.getElementById("submit-btn");
+    const submitBtnText = document.getElementById("submit-btn-text");
+    const formStatus = document.getElementById("form-status");
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        formStatus.className = "form-status";
+        formStatus.textContent = "";
+
+        // Validar que el usuario haya marcado el reCAPTCHA (si está configurado)
+        const recaptchaBox = document.querySelector(".g-recaptcha");
+        const siteKey = recaptchaBox ? recaptchaBox.getAttribute("data-sitekey") : "";
+        if (typeof grecaptcha !== "undefined" && siteKey && siteKey !== "TU_SITE_KEY_DE_RECAPTCHA_AQUI") {
+          const recaptchaResponse = grecaptcha.getResponse();
+          if (!recaptchaResponse) {
+            formStatus.className = "form-status is-error";
+            formStatus.textContent = "Por favor, marque la casilla 'No soy un robot' antes de enviar.";
+            return;
+          }
+        }
+
+        // Estado de carga en el botón
+        submitBtn.disabled = true;
+        submitBtnText.textContent = "Enviando consulta...";
+
+        try {
+          const formData = new FormData(contactForm);
+          const urlEncodedData = new URLSearchParams(formData);
+
+          const response = await fetch(SCRIPT_URL, {
+            method: "POST",
+            body: urlEncodedData
+          });
+
+          const result = await response.json();
+
+          if (result.result === "success") {
+            formStatus.className = "form-status is-success";
+            formStatus.textContent = "Su mensaje ha sido recibido correctamente. Nuestro equipo jurídico se pondrá en contacto con usted a la brevedad.";
+            contactForm.reset();
+            if (typeof grecaptcha !== "undefined" && siteKey !== "TU_SITE_KEY_DE_RECAPTCHA_AQUI") {
+              grecaptcha.reset();
+            }
+          } else {
+            throw new Error(result.message || "Error al procesar el envío.");
+          }
+        } catch (error) {
+          formStatus.className = "form-status is-error";
+          formStatus.textContent = "Hubo un inconveniente al enviar el formulario. Por favor, intente nuevamente o escríbanos directamente a contacto@legaldatos.cl.";
+        } finally {
+          submitBtn.disabled = false;
+          submitBtnText.textContent = "Enviar Mensaje";
+        }
       });
     }
   </script>
