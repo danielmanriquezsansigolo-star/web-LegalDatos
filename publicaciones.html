@@ -245,9 +245,17 @@
       margin-bottom: 22px;
     }
 
-    .publications-hero h1 em {
+    .publications-hero h1 em,
+    .services-hero h1 em,
+    h1 em {
       font-style: italic;
-      color: #93c5fd;
+      background: linear-gradient(90deg, #5b9dff 0%, #8388ff 35%, #a87ffb 70%, #cc78ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      display: inline-block;
+      padding-right: 0.08em; /* Evita que la última letra en cursiva se corte */
     }
 
     .publications-hero-lead {
@@ -884,7 +892,7 @@
         <div>
           <span class="firm-kicker">Análisis Jurídico y Actualidad Normativa</span>
           <h1>
-            Publicaciones, artículos y <em>seminarios.</em>
+            Publicaciones, artículos y <em>eventos</em>
           </h1>
           <p class="publications-hero-lead">
             Compartimos nuestro criterio legal sobre la implementación práctica de la Ley N° 21.719, análisis de casos reales en empresas chilenas, guías sobre bases de licitud y convocatorias a nuestros próximos webinars sectoriales.
