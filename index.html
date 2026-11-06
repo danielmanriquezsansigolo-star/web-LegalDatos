@@ -37,6 +37,23 @@
       
       --rule-solid: #cbd5e1;
       --rule-light: #e2e8f0;
+
+      /* Paleta de 4 colores extraída del degradado de la palabra "Datos" del logo */
+      --datos-1-accent: #4f8ef7; /* Azul cielo de la "D" */
+      --datos-1-bg: rgba(226, 238, 255, 0.82);
+      --datos-1-border: rgba(79, 142, 247, 0.42);
+
+      --datos-2-accent: #737df9; /* Azul índigo de la "a" */
+      --datos-2-bg: rgba(233, 234, 255, 0.82);
+      --datos-2-border: rgba(115, 125, 249, 0.42);
+
+      --datos-3-accent: #966ffb; /* Índigo-violeta de la "t" / "o" */
+      --datos-3-bg: rgba(241, 232, 255, 0.82);
+      --datos-3-border: rgba(150, 111, 251, 0.42);
+
+      --datos-4-accent: #b565fc; /* Lavanda-púrpura de la "s" */
+      --datos-4-bg: rgba(247, 230, 255, 0.82);
+      --datos-4-border: rgba(181, 101, 252, 0.42);
       
       --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -80,7 +97,7 @@
     }
 
     /* ==========================================
-       HEADER (Intacto según tu requerimiento)
+       HEADER (Intacto)
        ========================================== */
     .site-header {
       position: sticky;
@@ -210,7 +227,6 @@
 
     /* ==========================================
        1. APERTURA DE ESTUDIO JURÍDICO (HERO)
-       Diseño editorial sobrio, sin cajas "SaaS"
        ========================================== */
     .law-hero {
       background-color: var(--navy-deep);
@@ -303,18 +319,15 @@
       border-color: var(--white);
     }
 
-    /* Columna derecha del Hero: Nota del Estudio (Estilo Dictamen) */
     .law-hero-aside {
       border-left: 1px solid rgba(255, 255, 255, 0.18);
       padding-left: 36px;
     }
 
     .aside-label {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #94a3b8;
+      font-size: 14px;
+      font-weight: 600;
+      color: #cbd5e1;
       margin-bottom: 14px;
       display: block;
     }
@@ -336,18 +349,15 @@
     }
 
     .aside-meta {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: #7dd3fc;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      font-size: 14px;
+      font-weight: 600;
+      color: #cbd5e1;
       padding-top: 16px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     /* ==========================================
        2. PREMISA DEL ESTUDIO: CAPACITACIÓN Y CULTURA
-       Por qué partimos educando a la Mediana Empresa
        ========================================== */
     .premise-band {
       background-color: var(--white);
@@ -368,11 +378,9 @@
     }
 
     .premise-kicker {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--blue-brand);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy-primary);
       display: block;
       margin-bottom: 8px;
     }
@@ -423,171 +431,351 @@
     }
 
     /* ==========================================
-       3. LA RUTA DE IMPLEMENTACIÓN (LOS 4 PASOS)
-       Diseño editorial tipo Dossier / Guía Legal
+       3. NUEVA RUTA INTERACTIVA HORIZONTAL (4 CAJAS DE IZQUIERDA A DERECHA)
+       Con la paleta cromática de "Datos" al 80% y despliegue al hacer clic
        ========================================== */
     .roadmap-section {
-      padding: 88px 0;
+      padding: 76px 0 84px;
       background-color: var(--paper-bg);
+      position: relative;
     }
 
     .roadmap-intro {
-      max-width: 780px;
-      margin-bottom: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .roadmap-intro-left {
+      max-width: 680px;
     }
 
     .section-index {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--blue-brand);
-      margin-bottom: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy-primary);
+      margin-bottom: 10px;
       display: block;
     }
 
     .roadmap-intro h2 {
       font-family: var(--font-serif);
-      font-size: clamp(32px, 3.8vw, 44px);
+      font-size: clamp(30px, 3.6vw, 42px);
       font-weight: 500;
       line-height: 1.15;
       color: var(--navy-deep);
-      margin-bottom: 20px;
+      margin-bottom: 14px;
     }
 
     .roadmap-intro p {
-      font-size: 17px;
-      color: var(--ink-body);
-      line-height: 1.7;
-    }
-
-    /* Estructura de cada Paso */
-    .step-dossier {
-      border-top: 2px solid var(--navy-deep);
-      padding: 48px 0 56px;
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 56px;
-    }
-
-    .step-dossier:last-child {
-      border-bottom: 2px solid var(--navy-deep);
-    }
-
-    .step-sidebar {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .step-number {
-      font-family: var(--font-serif);
-      font-size: 56px;
-      line-height: 1;
-      font-weight: 400;
-      color: var(--blue-brand);
-      margin-bottom: 12px;
-    }
-
-    .step-stage-tag {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--ink-muted);
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .step-sidebar-note {
-      margin-top: 24px;
-      padding-top: 16px;
-      border-top: 1px solid var(--rule-solid);
-      font-size: 13px;
-      color: var(--ink-muted);
-      line-height: 1.55;
-    }
-
-    .step-sidebar-note strong {
-      display: block;
-      color: var(--ink-dark);
-      font-family: var(--font-mono);
-      font-size: 11px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-
-    .step-main h3 {
-      font-family: var(--font-serif);
-      font-size: 30px;
-      font-weight: 500;
-      color: var(--navy-deep);
-      line-height: 1.25;
-      margin-bottom: 18px;
-    }
-
-    .step-main > p {
       font-size: 16.5px;
       color: var(--ink-body);
-      line-height: 1.75;
-      margin-bottom: 24px;
-      max-width: 72ch;
+      line-height: 1.65;
     }
 
-    /* Elementos explicativos internos de cada paso */
-    .legal-sheet {
+    .roadmap-hint {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--navy-muted);
       background-color: var(--white);
       border: 1px solid var(--rule-solid);
-      padding: 28px 32px;
-      margin-top: 24px;
-    }
-
-    .legal-sheet-header {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--navy-primary);
-      border-bottom: 1px solid var(--rule-light);
-      padding-bottom: 12px;
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      padding: 10px 16px;
+      display: inline-flex;
+      align-items: center;
       gap: 8px;
     }
 
-    /* Tabla de anatomía del RAT (Paso 1) */
-    .rat-columns {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+    .roadmap-hint-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, var(--datos-1-accent), var(--datos-4-accent));
+      display: inline-block;
     }
 
-    .rat-item h4 {
+    /* Grilla de 4 columnas de izquierda a derecha en PC */
+    .steps-horizontal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    /* Tarjeta individual de cada paso */
+    .step-card {
+      appearance: none;
+      -webkit-appearance: none;
+      text-align: left;
+      width: 100%;
+      font-family: var(--font-sans);
+      cursor: pointer;
+      padding: 28px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 295px;
+      position: relative;
+      backdrop-filter: blur(8px);
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                  box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                  background-color 0.25s ease,
+                  border-color 0.25s ease;
+    }
+
+    /* Paleta de 4 colores del logo "Datos" al ~80% de transparencia */
+    .step-card[data-step="1"] {
+      background-color: var(--datos-1-bg);
+      border: 1px solid var(--datos-1-border);
+      border-top: 5px solid var(--datos-1-accent);
+      --card-accent: var(--datos-1-accent);
+    }
+
+    .step-card[data-step="2"] {
+      background-color: var(--datos-2-bg);
+      border: 1px solid var(--datos-2-border);
+      border-top: 5px solid var(--datos-2-accent);
+      --card-accent: var(--datos-2-accent);
+    }
+
+    .step-card[data-step="3"] {
+      background-color: var(--datos-3-bg);
+      border: 1px solid var(--datos-3-border);
+      border-top: 5px solid var(--datos-3-accent);
+      --card-accent: var(--datos-3-accent);
+    }
+
+    .step-card[data-step="4"] {
+      background-color: var(--datos-4-bg);
+      border: 1px solid var(--datos-4-border);
+      border-top: 5px solid var(--datos-4-accent);
+      --card-accent: var(--datos-4-accent);
+    }
+
+    /* Movimiento físico al pasar el cursor (Hover) y estado Activo */
+    .step-card:hover {
+      transform: translateY(-9px);
+      box-shadow: 0 20px 34px -14px rgba(11, 19, 43, 0.16);
+    }
+
+    .step-card.is-active {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 38px -12px rgba(11, 19, 43, 0.22);
+      border-color: var(--navy-deep);
+    }
+
+    /* Indicador inferior cuando la tarjeta está desplegada */
+    .step-card.is-active::after {
+      content: "";
+      position: absolute;
+      bottom: -21px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 10px 10px 0 10px;
+      border-style: solid;
+      border-color: var(--navy-deep) transparent transparent transparent;
+      z-index: 5;
+    }
+
+    .step-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+
+    .step-card-num {
+      font-family: var(--font-serif);
+      font-size: 46px;
+      line-height: 1;
+      font-weight: 500;
+      color: var(--navy-deep);
+      transition: transform 0.25s ease;
+    }
+
+    .step-card:hover .step-card-num {
+      transform: translateX(3px);
+    }
+
+    .step-card-tag {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy-primary);
+      background-color: rgba(255, 255, 255, 0.72);
+      padding: 4px 10px;
+      border: 1px solid rgba(11, 19, 43, 0.1);
+    }
+
+    .step-card-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.24;
+      color: var(--navy-deep);
+      margin-bottom: 10px;
+    }
+
+    .step-card-summary {
       font-size: 14px;
+      color: var(--ink-body);
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+
+    .step-card-footer {
+      padding-top: 14px;
+      border-top: 1px solid rgba(11, 19, 43, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
       font-weight: 700;
       color: var(--navy-deep);
+      width: 100%;
+    }
+
+    .step-card-toggle-icon {
+      width: 26px;
+      height: 26px;
+      background-color: var(--white);
+      border: 1px solid rgba(11, 19, 43, 0.2);
+      display: inline-grid;
+      place-items: center;
+      font-size: 15px;
+      line-height: 1;
+      transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .step-card.is-active .step-card-toggle-icon {
+      background-color: var(--navy-deep);
+      color: var(--white);
+      transform: rotate(45deg);
+    }
+
+    /* ==========================================
+       CONTENEDOR DESPLEGABLE DEL PASO SELECCIONADO
+       ========================================== */
+    .step-drawer-wrapper {
+      margin-top: 20px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .step-drawer-wrapper[hidden] {
+      display: none;
+    }
+
+    .step-drawer-panel {
+      background-color: var(--white);
+      border: 1px solid var(--rule-solid);
+      border-top: 4px solid var(--navy-deep);
+      padding: 40px 44px;
+      box-shadow: 0 20px 42px -18px rgba(11, 19, 43, 0.14);
+      animation: drawerFadeIn 0.26s ease-out;
+    }
+
+    @keyframes drawerFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      padding-bottom: 22px;
+      margin-bottom: 26px;
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    .drawer-kicker {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue-brand);
+      display: block;
       margin-bottom: 6px;
     }
 
-    .rat-item p {
-      font-size: 13.5px;
-      color: var(--ink-body);
-      line-height: 1.55;
+    .drawer-header h3 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--navy-deep);
+      line-height: 1.22;
     }
 
-    /* Cuadro Comparativo Paso 2: Política de Tratamiento vs Política de Privacidad */
+    .drawer-close-btn {
+      background-color: var(--paper-bg);
+      border: 1px solid var(--rule-solid);
+      color: var(--ink-dark);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background-color 0.2s ease;
+    }
+
+    .drawer-close-btn:hover {
+      background-color: var(--rule-light);
+    }
+
+    .drawer-lead {
+      font-size: 16px;
+      color: var(--ink-body);
+      line-height: 1.75;
+      margin-bottom: 24px;
+      max-width: 82ch;
+    }
+
+    .drawer-lead strong {
+      color: var(--ink-dark);
+      font-weight: 700;
+    }
+
+    /* Sub-estructuras dentro del desplegable */
+    .rat-columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      background-color: var(--paper-bg);
+      border: 1px solid var(--rule-solid);
+      padding: 26px 28px;
+    }
+
+    .rat-item h4 {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+    }
+
+    .rat-item p {
+      font-size: 14px;
+      color: var(--ink-body);
+      line-height: 1.6;
+    }
+
     .comparison-table {
       display: grid;
       grid-template-columns: 1fr 1fr;
       border: 1px solid var(--rule-solid);
-      background-color: var(--white);
-      margin-top: 24px;
+      background-color: var(--paper-bg);
     }
 
     .comparison-col {
-      padding: 28px 32px;
+      padding: 26px 30px;
     }
 
     .comparison-col:first-child {
@@ -595,13 +783,11 @@
     }
 
     .comp-badge {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      font-size: 13px;
+      font-weight: 700;
       color: var(--blue-brand);
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .comparison-col h4 {
@@ -609,26 +795,26 @@
       font-size: 22px;
       font-weight: 600;
       color: var(--navy-deep);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .comparison-col p {
       font-size: 14.5px;
       color: var(--ink-body);
       line-height: 1.6;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .comp-list {
       list-style: none;
-      border-top: 1px solid var(--rule-light);
-      padding-top: 14px;
+      border-top: 1px solid var(--rule-solid);
+      padding-top: 12px;
     }
 
     .comp-list li {
       font-size: 13.5px;
       color: var(--ink-dark);
-      padding: 5px 0;
+      padding: 4px 0;
       display: flex;
       gap: 10px;
     }
@@ -640,16 +826,14 @@
       font-weight: 700;
     }
 
-    /* Lista Contractual Paso 3 */
     .contract-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
-      margin-top: 24px;
     }
 
     .contract-box {
-      background-color: var(--white);
+      background-color: var(--paper-bg);
       border: 1px solid var(--rule-solid);
       padding: 26px 28px;
     }
@@ -663,57 +847,26 @@
     }
 
     .contract-box p {
-      font-size: 14px;
+      font-size: 14.5px;
       color: var(--ink-body);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    /* Ecuación de Riesgo Paso 4 */
     .risk-formula-sheet {
       background-color: var(--navy-deep);
       color: var(--white);
-      padding: 32px 36px;
-      margin-top: 24px;
+      padding: 30px 34px;
     }
 
     .risk-formula-title {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 22px;
-      font-weight: 400;
+      font-size: 21px;
       color: #ffffff;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       padding-bottom: 12px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
       display: block;
-    }
-
-    /* Corrección automática para quitar el estilo "IA/Computador" a los demás subtítulos */
-    .aside-label,
-    .aside-meta,
-    .premise-kicker,
-    .section-index,
-    .step-stage-tag,
-    .legal-sheet-header,
-    .comp-badge,
-    .case-item span {
-      font-family: var(--font-sans) !important;
-      text-transform: none !important;
-      letter-spacing: normal !important;
-      font-size: 14px !important;
-      font-weight: 600 !important;
-    }
-
-    .aside-label,
-    .aside-meta {
-      color: #cbd5e1 !important;
-    }
-
-    .premise-kicker,
-    .section-index,
-    .comp-badge,
-    .case-item span {
-      color: var(--navy-primary) !important;
     }
 
     .risk-equation {
@@ -721,23 +874,27 @@
       grid-template-columns: 1fr auto 1fr auto 1.2fr;
       gap: 18px;
       align-items: center;
-      padding-bottom: 24px;
+      padding-bottom: 22px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .risk-term h5 {
       font-family: var(--font-serif);
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 400;
       color: var(--white);
       margin-bottom: 4px;
     }
 
     .risk-term p {
-      font-size: 13px;
+      font-size: 13.5px;
       color: #cbd5e1;
       line-height: 1.5;
+    }
+
+    .risk-term p strong {
+      color: #93c5fd;
     }
 
     .risk-operator {
@@ -763,7 +920,6 @@
 
     /* ==========================================
        4. POR QUÉ NO DELEGAR ESTO A LA IA O PLANTILLAS
-       Posicionamiento directo de Abogado Experto
        ========================================== */
     .criterio-section {
       background-color: var(--white);
@@ -804,11 +960,9 @@
     }
 
     .case-item span {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--blue-brand);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy-primary);
       display: block;
       margin-bottom: 6px;
     }
@@ -874,8 +1028,12 @@
       margin-top: 6px;
     }
 
+    .consultation-meta strong {
+      color: #93c5fd;
+    }
+
     /* ==========================================
-       FOOTER (Intacto según tu requerimiento)
+       FOOTER (Intacto)
        ========================================== */
     .site-footer {
       background: #070d1f;
@@ -949,11 +1107,19 @@
     /* ==========================================
        RESPONSIVE
        ========================================== */
+    @media (max-width: 1040px) {
+      .steps-horizontal-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .step-card.is-active::after {
+        display: none;
+      }
+    }
+
     @media (max-width: 980px) {
       .law-hero-grid,
       .premise-layout,
       .premise-content-col,
-      .step-dossier,
       .criterio-grid,
       .consultation-box {
         grid-template-columns: 1fr;
@@ -1008,12 +1174,21 @@
       .menu-button {
         display: inline-flex;
       }
+      .steps-horizontal-grid {
+        grid-template-columns: 1fr;
+      }
+      .step-drawer-panel {
+        padding: 28px 22px;
+      }
+      .drawer-header {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER (Conservado con rutas limpias para Cloudflare) -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="LegalDatos">
@@ -1072,10 +1247,9 @@
     <section class="law-hero">
       <div class="container law-hero-grid">
         <div>
-          <span class="firm-kicker">Asesoría legal en protección de datos personales</span>          <h1>
-          
+          <span class="firm-kicker">Asesoría legal en protección de datos personales</span>
           <h1>
-            Somos una Consultora que adapta Organizaciones en <em> la nueva Cultura de Datos Personales.</em>
+            Somos una Consultora que adapta Organizaciones en <em>la nueva Cultura de Datos Personales.</em>
           </h1>
           <p class="law-hero-lead">
             Donde hay una persona natural —cliente, paciente, alumno o trabajador—, hay tratamiento de datos personales. Acompañamos a <strong>medianas empresas en Chile</strong> a implementar su sistema de cumplimiento paso a paso: desde la capacitación a su equipo y el levantamiento del inventario de datos, hasta la redacción de sus políticas, contratos y matriz de mitigación de riesgos.
@@ -1124,87 +1298,149 @@
       </div>
     </section>
 
-    <!-- 3. LOS 4 PASOS QUE DEBES TENER EN CUENTA (NÚCLEO EXPLICATIVO) -->
+    <!-- 3. LOS 4 PASOS DE IZQUIERDA A DERECHA (CON DESPLIEGUE INTERACTIVO) -->
     <section id="ruta-implementacion" class="roadmap-section">
       <div class="container">
         <div class="roadmap-intro">
-          <span class="section-index">Metodología Jurídica Paso a Paso</span>
-          <h2>Los 4 pasos que debe tener en cuenta para implementar la ley en su empresa</h2>
-          <p>
-            Muchos negocios cometen el error de empezar por el final: quieren publicar un aviso en su web sin haber mapeado antes qué datos recolectan ni qué proveedores intervienen. En nuestro estudio trabajamos por hitos secuenciales donde cada etapa sustenta legalmente a la siguiente.
-          </p>
+          <div class="roadmap-intro-left">
+            <span class="section-index">Metodología Jurídica Paso a Paso</span>
+            <h2>Los 4 pasos para implementar la ley en su empresa</h2>
+            <p>
+              Trabajamos por hitos secuenciales donde cada etapa sustenta legalmente a la siguiente. Seleccione cualquiera de los cuatro bloques para desplegar su alcance jurídico:
+            </p>
+          </div>
+          <div class="roadmap-hint">
+            <span class="roadmap-hint-dot"></span>
+            <span>Haga clic en cada etapa para desplegar el detalle</span>
+          </div>
         </div>
 
-        <!-- PASO 1: EL RAT -->
-        <article class="step-dossier">
-          <div class="step-sidebar">
+        <!-- FILA HORIZONTAL DE 4 CAJAS (PC: Izquierda a Derecha) -->
+        <div class="steps-horizontal-grid" role="tablist" aria-label="Pasos de implementación">
+          
+          <!-- CAJA 1 -->
+          <button type="button" class="step-card is-active" data-step="1" role="tab" aria-selected="true" aria-controls="drawer-step-1">
             <div>
-              <div class="step-number">01.</div>
-              <span class="step-stage-tag">El Cimiento Obligatorio</span>
-            </div>
-            <div class="step-sidebar-note">
-              <strong>Regla de oro jurídica</strong>
-              Sin un Registro de Actividades de Tratamiento (RAT) previo, es imposible construir un sistema de compliance ni redactar una política correcta.
-            </div>
-          </div>
-
-          <div class="step-main">
-            <h3>Levantamiento del Registro de Actividades de Tratamiento (RAT)</h3>
-            <p>
-              Tratar un dato personal es cualquier operación que su empresa realice con él: recolectarlo en un formulario, guardarlo en un Excel, subirlo a un CRM en la nube, comunicarlo o suprimirlo. Lo primero que hacemos como abogados es sentarnos con usted a levantar el <strong>inventario exhaustivo de cada actividad de tratamiento</strong> de su organización.
-            </p>
-            <p>
-              Para que cada actividad sea lícita ante la Agencia de Protección de Datos Personales, en el RAT determinamos y justificamos jurídicamente:
-            </p>
-
-            <div class="legal-sheet">
-              <div class="legal-sheet-header">
-                <span>Estructura Técnica del RAT que elaboramos en el Estudio</span>
-                <span>Art. 14 ter y Bases de Licitud Ley 21.719</span>
+              <div class="step-card-top">
+                <span class="step-card-num">01.</span>
+                <span class="step-card-tag">El Cimiento</span>
               </div>
-              <div class="rat-columns">
-                <div class="rat-item">
-                  <h4>1. Categoría de Datos y Finalidad</h4>
-                  <p>Distinguimos entre datos de simple identificación (nombre, RUT, correo, domicilio) y datos personales sensibles (salud, biometría), acotando su recolección estrictamente a la finalidad del servicio.</p>
-                </div>
-                <div class="rat-item">
-                  <h4>2. Base de Licitud y Test LIA</h4>
-                  <p>El consentimiento es revocable en cualquier momento. Por eso evaluamos qué tratamientos se amparan en la ejecución de un contrato, obligación legal, defensa judicial o <strong>Interés Legítimo</strong> (realizando el respectivo Test de Ponderación LIA).</p>
-                </div>
-                <div class="rat-item">
-                  <h4>3. Destino, Nube y Conservación</h4>
-                  <p>Mapeamos en qué servidores residen los datos, si existen transferencias internacionales (Google Workspace, AWS, softwares extranjeros) y fijamos plazos legales de retención, supresión o anonimización (ej. prescripción de 5 años).</p>
-                </div>
-              </div>
+              <h3 class="step-card-title">Levantamiento del RAT</h3>
+              <p class="step-card-summary">
+                Inventario exhaustivo de cada actividad de tratamiento, bases de licitud, plazos y Test de Interés Legítimo (LIA).
+              </p>
             </div>
-          </div>
-        </article>
+            <div class="step-card-footer">
+              <span class="step-action-label">Ocultar detalle</span>
+              <span class="step-card-toggle-icon">+</span>
+            </div>
+          </button>
 
-        <!-- PASO 2: POLÍTICA DE TRATAMIENTO VS POLÍTICA DE PRIVACIDAD -->
-        <article class="step-dossier">
-          <div class="step-sidebar">
+          <!-- CAJA 2 -->
+          <button type="button" class="step-card" data-step="2" role="tab" aria-selected="false" aria-controls="drawer-step-2">
             <div>
-              <div class="step-number">02.</div>
-              <span class="step-stage-tag">Arquitectura Normativa</span>
+              <div class="step-card-top">
+                <span class="step-card-num">02.</span>
+                <span class="step-card-tag">Gobernanza</span>
+              </div>
+              <h3 class="step-card-title">Políticas de Tratamiento y Privacidad</h3>
+              <p class="step-card-summary">
+                Redacción diferenciada de su norma interna de manejo de datos y su declaración pública del Art. 14 ter.
+              </p>
             </div>
-            <div class="step-sidebar-note">
-              <strong>Distinción clave</strong>
-              La Política de Tratamiento de Datos y la Política de Privacidad no son lo mismo ni cumplen la misma función legal.
+            <div class="step-card-footer">
+              <span class="step-action-label">Ver detalle jurídico</span>
+              <span class="step-card-toggle-icon">+</span>
             </div>
-          </div>
+          </button>
 
-          <div class="step-main">
-            <h3>Desarrollo de la Política de Tratamiento de Datos y de la Política de Privacidad</h3>
-            <p>
-              Una vez terminado el RAT —y solo cuando ya sabemos con exactitud qué hace su empresa con cada dato—, redactamos el cuerpo normativo. Aquí corregimos una confusión habitual en el mercado diferenciando los dos instrumentos que su empresa necesita:
+          <!-- CAJA 3 -->
+          <button type="button" class="step-card" data-step="3" role="tab" aria-selected="false" aria-controls="drawer-step-3">
+            <div>
+              <div class="step-card-top">
+                <span class="step-card-num">03.</span>
+                <span class="step-card-tag">Blindaje Legal</span>
+              </div>
+              <h3 class="step-card-title">Adaptación de Contratos y DPA</h3>
+              <p class="step-card-summary">
+                Contratos de Encargo de Tratamiento (DPA) con proveedores tecnológicos, anexos laborales y Reglamento Interno.
+              </p>
+            </div>
+            <div class="step-card-footer">
+              <span class="step-action-label">Ver detalle jurídico</span>
+              <span class="step-card-toggle-icon">+</span>
+            </div>
+          </button>
+
+          <!-- CAJA 4 -->
+          <button type="button" class="step-card" data-step="4" role="tab" aria-selected="false" aria-controls="drawer-step-4">
+            <div>
+              <div class="step-card-top">
+                <span class="step-card-num">04.</span>
+                <span class="step-card-tag">Accountability</span>
+              </div>
+              <h3 class="step-card-title">Matriz de Riesgos y Mitigación</h3>
+              <p class="step-card-summary">
+                Medición de probabilidad e impacto, controles de mitigación, protocolo ARSOP+ y Evaluaciones de Impacto (EIPD).
+              </p>
+            </div>
+            <div class="step-card-footer">
+              <span class="step-action-label">Ver detalle jurídico</span>
+              <span class="step-card-toggle-icon">+</span>
+            </div>
+          </button>
+
+        </div>
+
+        <!-- PANELES DESPLEGABLES (SE MUESTRA EL PASO ACTIVO AL PRESIONAR) -->
+        <div id="step-drawer-container" class="step-drawer-wrapper">
+          
+          <!-- DETALLE PASO 01 -->
+          <article id="drawer-step-1" class="step-drawer-panel" data-panel="1" role="tabpanel">
+            <div class="drawer-header">
+              <div>
+                <span class="drawer-kicker">Paso 01 · El Cimiento Obligatorio (Sin RAT previo es imposible redactar políticas reales)</span>
+                <h3>Levantamiento del Registro de Actividades de Tratamiento (RAT)</h3>
+              </div>
+              <button type="button" class="drawer-close-btn" data-close-drawer>Cerrar ✕</button>
+            </div>
+            <p class="drawer-lead">
+              Tratar un dato personal es cualquier operación que su empresa realice con él: recolectarlo en un formulario, guardarlo en un Excel, subirlo a un CRM en la nube, comunicarlo o suprimirlo. Lo primero que hacemos como abogados es sentarnos con usted a levantar el <strong>inventario exhaustivo de cada actividad de tratamiento</strong> de su organización y justificar su licitud ante la Agencia:
             </p>
+            <div class="rat-columns">
+              <div class="rat-item">
+                <h4>1. Categoría de Datos y Finalidad</h4>
+                <p>Distinguimos entre datos de simple identificación (nombre, RUT, correo, domicilio) y datos personales sensibles (salud, biometría), acotando su recolección estrictamente a la finalidad del servicio.</p>
+              </div>
+              <div class="rat-item">
+                <h4>2. Base de Licitud y Test LIA</h4>
+                <p>El consentimiento es revocable en cualquier momento. Por eso evaluamos qué tratamientos se amparan en la ejecución de un contrato, obligación legal, defensa judicial o <strong>Interés Legítimo</strong> (realizando el respectivo Test de Ponderación LIA).</p>
+              </div>
+              <div class="rat-item">
+                <h4>3. Destino, Nube y Conservación</h4>
+                <p>Mapeamos en qué servidores residen los datos, si existen transferencias internacionales (Google Workspace, AWS, softwares extranjeros) y fijamos plazos legales de retención, supresión o anonimización (ej. prescripción de 5 años).</p>
+              </div>
+            </div>
+          </article>
 
+          <!-- DETALLE PASO 02 -->
+          <article id="drawer-step-2" class="step-drawer-panel" data-panel="2" role="tabpanel" hidden>
+            <div class="drawer-header">
+              <div>
+                <span class="drawer-kicker">Paso 02 · Arquitectura Normativa (Distinción clave entre norma interna y aviso público)</span>
+                <h3>Desarrollo de la Política de Tratamiento de Datos y de la Política de Privacidad</h3>
+              </div>
+              <button type="button" class="drawer-close-btn" data-close-drawer>Cerrar ✕</button>
+            </div>
+            <p class="drawer-lead">
+              Una vez terminado el RAT —y solo cuando ya sabemos con exactitud qué hace su empresa con cada dato—, redactamos el cuerpo normativo diferenciando los dos instrumentos que su organización necesita:
+            </p>
             <div class="comparison-table">
               <div class="comparison-col">
                 <span class="comp-badge">Instrumento de Gobernanza Interna</span>
                 <h4>Política de Tratamiento de Datos</h4>
                 <p>
-                  Es la norma interna de su organización. Regula cómo la empresa se hace cargo puertas adentro de los datos personales de todos los sujetos con los que interactúa: clientes, trabajadores, postulantes y proveedores.
+                  Es la norma interna de su organización. Regula cómo la empresa se hace cargo puertas adentro de los datos personales de clientes, trabajadores, postulantes y proveedores.
                 </p>
                 <ul class="comp-list">
                   <li>Protocolos de confidencialidad y prohibiciones para el personal.</li>
@@ -1212,12 +1448,11 @@
                   <li>Procedimiento de destrucción o anonimización cumplido el plazo legal.</li>
                 </ul>
               </div>
-
               <div class="comparison-col">
-                <span class="comp-badge">Declaración Pública al Titular (Deber de Transparencia)</span>
+                <span class="comp-badge">Declaración Pública al Titular (Art. 14 ter)</span>
                 <h4>Política de Privacidad</h4>
                 <p>
-                  Es la manifestación pública hacia el usuario o cliente (publicada permanentemente en su sitio web con control de versión y fecha). No expone sus procesos laborales internos, sino que garantiza la autodeterminación informativa del titular.
+                  Es la manifestación pública hacia el usuario o cliente (publicada permanentemente en su sitio web con control de versión y fecha) que garantiza la autodeterminación informativa del titular.
                 </p>
                 <ul class="comp-list">
                   <li>Identificación del responsable, finalidades y bases de licitud del RAT.</li>
@@ -1226,28 +1461,20 @@
                 </ul>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- PASO 3: REVISIÓN Y ADAPTACIÓN DE CONTRATOS -->
-        <article class="step-dossier">
-          <div class="step-sidebar">
-            <div>
-              <div class="step-number">03.</div>
-              <span class="step-stage-tag">Blindaje frente a Terceros y Personal</span>
+          <!-- DETALLE PASO 03 -->
+          <article id="drawer-step-3" class="step-drawer-panel" data-panel="3" role="tabpanel" hidden>
+            <div class="drawer-header">
+              <div>
+                <span class="drawer-kicker">Paso 03 · Blindaje frente a Terceros y Personal (Art. 15 bis Ley 21.719)</span>
+                <h3>Revisión y adaptación de los Contratos de la Empresa</h3>
+              </div>
+              <button type="button" class="drawer-close-btn" data-close-drawer>Cerrar ✕</button>
             </div>
-            <div class="step-sidebar-note">
-              <strong>Responsabilidad Legal</strong>
-              Si su proveedor de software sufre una brecha o usa mal los datos de sus clientes, el responsable ante la ley sigue siendo usted.
-            </div>
-          </div>
-
-          <div class="step-main">
-            <h3>Revisión y adaptación de los Contratos de la Empresa</h3>
-            <p>
-              Las políticas no bastan si los vínculos jurídicos con quienes acceden a sus bases de datos están desprotegidos. En esta tercera etapa auditamos y redactamos la documentación contractual en dos frentes críticos:
+            <p class="drawer-lead">
+              Si su proveedor de software sufre una brecha o usa mal los datos de sus clientes, el responsable ante la ley sigue siendo usted. Auditamos y redactamos la documentación contractual en dos frentes críticos:
             </p>
-
             <div class="contract-grid">
               <div class="contract-box">
                 <h4>Contratos de Encargo de Tratamiento (DPA) con Proveedores</h4>
@@ -1255,7 +1482,6 @@
                   Cuando usted utiliza un software de agendamiento, un ERP, un sistema contable o almacenamiento en la nube, ese tercero actúa como <strong>Encargado o Mandatario</strong> por cuenta suya. Exigimos, revisamos y negociamos los contratos <em>Data Processing Agreement (DPA)</em> para asegurar que cumplan el estándar chileno y delimitar la responsabilidad civil si el proveedor incumple.
                 </p>
               </div>
-
               <div class="contract-box">
                 <h4>Contratos de Trabajo y Reglamento Interno (RIOHS)</h4>
                 <p>
@@ -1263,31 +1489,22 @@
                 </p>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- PASO 4: MATRIZ DE RIESGOS Y MITIGACIÓN -->
-        <article class="step-dossier">
-          <div class="step-sidebar">
-            <div>
-              <div class="step-number">04.</div>
-              <span class="step-stage-tag">Prevención y Responsabilidad Proactiva</span>
+          <!-- DETALLE PASO 04 -->
+          <article id="drawer-step-4" class="step-drawer-panel" data-panel="4" role="tabpanel" hidden>
+            <div class="drawer-header">
+              <div>
+                <span class="drawer-kicker">Paso 04 · Prevención y Responsabilidad Proactiva (Accountability)</span>
+                <h3>Mecanismos de prevención, medición de riesgo residual y mitigación</h3>
+              </div>
+              <button type="button" class="drawer-close-btn" data-close-drawer>Cerrar ✕</button>
             </div>
-            <div class="step-sidebar-note">
-              <strong>Accountability</strong>
-              Capacidad de demostrar técnicamente ante una fiscalización o denuncia que el riesgo fue medido y mitigado.
-            </div>
-          </div>
-
-          <div class="step-main">
-            <h3>Mecanismos de prevención, medición de riesgo residual y mitigación</h3>
-            <p>
-              Toda actividad de tratamiento conlleva un <strong>riesgo inherente</strong> (por ejemplo, conservar datos históricos sin base lícita vigente, compartir planillas sin control de acceso o publicar casos sin anonimización rigurosa). Para cerrar el sistema de cumplimiento, diseñamos su matriz de prevención evaluando técnicamente cada actividad del RAT:
+            <p class="drawer-lead">
+              Toda actividad de tratamiento conlleva un <strong>riesgo inherente</strong> (conservar datos históricos sin base lícita vigente, compartir planillas sin control de acceso o publicar casos sin anonimización). Cerramos su sistema de cumplimiento evaluando y mitigando técnicamente cada actividad del RAT:
             </p>
-
             <div class="risk-formula-sheet">
-             <span class="risk-formula-title">¿Cómo medimos y mitigamos el riesgo en cada actividad?</span>
-              
+              <span class="risk-formula-title">¿Cómo medimos y mitigamos el riesgo en cada actividad?</span>
               <div class="risk-equation">
                 <div class="risk-term">
                   <h5>Probabilidad de Impacto</h5>
@@ -1304,7 +1521,6 @@
                   <p>Aplicación de controles organizacionales, contractuales y técnicos para reducir el riesgo inherente a un <strong>riesgo residual controlado y justificable</strong>.</p>
                 </div>
               </div>
-
               <div class="risk-residual-row">
                 <div>
                   <strong>Controles Humanos y de Proceso</strong>
@@ -1316,8 +1532,9 @@
                 </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
+
+        </div>
 
       </div>
     </section>
@@ -1387,7 +1604,7 @@
     </section>
   </main>
 
-  <!-- FOOTER (Conservado intacto) -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="col">
@@ -1431,7 +1648,7 @@
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
             <circle cx="12" cy="10" r="3"></circle>
           </svg>
-          <span class="link">Huérfanos 757 oficina 614, Santiago</span>
+          <span class="link">Santiago</span>
         </div>
 
         <h3 class="title" style="padding-top: 24px;">Redes Sociales</h3>
@@ -1441,13 +1658,14 @@
     </div>
 
     <div class="container bottom">
-      <p class="copyright">© 2026 LegalDatos · Estudio Jurídico de Protección de Datos Personales</p>
+      <p class="copyright">© 2026 LegalDatos · División de Manríquez Sansigolo Abogados</p>
       <a class="link" href="/politica-de-privacidad/">Política de Privacidad</a>
     </div>
   </footer>
 
-  <!-- Script Menú Móvil -->
+  <!-- Script Menú Móvil + Interacción de los 4 Bloques de Metodología -->
   <script>
+    // 1. Menú Móvil
     const menuBtn = document.getElementById("mobile-menu-button");
     const mobilePanel = document.getElementById("mobile-menu-panel");
     if (menuBtn && mobilePanel) {
@@ -1469,6 +1687,67 @@
         if (e.key === "Escape") closeMenu();
       });
     }
+
+    // 2. Despliegue interactivo de los 4 pasos de Metodología
+    const stepCards = document.querySelectorAll(".step-card");
+    const stepPanels = document.querySelectorAll(".step-drawer-panel");
+    const drawerContainer = document.getElementById("step-drawer-container");
+    const closeDrawerBtns = document.querySelectorAll("[data-close-drawer]");
+
+    function toggleStep(stepNum) {
+      const clickedCard = document.querySelector(`.step-card[data-step="${stepNum}"]`);
+      const isAlreadyActive = clickedCard && clickedCard.classList.contains("is-active") && !drawerContainer.hasAttribute("hidden");
+
+      // Si presiona el mismo paso que ya está abierto, lo plegamos limpiamente
+      if (isAlreadyActive) {
+        stepCards.forEach((c) => {
+          c.classList.remove("is-active");
+          c.setAttribute("aria-selected", "false");
+          const label = c.querySelector(".step-action-label");
+          if (label) label.textContent = "Ver detalle jurídico";
+        });
+        drawerContainer.setAttribute("hidden", "");
+        return;
+      }
+
+      // Activamos el paso presionado y mostramos su contenido completo
+      drawerContainer.removeAttribute("hidden");
+
+      stepCards.forEach((c) => {
+        const active = c.getAttribute("data-step") === String(stepNum);
+        c.classList.toggle("is-active", active);
+        c.setAttribute("aria-selected", active ? "true" : "false");
+        const label = c.querySelector(".step-action-label");
+        if (label) label.textContent = active ? "Ocultar detalle" : "Ver detalle jurídico";
+      });
+
+      stepPanels.forEach((p) => {
+        if (p.getAttribute("data-panel") === String(stepNum)) {
+          p.removeAttribute("hidden");
+        } else {
+          p.setAttribute("hidden", "");
+        }
+      });
+    }
+
+    stepCards.forEach((card) => {
+      card.addEventListener("click", () => {
+        const step = card.getAttribute("data-step");
+        toggleStep(step);
+      });
+    });
+
+    closeDrawerBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        stepCards.forEach((c) => {
+          c.classList.remove("is-active");
+          c.setAttribute("aria-selected", "false");
+          const label = c.querySelector(".step-action-label");
+          if (label) label.textContent = "Ver detalle jurídico";
+        });
+        drawerContainer.setAttribute("hidden", "");
+      });
+    });
   </script>
 </body>
 </html>
