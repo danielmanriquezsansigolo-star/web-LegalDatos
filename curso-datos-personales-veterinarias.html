@@ -3,26 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso de Datos Personales para Clínicas Veterinarias | LegalDatos</title>
-  <meta name="description" content="Miércoles 16 de diciembre de 2026 a las 19:30 hrs. La Ley de Datos Personales en contexto veterinario: conceptos necesarios, sanciones, fichas, WhatsApp, RRSS y softwares de gestión veterinaria." />
-  <link rel="canonical" href="https://www.legaldatos.cl/publicaciones/curso-datos-personales-veterinarias" />
+  <title>Ficha de Inscripción · Curso Datos Personales para Clínicas Veterinarias | LegalDatos</title>
+  <meta name="description" content="Formulario oficial de inscripción al Curso de Datos Personales para Clínicas Veterinarias de LegalDatos." />
+  <meta name="robots" content="noindex, follow" />
   <link rel="icon" type="image/png" sizes="32x32" href="https://www.legaldatos.cl/favicon.png" />
-
-  <!-- =================================================================
-       METADATOS AUTOMÁTICOS PARA EL REPOSITORIO (publicaciones.html)
-       ================================================================= -->
-  <meta name="article-title" content="Curso de Datos Personales para Clínicas Veterinarias: La Ley de Datos Personales en contexto veterinario" />
-  <meta name="article-date" content="2026-12-16" />
-  <meta name="article-date-label" content="Miércoles 16 Dic 2026 · 19:30 hrs" />
-  <meta name="article-category" content="Seminarios y Cursos · Clínicas Veterinarias" />
-  <meta name="article-image" content="/publicaciones/WEBINAR%20VETERINARIAS.png" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Curso de Datos Personales para Clínicas Veterinarias | LegalDatos" />
-  <meta property="og:description" content="La Ley de Datos Personales en contexto veterinario. Miércoles 16 de diciembre a las 19:30 hrs (90 minutos · Máximo 30 cupos). Inscripción: $20.000 CLP." />
-  <meta property="og:image" content="https://www.legaldatos.cl/publicaciones/WEBINAR%20VETERINARIAS.png" />
-  <meta property="og:type" content="article" />
-  <meta property="og:locale" content="es_CL" />
 
   <!-- Tipografías: Misma línea editorial del sitio -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +17,6 @@
     :root {
       --navy-deep: #0b132b;
       --navy-primary: #132247;
-      --navy-muted: #1e3264;
       --blue-brand: #1d5bd6;
       --cyan-accent: #0091d5;
       --emerald-event: #047857;
@@ -54,7 +37,7 @@
       --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       
-      --container: 1180px;
+      --container: 1080px;
     }
 
     * {
@@ -71,7 +54,7 @@
       font-family: var(--font-sans);
       color: var(--ink-dark);
       background-color: var(--paper-bg);
-      line-height: 1.7;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -153,19 +136,8 @@
       position: relative;
     }
 
-    .nav-link:hover,
-    .nav-link.is-active {
+    .nav-link:hover {
       color: var(--white);
-    }
-
-    .nav-link.is-active::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--cyan-accent);
     }
 
     .menu-button {
@@ -221,281 +193,156 @@
     }
 
     /* ==========================================
-       1. CABECERA EDITORIAL DEL CURSO
+       1. FRANJA SUPERIOR DE LA LANDING DE INSCRIPCIÓN
        ========================================== */
-    .article-hero {
+    .enroll-hero {
       background-color: var(--navy-deep);
       color: var(--white);
-      padding: 64px 0 56px;
+      padding: 44px 0 40px;
       border-bottom: 4px solid var(--emerald-event);
     }
 
-    .article-hero-inner {
-      max-width: 920px;
-    }
-
-    .breadcrumb {
-      font-size: 13.5px;
-      color: #94a3b8;
-      margin-bottom: 24px;
-    }
-
-    .breadcrumb ol {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
+    .enroll-back-link {
+      display: inline-flex;
       align-items: center;
-      gap: 8px;
-    }
-
-    .breadcrumb a {
-      color: #cbd5e1;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #93c5fd;
+      margin-bottom: 16px;
       transition: color 0.2s ease;
     }
 
-    .breadcrumb a:hover {
+    .enroll-back-link:hover {
       color: var(--white);
     }
 
-    .breadcrumb .sep {
-      color: #64748b;
-    }
-
-    .event-badge-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-    }
-
-    .event-pill {
-      background-color: rgba(16, 185, 129, 0.18);
-      border: 1px solid rgba(52, 211, 153, 0.45);
-      color: #6ee7b7;
-      font-size: 12.5px;
-      font-weight: 700;
-      padding: 5px 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-    }
-
-    .article-kicker {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: 19px;
-      color: #cbd5e1;
-    }
-
-    .article-hero h1 {
+    .enroll-hero h1 {
       font-family: var(--font-serif);
       font-weight: 400;
-      font-size: clamp(32px, 4vw, 46px);
-      line-height: 1.15;
+      font-size: clamp(28px, 3.5vw, 40px);
+      line-height: 1.18;
       color: var(--white);
-      margin-bottom: 24px;
+      margin-bottom: 10px;
     }
 
-    .article-byline {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 24px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      font-size: 14px;
+    .enroll-hero p {
+      font-size: 16px;
       color: #cbd5e1;
-    }
-
-    .article-byline strong {
-      color: var(--white);
-      font-weight: 600;
+      max-width: 68ch;
     }
 
     /* ==========================================
-       2. LAYOUT PRINCIPAL + FORMULARIO DE INSCRIPCIÓN
+       2. CAJA CENTRAL DE INSCRIPCIÓN (2 COLUMNAS ENFOCADAS)
        ========================================== */
-    .article-wrapper {
-      padding: 64px 0 88px;
+    .enroll-section {
+      padding: 56px 0 88px;
     }
 
-    .article-layout {
+    .enroll-grid {
       display: grid;
-      grid-template-columns: 1fr 410px;
+      grid-template-columns: 0.85fr 1.15fr;
       gap: 44px;
       align-items: start;
     }
 
-    .article-sheet {
+    /* Columna Izquierda: Resumen de la Actividad y Proceso en 2 pasos */
+    .course-summary-box {
       background-color: var(--white);
       border: 1px solid var(--rule-solid);
-      border-top: 3px solid var(--emerald-event);
-      padding: 48px 50px;
+      border-top: 3px solid var(--navy-deep);
+      padding: 32px 30px;
     }
 
-    .featured-poster-frame {
-      max-width: 540px;
-      margin: 0 auto 38px;
-      border: 1px solid var(--rule-solid);
-      background-color: var(--navy-deep);
-      box-shadow: 0 16px 36px -12px rgba(11, 19, 43, 0.18);
-    }
-
-    .featured-poster-frame img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .article-lead {
-      font-family: var(--font-serif);
-      font-size: 21px;
-      line-height: 1.6;
-      color: var(--navy-deep);
-      margin-bottom: 32px;
-      padding-bottom: 26px;
-      border-bottom: 1px solid var(--rule-solid);
-    }
-
-    .article-lead strong {
+    .summary-kicker {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
       color: var(--emerald-event);
-      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
     }
 
-    .article-content h2 {
+    .course-summary-box h2 {
       font-family: var(--font-serif);
-      font-size: 28px;
-      font-weight: 500;
+      font-size: 24px;
+      font-weight: 600;
       color: var(--navy-deep);
       line-height: 1.25;
-      margin: 40px 0 16px;
-      padding-top: 26px;
-      border-top: 1px solid var(--rule-light);
-    }
-
-    .article-content h2:first-of-type {
-      margin-top: 0;
-      padding-top: 0;
-      border-top: none;
-    }
-
-    .article-content p {
-      font-size: 16.5px;
-      color: var(--ink-body);
-      line-height: 1.8;
       margin-bottom: 18px;
     }
 
-    .article-content > p strong {
+    .summary-specs {
+      list-style: none;
+      border-top: 1px solid var(--rule-light);
+      border-bottom: 1px solid var(--rule-light);
+      padding: 16px 0;
+      margin-bottom: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      font-size: 14px;
+    }
+
+    .summary-specs li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--ink-body);
+    }
+
+    .summary-specs li strong {
+      color: var(--navy-deep);
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .how-it-works {
+      background-color: var(--paper-bg);
+      border: 1px solid var(--rule-light);
+      border-left: 3px solid var(--blue-brand);
+      padding: 18px 20px;
+      font-size: 13.5px;
+      color: var(--ink-body);
+    }
+
+    .how-it-works h3 {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+    }
+
+    .how-it-works ol {
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .how-it-works li strong {
       color: var(--ink-dark);
       font-weight: 700;
     }
 
-    .modules-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      margin: 26px 0 34px;
-    }
-
-    .module-box {
-      background-color: var(--paper-bg);
-      border: 1px solid var(--rule-solid);
-      border-left: 3px solid var(--emerald-event);
-      padding: 22px 26px;
-    }
-
-    .module-num {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--emerald-event);
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .module-box h3 {
-      font-family: var(--font-serif);
-      font-size: 21px;
-      font-weight: 600;
-      color: var(--navy-deep);
-      margin-bottom: 8px;
-    }
-
-    .module-box p {
-      font-size: 15px;
-      color: var(--ink-body);
-      line-height: 1.65;
-      margin-bottom: 0;
-    }
-
-    .discount-callout {
-      background-color: var(--emerald-light);
-      border: 1px solid #a7f3d0;
-      border-left: 4px solid var(--emerald-event);
-      padding: 26px 30px;
-      margin: 32px 0;
-    }
-
-    .discount-callout h3 {
-      font-family: var(--font-serif);
-      font-size: 22px;
-      font-weight: 600;
-      color: #064e3b;
-      margin-bottom: 8px;
-    }
-
-    .discount-callout p {
-      font-size: 15px;
-      color: #065f46;
-      line-height: 1.65;
-      margin-bottom: 0;
-    }
-
-    .discount-callout p strong {
-      color: #064e3b;
-      font-weight: 700;
-    }
-
-    /* ==========================================
-       3. SIDEBAR CON FORMULARIO DE INSCRIPCIÓN EN VIVO
-       ========================================== */
-    .article-sidebar {
-      position: sticky;
-      top: 98px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .back-link-box {
-      background-color: var(--paper-warm);
-      border: 1px solid var(--rule-solid);
-      padding: 14px 18px;
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--navy-deep);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: border-color 0.2s ease;
-    }
-
-    .back-link-box:hover {
-      border-color: var(--blue-brand);
-      color: var(--blue-brand);
-    }
-
-    .registration-card {
+    /* Columna Derecha: Formulario Exclusivo de Inscripción */
+    .form-card {
       background-color: var(--white);
       border: 1px solid var(--rule-solid);
       border-top: 4px solid var(--emerald-event);
-      padding: 28px 26px;
-      box-shadow: 0 14px 32px -12px rgba(11, 19, 43, 0.12);
+      padding: 38px 40px;
+      box-shadow: 0 18px 38px -14px rgba(11, 19, 43, 0.1);
     }
 
-    .reg-tag {
-      font-size: 11.5px;
+    .form-card-header {
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    .form-card-header span {
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -504,52 +351,34 @@
       margin-bottom: 4px;
     }
 
-    .registration-card h3 {
+    .form-card-header h2 {
       font-family: var(--font-serif);
-      font-size: 24px;
-      font-weight: 600;
+      font-size: 28px;
+      font-weight: 500;
       color: var(--navy-deep);
-      margin-bottom: 12px;
-      line-height: 1.22;
+      line-height: 1.2;
     }
 
-    .reg-summary-pills {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      background-color: var(--paper-bg);
-      border: 1px solid var(--rule-light);
-      padding: 12px;
-      margin-bottom: 18px;
-      font-size: 12.5px;
-    }
-
-    .reg-summary-pills div span {
-      display: block;
-      color: var(--ink-muted);
-      font-size: 11px;
-    }
-
-    .reg-summary-pills div strong {
-      color: var(--navy-deep);
-      font-weight: 700;
-    }
-
-    /* Estilos del Formulario */
     .course-form {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 18px;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
     }
 
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 6px;
     }
 
     .form-group label {
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 600;
       color: var(--navy-deep);
     }
@@ -561,11 +390,11 @@
     .form-input {
       width: 100%;
       font-family: var(--font-sans);
-      font-size: 14px;
+      font-size: 14.5px;
       color: var(--ink-dark);
       background-color: var(--paper-bg);
       border: 1px solid var(--rule-solid);
-      padding: 11px 13px;
+      padding: 12px 14px;
       transition: border-color 0.2s ease, background-color 0.2s ease;
     }
 
@@ -575,33 +404,39 @@
       background-color: var(--white);
     }
 
-    /* Casillas de verificación (Marketing y Política Específica) */
+    /* Casillas de verificación */
     .checkbox-group {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       margin-top: 4px;
-      padding-top: 12px;
-      border-top: 1px solid var(--rule-light);
+      padding: 16px 18px;
+      background-color: var(--paper-bg);
+      border: 1px solid var(--rule-light);
     }
 
     .checkbox-label {
       display: flex;
       align-items: flex-start;
-      gap: 9px;
-      font-size: 12.5px;
+      gap: 10px;
+      font-size: 13.5px;
       color: var(--ink-body);
-      line-height: 1.48;
+      line-height: 1.5;
       cursor: pointer;
     }
 
     .checkbox-label input[type="checkbox"] {
       margin-top: 3px;
-      width: 16px;
-      height: 16px;
+      width: 17px;
+      height: 17px;
       accent-color: var(--emerald-event);
       flex-shrink: 0;
       cursor: pointer;
+    }
+
+    .checkbox-label strong {
+      color: var(--ink-dark);
+      font-weight: 700;
     }
 
     .policy-trigger-btn {
@@ -627,12 +462,11 @@
       color: var(--white);
       border: 1px solid #059669;
       font-family: var(--font-sans);
-      font-size: 15px;
+      font-size: 15.5px;
       font-weight: 700;
-      padding: 14px 20px;
+      padding: 15px 24px;
       cursor: pointer;
       transition: background-color 0.2s ease;
-      margin-top: 4px;
     }
 
     .btn-submit-course:hover {
@@ -649,19 +483,19 @@
       background-color: #fef2f2;
       border: 1px solid #fecaca;
       color: #991b1b;
-      font-size: 13px;
-      padding: 10px 12px;
+      font-size: 13.5px;
+      padding: 12px 14px;
     }
 
     /* ==========================================
-       4. CAJA DE CONFIRMACIÓN Y DATOS BANCARIOS (POST-INSCRIPCIÓN)
+       3. PANTALLA DE CONFIRMACIÓN Y DATOS BANCARIOS BCI
        ========================================== */
     .bank-confirmation-box {
       display: none;
       background-color: #f0fdf4;
       border: 1px solid #86efac;
-      border-top: 4px solid var(--emerald-event);
-      padding: 22px 20px;
+      border-left: 4px solid var(--emerald-event);
+      padding: 28px 30px;
     }
 
     .bank-status-badge {
@@ -670,28 +504,28 @@
       gap: 6px;
       background-color: var(--emerald-event);
       color: var(--white);
-      font-size: 11.5px;
+      font-size: 12px;
       font-weight: 700;
-      padding: 4px 10px;
-      margin-bottom: 12px;
+      padding: 5px 12px;
+      margin-bottom: 14px;
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
 
-    .bank-confirmation-box h4 {
+    .bank-confirmation-box h3 {
       font-family: var(--font-serif);
-      font-size: 21px;
+      font-size: 26px;
       font-weight: 600;
       color: #064e3b;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       line-height: 1.25;
     }
 
     .bank-confirmation-box p {
-      font-size: 13.8px;
+      font-size: 15.5px;
       color: #065f46;
-      line-height: 1.6;
-      margin-bottom: 14px;
+      line-height: 1.68;
+      margin-bottom: 18px;
     }
 
     .bank-confirmation-box p strong {
@@ -702,17 +536,17 @@
     .bank-details-card {
       background-color: var(--white);
       border: 1px solid #bbf7d0;
-      padding: 16px 18px;
-      margin-bottom: 14px;
+      padding: 20px 24px;
+      margin-bottom: 18px;
     }
 
     .bank-details-title {
-      font-size: 11.5px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--emerald-event);
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       display: block;
     }
 
@@ -720,8 +554,8 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      font-size: 13.5px;
+      gap: 8px;
+      font-size: 15px;
       color: var(--ink-dark);
     }
 
@@ -729,7 +563,7 @@
       display: flex;
       justify-content: space-between;
       border-bottom: 1px dashed var(--rule-light);
-      padding-bottom: 5px;
+      padding-bottom: 6px;
     }
 
     .bank-details-list li:last-child {
@@ -752,9 +586,9 @@
       color: var(--white);
       border: none;
       font-family: var(--font-sans);
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
-      padding: 10px 14px;
+      padding: 13px 18px;
       cursor: pointer;
       transition: background-color 0.2s ease;
     }
@@ -764,7 +598,7 @@
     }
 
     /* ==========================================
-       5. MODAL EMERGENTE: POLÍTICA DE TRATAMIENTO ESPECÍFICA DEL CURSO
+       4. MODAL EMERGENTE: POLÍTICA ESPECÍFICA DE ESTA ACTIVIDAD
        ========================================== */
     .modal-backdrop {
       position: fixed;
@@ -956,14 +790,10 @@
     /* ==========================================
        RESPONSIVE
        ========================================== */
-    @media (max-width: 1020px) {
-      .article-layout {
+    @media (max-width: 920px) {
+      .enroll-grid {
         grid-template-columns: 1fr;
-        gap: 36px;
-      }
-
-      .article-sidebar {
-        position: static;
+        gap: 32px;
       }
 
       .footer-grid {
@@ -979,8 +809,11 @@
       .menu-button {
         display: inline-flex;
       }
-      .article-sheet {
-        padding: 32px 22px;
+      .form-card {
+        padding: 28px 20px;
+      }
+      .form-row-2 {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -1001,7 +834,7 @@
         <a class="nav-link" href="/">Inicio</a>
         <a class="nav-link" href="/nosotros/">Nosotros</a>
         <a class="nav-link" href="/servicios/">Servicios</a>
-        <a class="nav-link is-active" href="/publicaciones/">Publicaciones</a>
+        <a class="nav-link" href="/publicaciones/">Publicaciones</a>
         <a class="nav-link" href="/contacto/">Contacto</a>
       </nav>
       <button id="mobile-menu-button" type="button" class="menu-button" aria-label="Abrir menú" aria-controls="mobile-menu-panel" aria-expanded="false">
@@ -1014,7 +847,7 @@
           <a class="mobile-link" href="/">Inicio</a>
           <a class="mobile-link" href="/nosotros/">Nosotros</a>
           <a class="mobile-link" href="/servicios/">Servicios</a>
-          <a class="mobile-link is-active" href="/publicaciones/">Publicaciones</a>
+          <a class="mobile-link" href="/publicaciones/">Publicaciones</a>
           <a class="mobile-link" href="/contacto/">Contacto</a>
         </nav>
       </div>
@@ -1022,156 +855,74 @@
   </header>
 
   <main>
-    <!-- 1. CABECERA DEL CURSO -->
-    <section class="article-hero">
+    <!-- 1. CABECERA DE LA LANDING DE INSCRIPCIÓN -->
+    <section class="enroll-hero">
       <div class="container">
-        <div class="article-hero-inner">
-          <nav class="breadcrumb" aria-label="Breadcrumb">
-            <ol>
-              <li><a href="/">Inicio</a> <span class="sep">/</span></li>
-              <li><a href="/publicaciones/">Publicaciones</a> <span class="sep">/</span></li>
-              <li><span aria-current="page">Curso Clínicas Veterinarias</span></li>
-            </ol>
-          </nav>
-
-          <div class="event-badge-row">
-            <span class="event-pill">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-              <span>Miércoles 16 de Diciembre de 2026 · 19:30 hrs.</span>
-            </span>
-            <span class="article-kicker">La Ley de Datos Personales en contexto veterinario</span>
-          </div>
-
-          <h1>Curso de Datos Personales para Clínicas Veterinarias: La Ley de Datos Personales en contexto veterinario</h1>
-
-          <div class="article-byline">
-            <span>Expone: <strong>Daniel Manríquez Sansigolo</strong> (Abogado Director de LegalDatos)</span>
-            <span>·</span>
-            <span>Modalidad Online (Meet) · Máximo 30 cupos</span>
-            <span>·</span>
-            <span>Duración: 90 minutos</span>
-          </div>
-        </div>
+        <a href="/publicaciones/curso-datos-personales-clinicas-veterinarias" class="enroll-back-link">
+          ← Volver al programa del curso
+        </a>
+        <h1>Inscripción al Curso de Datos Personales para Clínicas Veterinarias</h1>
+        <p>
+          Complete el siguiente registro para reservar su cupo y obtener los datos de transferencia bancaria.
+        </p>
       </div>
     </section>
 
-    <!-- 2. CONTENIDO DEL CURSO + FORMULARIO DE INSCRIPCIÓN DIRECTA -->
-    <section class="article-wrapper">
-      <div class="container article-layout">
+    <!-- 2. SECCIÓN CENTRAL DE REGISTRO -->
+    <section class="enroll-section">
+      <div class="container enroll-grid">
 
-        <article class="article-sheet">
-          
-          <!-- Afiche oficial del Curso -->
-          <div class="featured-poster-frame" id="webinar-img-wrapper">
-            <img 
-              src="/publicaciones/WEBINAR%20VETERINARIAS.png" 
-              alt="Curso de Datos Personales para Clínicas Veterinarias - Miércoles 16 de Diciembre 19:30 hrs" 
-              onerror="document.getElementById('webinar-img-wrapper').style.display='none';" 
-            />
+        <!-- Columna Izquierda: Resumen de la Actividad -->
+        <aside class="course-summary-box">
+          <span class="summary-kicker">Resumen de la Actividad</span>
+          <h2>La Ley de Datos Personales en contexto veterinario</h2>
+
+          <ul class="summary-specs">
+            <li>
+              <span>Expositor:</span>
+              <strong>Daniel Manríquez Sansigolo</strong>
+            </li>
+            <li>
+              <span>Fecha:</span>
+              <strong>Miércoles 16 Dic 2026</strong>
+            </li>
+            <li>
+              <span>Horario:</span>
+              <strong>19:30 hrs. (90 minutos)</strong>
+            </li>
+            <li>
+              <span>Modalidad:</span>
+              <strong>Online en vivo (Meet)</strong>
+            </li>
+            <li>
+              <span>Capacidad:</span>
+              <strong>Máximo 30 cupos</strong>
+            </li>
+            <li>
+              <span>Valor Inscripción:</span>
+              <strong>$20.000 CLP*</strong>
+            </li>
+          </ul>
+
+          <div class="how-it-works">
+            <h3>¿Cómo se activa su link de conexión?</h3>
+            <ol>
+              <li>Complete este formulario para <strong>pre-registrar su cupo</strong>.</li>
+              <li>Realice la transferencia de <strong>$20.000 CLP</strong> a la cuenta que aparecerá en pantalla y envíe el comprobante a <strong>contacto@legaldatos.cl</strong>.</li>
+              <li>Una vez verificado el pago, recibirá en su correo el <strong>link oficial de acceso a Google Meet</strong>.</li>
+            </ol>
+          </div>
+        </aside>
+
+        <!-- Columna Derecha: Formulario Exclusivo + Confirmación BCI -->
+        <div class="form-card">
+          <div class="form-card-header">
+            <span>Registro de Participante</span>
+            <h2>Complete sus datos de inscripción</h2>
           </div>
 
-          <p class="article-lead">
-            Existe un mito frecuente en el sector veterinario: creer que, como los pacientes son animales, las clínicas veterinarias no estarían sujetas a las exigencias de la nueva <strong>Ley N° 21.719 de Protección de Datos Personales</strong>. La realidad jurídica es exactamente la opuesta: detrás de cada paciente hay un tutor humano cuyos datos identificativos, de contacto, financieros e incluso de ubicación son recolectados y almacenados a diario.
-          </p>
-
-          <div class="article-content">
-            <h2>¿Por qué una Clínica Veterinaria necesita adecuar sus procesos con anticipación?</h2>
-            <p>
-              Toda clínica u hospital veterinario —sin importar su tamaño— ejecuta decenas de actividades de tratamiento de datos personales todos los días: agendamiento de horas, creación de fichas clínicas, envío de recetas y presupuestos por WhatsApp o correo electrónico, almacenamiento en softwares de gestión en la nube, grabación con cámaras de seguridad en recepción y publicación de casos clínicos en redes sociales.
-            </p>
-            <p>
-              Frente a un cliente disconforme o una denuncia ante la futura Agencia de Protección de Datos Personales, no contar con los respaldos de consentimiento, las políticas de privacidad y los contratos de encargo con sus proveedores tecnológicos expone innecesariamente la estabilidad financiera de su clínica.
-            </p>
-
-            <h2>Temario Práctico del Curso: Las preguntas reales del sector veterinario</h2>
-            <p>
-              En este curso intensivo de 90 minutos —diseñado específicamente para directores médicos, dueños de clínicas, administradores y médicos veterinarios— veremos cómo la práctica veterinaria se enfrenta a la nueva ley que regula datos personales humanos:
-            </p>
-
-            <div class="modules-grid">
-              <div class="module-box">
-                <span class="module-num">MÓDULO 01 · CONCEPTOS NECESARIOS Y EL TUTOR</span>
-                <h3>¿Es el nombre de la mascota o su microchip un dato personal?</h3>
-                <p>
-                  Analizaremos cuándo el nombre de un paciente (especialmente cuando se registra con los apellidos de la familia) o el código vinculado al Registro Nacional de Mascotas permite identificar a una persona natural, y por qué está estrictamente prohibido anotar antecedentes de salud del tutor humano dentro de la ficha clínica veterinaria.
-                </p>
-              </div>
-
-              <div class="module-box">
-                <span class="module-num">MÓDULO 02 · REDES SOCIALES (RRSS) Y CASOS CLÍNICOS</span>
-                <h3>Publicación de fotos, cirugías («antes y después») y mascotas en Instagram</h3>
-                <p>
-                  ¿Cuándo basta con anonimizar la información para fines académicos o estadísticos y cuándo es obligatorio contar con un documento de consentimiento expreso firmado por el tutor antes de subir un video o etiquetar a un paciente en las redes sociales de la clínica?
-                </p>
-              </div>
-
-              <div class="module-box">
-                <span class="module-num">MÓDULO 03 · FICHAS CLÍNICAS Y PLAZOS DE RETENCIÓN</span>
-                <h3>¿Qué hacer con bases de datos de hace 10 o 20 años y pacientes fallecidos?</h3>
-                <p>
-                  A diferencia de la medicina humana (donde la ley exige conservar la ficha por 15 años), en medicina veterinaria rige la regla de prescripción general de 5 años y el principio de finalidad. Explicaremos cómo justificar legalmente la conservación del historial clínico mediante el Interés Legítimo o la renovación de consentimiento, y cómo proceder a la anonimización.
-                </p>
-              </div>
-
-              <div class="module-box">
-                <span class="module-num">MÓDULO 04 · SOFTWARES DE GESTIÓN VETERINARIA EN LA NUBE</span>
-                <h3>AgendaPro, softwares de gestión extranjeros y Contratos DPA</h3>
-                <p>
-                  Si su clínica aloja las fichas y datos de sus clientes en un software externo en la nube, ese proveedor actúa como su «Encargado de Tratamiento», pero el responsable legal ante el cliente sigue siendo usted. Le enseñaremos cómo exigir y revisar el Contrato de Encargo (DPA) y cómo transparentarlo en su Política de Privacidad.
-                </p>
-              </div>
-
-              <div class="module-box">
-                <span class="module-num">MÓDULO 05 · SANCIONES, WHATSAPP Y VIDEOVIGILANCIA</span>
-                <h3>Uso de WhatsApp con tutores, secreto del personal y cámaras de seguridad</h3>
-                <p>
-                  Cómo regular las comunicaciones del equipo médico y recepcionistas con los tutores por WhatsApp, prohibir la extracción de bases de datos de clientes, conocer el catálogo de sanciones y justificar legalmente las cámaras de seguridad de su clínica mediante el Test de Interés Legítimo (LIA).
-                </p>
-              </div>
-            </div>
-
-            <div class="discount-callout">
-              <h3>Beneficio exclusivo para clínicas asistentes: Inscripción 100% descontable</h3>
-              <p>
-                Con el fin de asegurar el compromiso de los participantes y una ronda de preguntas personalizada (máximo 30 cupos), el curso cuenta con un valor de inscripción de <strong>$20.000 CLP</strong> por clínica o profesional. Si posteriormente su clínica decide contratar nuestros servicios de adecuación legal o levantamiento de RAT, <strong>el 100% del valor de su inscripción será descontado de su propuesta</strong>.
-              </p>
-            </div>
-
-            <h2>¿A quién está dirigido este curso?</h2>
-            <p>
-              Exclusivamente a <strong>dueños y socios de clínicas veterinarias, directores médicos, administradores de hospitales veterinarios y médicos veterinarios independientes</strong> que deseen comprender qué exige realmente la Ley 21.719 y cómo ordenarse paso a paso con el mínimo roce operativo para su clínica.
-            </p>
-          </div>
-        </article>
-
-        <!-- BARRA LATERAL CON FORMULARIO CONECTADO AL SHEET -->
-        <aside class="article-sidebar">
-          <a href="/publicaciones/" class="back-link-box">
-            <span>← Volver al Repositorio</span>
-          </a>
-
-          <div class="registration-card" id="inscripcion-box">
-            <span class="reg-tag">Inscripción en Línea · Máximo 30 Cupos</span>
-            <h3>Formulario de Inscripción al Curso</h3>
-
-            <div class="reg-summary-pills">
-              <div>
-                <span>Fecha y Hora</span>
-                <strong>Mié 16 Dic · 19:30 hrs</strong>
-              </div>
-              <div>
-                <span>Valor Inscripción</span>
-                <strong>$20.000 CLP* (Meet)</strong>
-              </div>
-            </div>
-
-            <!-- FORMULARIO DE INSCRIPCIÓN -->
-            <form id="course-registration-form" class="course-form">
+          <form id="course-registration-form" class="course-form">
+            <div class="form-row-2">
               <div class="form-group">
                 <label for="reg-nombre">Nombre y Apellido <span class="req">*</span></label>
                 <input type="text" id="reg-nombre" name="nombre" class="form-input" placeholder="Ej. Dra. Carolina Pérez" required />
@@ -1181,7 +932,9 @@
                 <label for="reg-clinica">Clínica Veterinaria <span class="req">*</span></label>
                 <input type="text" id="reg-clinica" name="clinica" class="form-input" placeholder="Nombre de su clínica o consulta" required />
               </div>
+            </div>
 
+            <div class="form-row-2">
               <div class="form-group">
                 <label for="reg-correo">Correo Electrónico <span class="req">*</span></label>
                 <input type="email" id="reg-correo" name="correo" class="form-input" placeholder="correo@suclinica.cl" required />
@@ -1191,73 +944,77 @@
                 <label for="reg-telefono">Teléfono / WhatsApp <span class="req">*</span></label>
                 <input type="tel" id="reg-telefono" name="telefono" class="form-input" placeholder="+56 9 1234 5678" required />
               </div>
-
-              <div class="checkbox-group">
-                <!-- Casilla 1: Política Específica de la Actividad (Obligatoria) -->
-                <label class="checkbox-label" for="reg-politica">
-                  <input type="checkbox" id="reg-politica" name="politica" value="SI" required />
-                  <span>
-                    He leído y acepto la <button type="button" id="open-policy-modal" class="policy-trigger-btn">Política de Tratamiento de Datos para esta actividad</button>. <strong style="color:#dc2626;">*</strong>
-                  </span>
-                </label>
-
-                <!-- Casilla 2: Aceptación de Marketing (Voluntaria / Jamás pre-marcada) -->
-                <label class="checkbox-label" for="reg-marketing">
-                  <input type="checkbox" id="reg-marketing" name="marketing" value="SI" />
-                  <span>
-                    <strong>(Voluntario)</strong> Acepto recibir comunicaciones sobre futuros cursos, alertas legales y servicios de LegalDatos.
-                  </span>
-                </label>
-              </div>
-
-              <div id="form-error-msg" class="form-error-msg"></div>
-
-              <button type="submit" id="btn-submit-course" class="btn-submit-course">
-                Registrar mi cupo en el Curso →
-              </button>
-            </form>
-
-            <!-- MENSAJE POST-INSCRIPCIÓN CON DATOS DE TRANSFERENCIA BCI -->
-            <div id="bank-confirmation-box" class="bank-confirmation-box" aria-live="polite">
-              <span class="bank-status-badge">✓ Cupo Pre-Registrado</span>
-              <h4>¡Ya estás inscrito!</h4>
-              <p>
-                Ya estás inscrito, sin embargo, para recibir el link de conexión al curso, primero deberás remitir a <strong><a href="mailto:contacto@legaldatos.cl" style="text-decoration: underline;">contacto@legaldatos.cl</a></strong> el comprobante de depósito por <strong>$20.000 CLP</strong>.
-              </p>
-
-              <div class="bank-details-card">
-                <span class="bank-details-title">Datos de cuenta para transferencia</span>
-                <ul class="bank-details-list">
-                  <li>
-                    <span>Nombre:</span>
-                    <strong>Daniel Manríquez Sansigolo</strong>
-                  </li>
-                  <li>
-                    <span>RUT:</span>
-                    <strong>17.700.585-1</strong>
-                  </li>
-                  <li>
-                    <span>Banco / Tipo:</span>
-                    <strong>Cuenta Corriente BCI</strong>
-                  </li>
-                  <li>
-                    <span>N° de Cuenta:</span>
-                    <strong>18743871</strong>
-                  </li>
-                  <li>
-                    <span>Correo comprobante:</span>
-                    <strong>contacto@legaldatos.cl</strong>
-                  </li>
-                </ul>
-              </div>
-
-              <button type="button" id="btn-copy-bank" class="btn-copy-bank">
-                Copiar datos de transferencia
-              </button>
             </div>
 
+            <div class="checkbox-group">
+              <!-- Casilla 1: Política Específica de la Actividad (Obligatoria) -->
+              <label class="checkbox-label" for="reg-politica">
+                <input type="checkbox" id="reg-politica" name="politica" value="SI" required />
+                <span>
+                  He leído y acepto la <button type="button" id="open-policy-modal" class="policy-trigger-btn">Política de Tratamiento de Datos para esta actividad en específico</button>. <strong style="color:#dc2626;">*</strong>
+                </span>
+              </label>
+
+              <!-- Casilla 2: Aceptación de Marketing (Voluntaria) -->
+              <label class="checkbox-label" for="reg-marketing">
+                <input type="checkbox" id="reg-marketing" name="marketing" value="SI" />
+                <span>
+                  <strong>(Voluntario)</strong> Acepto recibir comunicaciones de marketing sobre futuros cursos, publicaciones y servicios de LegalDatos.
+                </span>
+              </label>
+            </div>
+
+            <div id="form-error-msg" class="form-error-msg"></div>
+
+            <button type="submit" id="btn-submit-course" class="btn-submit-course">
+              Confirmar inscripción al Curso →
+            </button>
+          </form>
+
+          <!-- MENSAJE POST-INSCRIPCIÓN CON DATOS DE CUENTA BCI -->
+          <div id="bank-confirmation-box" class="bank-confirmation-box" aria-live="polite">
+            <span class="bank-status-badge">✓ Registro Recibido</span>
+            <h3>¡Ya estás inscrito!</h3>
+            <p>
+              Ya estás inscrito, sin embargo, para recibir el link de conexión al curso, primero deberás remitir a <strong><a href="mailto:contacto@legaldatos.cl" style="text-decoration: underline;">contacto@legaldatos.cl</a></strong> el comprobante de depósito.
+            </p>
+
+            <div class="bank-details-card">
+              <span class="bank-details-title">Datos de cuenta:</span>
+              <ul class="bank-details-list">
+                <li>
+                  <span>Titular:</span>
+                  <strong>Daniel Manríquez Sansigolo</strong>
+                </li>
+                <li>
+                  <span>RUT:</span>
+                  <strong>17.700.585-1</strong>
+                </li>
+                <li>
+                  <span>Banco y Tipo de Cuenta:</span>
+                  <strong>Cuenta Corriente BCI</strong>
+                </li>
+                <li>
+                  <span>N° de Cuenta:</span>
+                  <strong>N°18743871</strong>
+                </li>
+                <li>
+                  <span>Monto a transferir:</span>
+                  <strong>$20.000 CLP</strong>
+                </li>
+                <li>
+                  <span>Enviar comprobante a:</span>
+                  <strong>contacto@legaldatos.cl</strong>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" id="btn-copy-bank" class="btn-copy-bank">
+              Copiar datos de cuenta al portapapeles
+            </button>
           </div>
-        </aside>
+
+        </div>
 
       </div>
     </section>
@@ -1274,7 +1031,7 @@
       </div>
       <div class="modal-body">
         <p>
-          En cumplimiento del artículo 14 ter de la Ley N° 19.628 sobre Protección de la Vida Privada (reformada por la Ley N° 21.719), informamos a usted los términos específicos del tratamiento de los datos personales recolectados a través de este formulario de inscripción:
+          En cumplimiento del artículo 14 ter de la Ley N° 19.628 sobre Protección de la Vida Privada (reformada por la Ley N° 21.719), informamos los términos específicos del tratamiento de los datos personales recolectados en este formulario de inscripción:
         </p>
 
         <h4>1. Responsable del Tratamiento</h4>
@@ -1285,16 +1042,16 @@
         <h4>2. Datos Recolectados y Finalidad Específica</h4>
         <ul>
           <li>
-            <strong>Gestión académica y administrativa del Curso (Obligatorio):</strong> Su nombre, clínica veterinaria, correo electrónico y teléfono serán tratados con la única finalidad de registrar su reserva de cupo en el <em>«Curso de Datos Personales para Clínicas Veterinarias»</em>, verificar su comprobante de pago, remitirle el enlace único de conexión a la sesión en Google Meet, entregar el material de apoyo y aplicar el descuento del 100% de su entrada en caso de contratar posteriormente servicios de adecuación legal o RAT.
+            <strong>Gestión de inscripción y acceso al Curso (Obligatorio):</strong> Su nombre, clínica veterinaria, correo electrónico y teléfono serán tratados con la finalidad exclusiva de registrar su inscripción en el <em>«Curso de Datos Personales para Clínicas Veterinarias»</em>, verificar la recepción de su comprobante de transferencia, remitirle el link de conexión a Google Meet y aplicar el descuento del 100% de su entrada en caso de contratar posteriormente servicios de adecuación legal o RAT.
           </li>
           <li>
-            <strong>Comunicaciones informativas y de marketing (Voluntario):</strong> Únicamente si usted marca voluntariamente la casilla opcional de marketing, utilizaremos su nombre y correo electrónico para enviarle invitaciones a próximos seminarios, artículos jurídicos y novedades sobre nuestros servicios.
+            <strong>Comunicaciones de marketing (Voluntario):</strong> Únicamente si usted marca voluntariamente la casilla opcional de marketing, utilizaremos su nombre y correo electrónico para enviarle invitaciones a próximos seminarios, artículos jurídicos y novedades sobre nuestros servicios.
           </li>
         </ul>
 
         <h4>3. Base de Licitud</h4>
         <p>
-          El tratamiento para la gestión de su inscripción se funda en la <strong>ejecución de medidas precontractuales y de la relación contractual</strong> originada por su inscripción al curso (art. 13 letra c) de la Ley), así como en el cumplimiento de obligaciones legales tributarias (art. 13 letra b)). El envío de comunicaciones promocionales se funda exclusivamente en su <strong>consentimiento libre, informado y específico</strong> (art. 12), el cual puede revocar en cualquier momento escribiendo a contacto@legaldatos.cl.
+          El tratamiento para la gestión de su inscripción se funda en la <strong>ejecución de medidas precontractuales y de la relación contractual</strong> originada por su inscripción al curso (art. 13 letra c) de la Ley), así como en el cumplimiento de obligaciones legales tributarias (art. 13 letra b)). El envío de comunicaciones promocionales se funda exclusivamente en su <strong>consentimiento libre, informado y específico</strong> (art. 12), el cual puede retirar en cualquier momento escribiendo a contacto@legaldatos.cl.
         </p>
 
         <h4>4. Encargados Tecnológicos y Plazo de Conservación</h4>
@@ -1494,7 +1251,7 @@
           errorMsg.textContent = "Hubo un inconveniente de conexión. Por favor intenta nuevamente.";
           errorMsg.style.display = "block";
           submitBtn.disabled = false;
-          submitBtn.textContent = "Registrar mi cupo en el Curso →";
+          submitBtn.textContent = "Confirmar inscripción al Curso →";
         }
       });
     }
@@ -1503,11 +1260,11 @@
     const copyBankBtn = document.getElementById("btn-copy-bank");
     if (copyBankBtn) {
       copyBankBtn.addEventListener("click", () => {
-        const datosTexto = `Daniel Manríquez Sansigolo\n17.700.585-1\nCuenta Corriente BCI\nN° 18743871\ncontacto@legaldatos.cl`;
+        const datosTexto = `Daniel Manríquez Sansigolo\n17.700.585-1\nCuenta Corriente BCI\nN°18743871\ncontacto@legaldatos.cl`;
         navigator.clipboard.writeText(datosTexto).then(() => {
           copyBankBtn.textContent = "✓ Datos copiados al portapapeles";
           setTimeout(() => {
-            copyBankBtn.textContent = "Copiar datos de transferencia";
+            copyBankBtn.textContent = "Copiar datos de cuenta al portapapeles";
           }, 3000);
         });
       });
