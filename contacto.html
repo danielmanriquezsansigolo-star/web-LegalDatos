@@ -943,7 +943,7 @@
 
             <!-- Google reCAPTCHA v2 -->
             <div class="recaptcha-wrapper">
-              <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_DE_RECAPTCHA_AQUI"></div>
+              <div class="g-recaptcha" data-sitekey="6LeokxluAAAAABI4X8Rana-H6BCuMD0jicM9DYn3"></div>
             </div>
 
             <div class="submit-row">
@@ -1054,7 +1054,7 @@
     }
 
     // 2. Envío del Formulario a Google Sheets y Correo mediante Apps Script
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbym-zpAwW3IRD39S9ptjhhiXEQJOA6NXKRsrFXoSerwg4lhLlmD7wg5NvmPb0vN1lZ0/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxTI-cSPaSYo0kGlmUw5YIFg3g4jnrI6E6i41Wb5nvSorEAhH1z7ZbyTt8yUOyPcm6i/exec";
     const contactForm = document.getElementById("legaldatos-contact-form");
     const submitBtn = document.getElementById("submit-btn");
     const submitBtnText = document.getElementById("submit-btn-text");
@@ -1066,16 +1066,18 @@
         formStatus.className = "form-status";
         formStatus.textContent = "";
 
-        // Validar que el usuario haya marcado el reCAPTCHA (si está configurado)
-        const recaptchaBox = document.querySelector(".g-recaptcha");
-        const siteKey = recaptchaBox ? recaptchaBox.getAttribute("data-sitekey") : "";
-        if (typeof grecaptcha !== "undefined" && siteKey && siteKey !== "TU_SITE_KEY_DE_RECAPTCHA_AQUI") {
-          const recaptchaResponse = grecaptcha.getResponse();
-          if (!recaptchaResponse) {
-            formStatus.className = "form-status is-error";
-            formStatus.textContent = "Por favor, marque la casilla 'No soy un robot' antes de enviar.";
-            return;
-          }
+        // Validar que el script de reCAPTCHA haya cargado y la casilla esté marcada
+        if (typeof grecaptcha === "undefined") {
+          formStatus.className = "form-status is-error";
+          formStatus.textContent = "El sistema de seguridad reCAPTCHA aún está cargando. Por favor, espere un segundo e intente nuevamente.";
+          return;
+        }
+
+        const recaptchaResponse = grecaptcha.getResponse();
+        if (!recaptchaResponse) {
+          formStatus.className = "form-status is-error";
+          formStatus.textContent = "Por favor, marque la casilla 'No soy un robot' antes de enviar.";
+          return;
         }
 
         // Estado de carga en el botón
@@ -1085,6 +1087,7 @@
         try {
           const formData = new FormData(contactForm);
           const urlEncodedData = new URLSearchParams(formData);
+          urlEncodedData.set("g-recaptcha-response", recaptchaResponse);
 
           const response = await fetch(SCRIPT_URL, {
             method: "POST",
@@ -1097,9 +1100,7 @@
             formStatus.className = "form-status is-success";
             formStatus.textContent = "Su mensaje ha sido recibido correctamente. Nuestro equipo jurídico se pondrá en contacto con usted a la brevedad.";
             contactForm.reset();
-            if (typeof grecaptcha !== "undefined" && siteKey !== "TU_SITE_KEY_DE_RECAPTCHA_AQUI") {
-              grecaptcha.reset();
-            }
+            grecaptcha.reset();
           } else {
             throw new Error(result.message || "Error al procesar el envío.");
           }
