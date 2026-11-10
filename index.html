@@ -20,7 +20,7 @@
 
   <style>
     :root {
-      /* Misma línea de colores de LegalDatos, llevada a tono editorial de Estudio Jurídico */
+      /* Línea de colores editorial de Estudio Jurídico */
       --navy-deep: #0b132b;
       --navy-primary: #132247;
       --navy-muted: #1e3264;
@@ -28,7 +28,8 @@
       --cyan-accent: #0091d5;
       
       --paper-bg: #f8f9fb;
-      --paper-warm: #f1f4f9;
+      --paper-warm: #eef2f6;
+      --paper-stone: #e6ebf2;
       --white: #ffffff;
       
       --ink-dark: #0f172a;
@@ -38,22 +39,11 @@
       --rule-solid: #cbd5e1;
       --rule-light: #e2e8f0;
 
-      /* Paleta de 4 colores extraída del degradado de la palabra "Datos" del logo */
-      --datos-1-accent: #4f8ef7; /* Azul cielo de la "D" */
-      --datos-1-bg: rgba(226, 238, 255, 0.82);
-      --datos-1-border: rgba(79, 142, 247, 0.42);
-
-      --datos-2-accent: #737df9; /* Azul índigo de la "a" */
-      --datos-2-bg: rgba(233, 234, 255, 0.82);
-      --datos-2-border: rgba(115, 125, 249, 0.42);
-
-      --datos-3-accent: #966ffb; /* Índigo-violeta de la "t" / "o" */
-      --datos-3-bg: rgba(241, 232, 255, 0.82);
-      --datos-3-border: rgba(150, 111, 251, 0.42);
-
-      --datos-4-accent: #b565fc; /* Lavanda-púrpura de la "s" */
-      --datos-4-bg: rgba(247, 230, 255, 0.82);
-      --datos-4-border: rgba(181, 101, 252, 0.42);
+      /* Progresión cromática de los 4 tonos de la palabra "Datos" del logo */
+      --datos-1: #4f8ef7; /* Azul "D" */
+      --datos-2: #737df9; /* Índigo "a" */
+      --datos-3: #966ffb; /* Violeta "t/o" */
+      --datos-4: #b565fc; /* Púrpura "s" */
       
       --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -272,7 +262,7 @@
       -webkit-text-fill-color: transparent;
       color: transparent;
       display: inline-block;
-      padding-right: 0.08em; /* Evita que la última letra en cursiva se corte */
+      padding-right: 0.08em;
     }
 
     .law-hero-lead {
@@ -439,33 +429,25 @@
     }
 
     /* ==========================================
-       3. NUEVA RUTA INTERACTIVA HORIZONTAL (4 CAJAS DE IZQUIERDA A DERECHA)
-       Con la paleta cromática de "Datos" al 80% y despliegue al hacer clic
+       3. LOS 4 PASOS: ARQUITECTURA EDITORIAL DE ESTUDIO JURÍDICO
+       Bloque continuo en tono piedra cálido (#eef2f6), sin "cajas de IA",
+       con acentos cromáticos de "Datos" y despliegue inteligente.
        ========================================== */
     .roadmap-section {
-      padding: 76px 0 84px;
+      padding: 80px 0 88px;
       background-color: var(--paper-bg);
-      position: relative;
     }
 
     .roadmap-intro {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 40px;
+      max-width: 760px;
       margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-
-    .roadmap-intro-left {
-      max-width: 680px;
     }
 
     .section-index {
       font-size: 14px;
       font-weight: 600;
       color: var(--navy-primary);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       display: block;
     }
 
@@ -481,38 +463,19 @@
     .roadmap-intro p {
       font-size: 16.5px;
       color: var(--ink-body);
-      line-height: 1.65;
+      line-height: 1.68;
     }
 
-    .roadmap-hint {
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--navy-muted);
-      background-color: var(--white);
-      border: 1px solid var(--rule-solid);
-      padding: 10px 16px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .roadmap-hint-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: linear-gradient(90deg, var(--datos-1-accent), var(--datos-4-accent));
-      display: inline-block;
-    }
-
-    /* Grilla de 4 columnas de izquierda a derecha en PC */
+    /* Contenedor arquitectónico de 4 columnas unidas (Estilo Dossier) */
     .steps-horizontal-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      align-items: stretch;
+      background-color: var(--paper-warm);
+      border: 1px solid var(--rule-solid);
+      box-shadow: 0 12px 30px -18px rgba(11, 19, 43, 0.12);
     }
 
-    /* Tarjeta individual de cada paso */
+    /* Cada columna es un bloque editorial sobrio, más oscuro que el blanco */
     .step-card {
       appearance: none;
       -webkit-appearance: none;
@@ -520,155 +483,176 @@
       width: 100%;
       font-family: var(--font-sans);
       cursor: pointer;
-      padding: 28px 24px 24px;
+      padding: 34px 28px 28px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 295px;
+      min-height: 315px;
       position: relative;
-      backdrop-filter: blur(8px);
-      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
-                  box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+      border: none;
+      border-right: 1px solid var(--rule-solid);
+      border-top: 4px solid transparent;
+      transition: transform 0.25s ease,
                   background-color 0.25s ease,
-                  border-color 0.25s ease;
+                  box-shadow 0.25s ease;
     }
 
-    /* Paleta de 4 colores del logo "Datos" al ~80% de transparencia */
+    .step-card:last-of-type {
+      border-right: none;
+    }
+
+    /* Tono papel piedra + progresión de los 4 colores de "Datos" */
     .step-card[data-step="1"] {
-      background-color: var(--datos-1-bg);
-      border: 1px solid var(--datos-1-border);
-      border-top: 5px solid var(--datos-1-accent);
-      --card-accent: var(--datos-1-accent);
+      border-top-color: var(--datos-1);
+      background: linear-gradient(180deg, rgba(79, 142, 247, 0.11) 0%, rgba(238, 242, 246, 0.92) 100%);
+      --step-color: var(--datos-1);
     }
 
     .step-card[data-step="2"] {
-      background-color: var(--datos-2-bg);
-      border: 1px solid var(--datos-2-border);
-      border-top: 5px solid var(--datos-2-accent);
-      --card-accent: var(--datos-2-accent);
+      border-top-color: var(--datos-2);
+      background: linear-gradient(180deg, rgba(115, 125, 249, 0.11) 0%, rgba(238, 242, 246, 0.92) 100%);
+      --step-color: var(--datos-2);
     }
 
     .step-card[data-step="3"] {
-      background-color: var(--datos-3-bg);
-      border: 1px solid var(--datos-3-border);
-      border-top: 5px solid var(--datos-3-accent);
-      --card-accent: var(--datos-3-accent);
+      border-top-color: var(--datos-3);
+      background: linear-gradient(180deg, rgba(150, 111, 251, 0.11) 0%, rgba(238, 242, 246, 0.92) 100%);
+      --step-color: var(--datos-3);
     }
 
     .step-card[data-step="4"] {
-      background-color: var(--datos-4-bg);
-      border: 1px solid var(--datos-4-border);
-      border-top: 5px solid var(--datos-4-accent);
-      --card-accent: var(--datos-4-accent);
+      border-top-color: var(--datos-4);
+      background: linear-gradient(180deg, rgba(181, 101, 252, 0.11) 0%, rgba(238, 242, 246, 0.92) 100%);
+      --step-color: var(--datos-4);
     }
 
-    /* Movimiento físico al pasar el cursor (Hover) y estado Activo */
+    /* Movimiento sutil de estudio jurídico al pasar el cursor */
     .step-card:hover {
-      transform: translateY(-9px);
-      box-shadow: 0 20px 34px -14px rgba(11, 19, 43, 0.16);
+      background-color: var(--white);
+      transform: translateY(-4px);
+      z-index: 2;
+      box-shadow: 0 16px 32px -14px rgba(11, 19, 43, 0.14);
     }
 
+    /* Estado cuando el usuario hace clic para abrir el expediente */
     .step-card.is-active {
-      transform: translateY(-6px);
-      box-shadow: 0 22px 38px -12px rgba(11, 19, 43, 0.22);
-      border-color: var(--navy-deep);
+      background: var(--navy-deep);
+      color: var(--white);
+      z-index: 3;
     }
 
-    /* Indicador inferior cuando la tarjeta está desplegada */
-    .step-card.is-active::after {
-      content: "";
-      position: absolute;
-      bottom: -21px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-width: 10px 10px 0 10px;
-      border-style: solid;
-      border-color: var(--navy-deep) transparent transparent transparent;
-      z-index: 5;
-    }
-
-    .step-card-top {
+    .step-card-header {
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.1);
       display: flex;
-      justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 16px;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .step-card.is-active .step-card-header {
+      border-bottom-color: rgba(255, 255, 255, 0.16);
     }
 
     .step-card-num {
       font-family: var(--font-serif);
-      font-size: 46px;
+      font-size: 42px;
       line-height: 1;
-      font-weight: 500;
+      font-weight: 400;
       color: var(--navy-deep);
-      transition: transform 0.25s ease;
+      transition: transform 0.25s ease, color 0.25s ease;
     }
 
     .step-card:hover .step-card-num {
       transform: translateX(3px);
+      color: var(--step-color);
     }
 
-    .step-card-tag {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--navy-primary);
-      background-color: rgba(255, 255, 255, 0.72);
-      padding: 4px 10px;
-      border: 1px solid rgba(11, 19, 43, 0.1);
+    .step-card.is-active .step-card-num {
+      color: var(--step-color);
+    }
+
+    /* Subtítulo en cursiva editorial (Cero "badges" blancos de IA) */
+    .step-card-kicker {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 15.5px;
+      color: var(--navy-muted);
+      text-align: right;
+    }
+
+    .step-card.is-active .step-card-kicker {
+      color: #cbd5e1;
     }
 
     .step-card-title {
       font-family: var(--font-serif);
       font-size: 22px;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.24;
       color: var(--navy-deep);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      transition: color 0.25s ease;
+    }
+
+    .step-card.is-active .step-card-title {
+      color: var(--white);
     }
 
     .step-card-summary {
       font-size: 14px;
       color: var(--ink-body);
-      line-height: 1.55;
-      margin-bottom: 20px;
+      line-height: 1.6;
+      margin-bottom: 22px;
+      transition: color 0.25s ease;
+    }
+
+    .step-card.is-active .step-card-summary {
+      color: #cbd5e1;
     }
 
     .step-card-footer {
       padding-top: 14px;
-      border-top: 1px solid rgba(11, 19, 43, 0.1);
+      border-top: 1px solid rgba(15, 23, 42, 0.1);
       display: flex;
       align-items: center;
       justify-content: space-between;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--navy-deep);
       width: 100%;
     }
 
+    .step-card.is-active .step-card-footer {
+      border-top-color: rgba(255, 255, 255, 0.16);
+      color: #93c5fd;
+    }
+
     .step-card-toggle-icon {
-      width: 26px;
-      height: 26px;
-      background-color: var(--white);
-      border: 1px solid rgba(11, 19, 43, 0.2);
-      display: inline-grid;
-      place-items: center;
-      font-size: 15px;
+      font-family: var(--font-serif);
+      font-size: 18px;
       line-height: 1;
-      transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+      color: var(--navy-deep);
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
+
+    .step-card:hover .step-card-toggle-icon {
+      transform: translateX(3px);
     }
 
     .step-card.is-active .step-card-toggle-icon {
-      background-color: var(--navy-deep);
       color: var(--white);
       transform: rotate(45deg);
     }
 
     /* ==========================================
-       CONTENEDOR DESPLEGABLE DEL PASO SELECCIONADO
+       CONTENEDOR DESPLEGABLE (CERRADO POR DEFECTO)
+       En PC se abre como un expediente continuo bajo las 4 columnas;
+       en móvil se inserta automáticamente debajo de la tarjeta presionada.
        ========================================== */
     .step-drawer-wrapper {
-      margin-top: 20px;
-      overflow: hidden;
-      transition: all 0.3s ease;
+      margin-top: -1px; /* Se une arquitectónicamente al borde inferior de la grilla */
     }
 
     .step-drawer-wrapper[hidden] {
@@ -678,16 +662,20 @@
     .step-drawer-panel {
       background-color: var(--white);
       border: 1px solid var(--rule-solid);
-      border-top: 4px solid var(--navy-deep);
+      border-top: 3px solid var(--navy-deep);
       padding: 40px 44px;
       box-shadow: 0 20px 42px -18px rgba(11, 19, 43, 0.14);
-      animation: drawerFadeIn 0.26s ease-out;
+      animation: drawerFadeIn 0.22s ease-out;
+    }
+
+    .step-drawer-panel[hidden] {
+      display: none;
     }
 
     @keyframes drawerFadeIn {
       from {
         opacity: 0;
-        transform: translateY(-8px);
+        transform: translateY(-6px);
       }
       to {
         opacity: 1;
@@ -700,17 +688,18 @@
       justify-content: space-between;
       align-items: flex-start;
       gap: 24px;
-      padding-bottom: 22px;
-      margin-bottom: 26px;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
       border-bottom: 1px solid var(--rule-light);
     }
 
     .drawer-kicker {
-      font-size: 13px;
-      font-weight: 700;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 17px;
       color: var(--blue-brand);
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .drawer-header h3 {
@@ -722,7 +711,7 @@
     }
 
     .drawer-close-btn {
-      background-color: var(--paper-bg);
+      background-color: var(--paper-warm);
       border: 1px solid var(--rule-solid);
       color: var(--ink-dark);
       font-family: var(--font-sans);
@@ -735,7 +724,7 @@
     }
 
     .drawer-close-btn:hover {
-      background-color: var(--rule-light);
+      background-color: var(--rule-solid);
     }
 
     .drawer-lead {
@@ -1011,7 +1000,6 @@
       isolation: isolate;
     }
 
-    /* Lienzo de nodos, conectores y datos anonimizados en movimiento */
     .data-network-canvas {
       position: absolute;
       inset: 0;
@@ -1022,7 +1010,6 @@
       opacity: 0.85;
     }
 
-    /* Asegura que el texto y el botón queden nítidos sobre la animación */
     .consultation-content,
     .consultation-actions {
       position: relative;
@@ -1134,14 +1121,30 @@
     }
 
     /* ==========================================
-       RESPONSIVE
+       RESPONSIVE (En móvil y tablet cada detalle se abre justo debajo de su paso)
        ========================================== */
-    @media (max-width: 1040px) {
+    @media (max-width: 1020px) {
       .steps-horizontal-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
-      .step-card.is-active::after {
-        display: none;
+
+      .step-card {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--rule-solid);
+        padding: 26px 24px;
+      }
+
+      .step-card:hover {
+        transform: none;
+      }
+
+      .step-drawer-panel {
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid var(--navy-deep);
+        border-bottom: 2px solid var(--navy-deep);
+        padding: 28px 22px;
       }
     }
 
@@ -1202,12 +1205,6 @@
       }
       .menu-button {
         display: inline-flex;
-      }
-      .steps-horizontal-grid {
-        grid-template-columns: 1fr;
-      }
-      .step-drawer-panel {
-        padding: 28px 22px;
       }
       .drawer-header {
         flex-direction: column;
@@ -1327,32 +1324,26 @@
       </div>
     </section>
 
-    <!-- 3. LOS 4 PASOS DE IZQUIERDA A DERECHA (CON DESPLIEGUE INTERACTIVO) -->
+    <!-- 3. LOS 4 PASOS: ARQUITECTURA CONTINUA ESTILO ESTUDIO JURÍDICO -->
     <section id="ruta-implementacion" class="roadmap-section">
       <div class="container">
         <div class="roadmap-intro">
-          <div class="roadmap-intro-left">
-            <span class="section-index">Metodología Jurídica Paso a Paso</span>
-            <h2>Los 4 pasos para implementar la ley en su empresa</h2>
-            <p>
-              Trabajamos por hitos secuenciales donde cada etapa sustenta legalmente a la siguiente. Seleccione cualquiera de los cuatro bloques para desplegar su alcance jurídico:
-            </p>
-          </div>
-          <div class="roadmap-hint">
-            <span class="roadmap-hint-dot"></span>
-            <span>Haga clic en cada etapa para desplegar el detalle</span>
-          </div>
+          <span class="section-index">Metodología Jurídica Paso a Paso</span>
+          <h2>Los 4 pasos para implementar la ley en su empresa</h2>
+          <p>
+            Trabajamos por hitos secuenciales donde cada etapa sustenta legalmente a la siguiente. Presione cualquiera de las cuatro etapas para revisar su alcance jurídico:
+          </p>
         </div>
 
-        <!-- FILA HORIZONTAL DE 4 CAJAS (PC: Izquierda a Derecha) -->
-        <div class="steps-horizontal-grid" role="tablist" aria-label="Pasos de implementación">
+        <!-- GRILLA CONTINUA DE 4 COLUMNAS (Todas parten cerradas por defecto) -->
+        <div id="steps-grid" class="steps-horizontal-grid" role="tablist" aria-label="Pasos de implementación">
           
-          <!-- CAJA 1 -->
-          <button type="button" class="step-card is-active" data-step="1" role="tab" aria-selected="true" aria-controls="drawer-step-1">
+          <!-- PASO 01 -->
+          <button type="button" class="step-card" data-step="1" role="tab" aria-selected="false" aria-controls="drawer-step-1">
             <div>
-              <div class="step-card-top">
+              <div class="step-card-header">
                 <span class="step-card-num">01.</span>
-                <span class="step-card-tag">El Cimiento</span>
+                <span class="step-card-kicker">El Cimiento</span>
               </div>
               <h3 class="step-card-title">Levantamiento del RAT</h3>
               <p class="step-card-summary">
@@ -1360,17 +1351,17 @@
               </p>
             </div>
             <div class="step-card-footer">
-              <span class="step-action-label">Ocultar detalle</span>
+              <span class="step-action-label">Revisar etapa</span>
               <span class="step-card-toggle-icon">+</span>
             </div>
           </button>
 
-          <!-- CAJA 2 -->
+          <!-- PASO 02 -->
           <button type="button" class="step-card" data-step="2" role="tab" aria-selected="false" aria-controls="drawer-step-2">
             <div>
-              <div class="step-card-top">
+              <div class="step-card-header">
                 <span class="step-card-num">02.</span>
-                <span class="step-card-tag">Gobernanza</span>
+                <span class="step-card-kicker">Gobernanza</span>
               </div>
               <h3 class="step-card-title">Políticas de Tratamiento y Privacidad</h3>
               <p class="step-card-summary">
@@ -1378,17 +1369,17 @@
               </p>
             </div>
             <div class="step-card-footer">
-              <span class="step-action-label">Ver detalle jurídico</span>
+              <span class="step-action-label">Revisar etapa</span>
               <span class="step-card-toggle-icon">+</span>
             </div>
           </button>
 
-          <!-- CAJA 3 -->
+          <!-- PASO 03 -->
           <button type="button" class="step-card" data-step="3" role="tab" aria-selected="false" aria-controls="drawer-step-3">
             <div>
-              <div class="step-card-top">
+              <div class="step-card-header">
                 <span class="step-card-num">03.</span>
-                <span class="step-card-tag">Prevención de Riesgos</span>
+                <span class="step-card-kicker">Prevención de Riesgos</span>
               </div>
               <h3 class="step-card-title">Adaptación de Contratos y DPA</h3>
               <p class="step-card-summary">
@@ -1396,17 +1387,17 @@
               </p>
             </div>
             <div class="step-card-footer">
-              <span class="step-action-label">Ver detalle jurídico</span>
+              <span class="step-action-label">Revisar etapa</span>
               <span class="step-card-toggle-icon">+</span>
             </div>
           </button>
 
-          <!-- CAJA 4 -->
+          <!-- PASO 04 -->
           <button type="button" class="step-card" data-step="4" role="tab" aria-selected="false" aria-controls="drawer-step-4">
             <div>
-              <div class="step-card-top">
+              <div class="step-card-header">
                 <span class="step-card-num">04.</span>
-                <span class="step-card-tag">Accountability</span>
+                <span class="step-card-kicker">Accountability</span>
               </div>
               <h3 class="step-card-title">Matriz de Riesgos y Mitigación</h3>
               <p class="step-card-summary">
@@ -1414,21 +1405,21 @@
               </p>
             </div>
             <div class="step-card-footer">
-              <span class="step-action-label">Ver detalle jurídico</span>
+              <span class="step-action-label">Revisar etapa</span>
               <span class="step-card-toggle-icon">+</span>
             </div>
           </button>
 
         </div>
 
-        <!-- PANELES DESPLEGABLES (SE MUESTRA EL PASO ACTIVO AL PRESIONAR) -->
-        <div id="step-drawer-container" class="step-drawer-wrapper">
+        <!-- CONTENEDOR DESPLEGABLE (OCULTO POR DEFECTO HASTA QUE EL USUARIO HAGA CLIC) -->
+        <div id="step-drawer-container" class="step-drawer-wrapper" hidden>
           
           <!-- DETALLE PASO 01 -->
-          <article id="drawer-step-1" class="step-drawer-panel" data-panel="1" role="tabpanel">
+          <article id="drawer-step-1" class="step-drawer-panel" data-panel="1" role="tabpanel" hidden>
             <div class="drawer-header">
               <div>
-                <span class="drawer-kicker">Paso 01 · El Cimiento Obligatorio (Sin RAT previo es imposible redactar políticas reales)</span>
+                <span class="drawer-kicker">Etapa 01 · El Cimiento Obligatorio (Sin RAT previo es imposible redactar políticas reales)</span>
                 <h3>Levantamiento del Registro de Actividades de Tratamiento (RAT)</h3>
               </div>
               <button type="button" class="drawer-close-btn" data-close-drawer>Cerrar ✕</button>
@@ -1456,7 +1447,7 @@
           <article id="drawer-step-2" class="step-drawer-panel" data-panel="2" role="tabpanel" hidden>
             <div class="drawer-header">
               <div>
-                <span class="drawer-kicker">Paso 02 · Arquitectura Normativa (Distinción clave entre norma interna y aviso público)</span>
+                <span class="drawer-kicker">Etapa 02 · Arquitectura Normativa (Distinción clave entre norma interna y aviso público)</span>
                 <h3>Desarrollo de la Política de Tratamiento de Datos y de la Política de Privacidad</h3>
               </div>
               <button type="button" class="drawer-close-btn" data-close-drawer>Cerrar ✕</button>
@@ -1496,7 +1487,7 @@
           <article id="drawer-step-3" class="step-drawer-panel" data-panel="3" role="tabpanel" hidden>
             <div class="drawer-header">
               <div>
-                <span class="drawer-kicker">Paso 03 · Blindaje frente a Terceros y Personal (Art. 15 bis Ley 21.719)</span>
+                <span class="drawer-kicker">Etapa 03 · Prevención frente a Terceros y Personal (Art. 15 bis Ley 21.719)</span>
                 <h3>Revisión y adaptación de los Contratos de la Empresa</h3>
               </div>
               <button type="button" class="drawer-close-btn" data-close-drawer>Cerrar ✕</button>
@@ -1524,7 +1515,7 @@
           <article id="drawer-step-4" class="step-drawer-panel" data-panel="4" role="tabpanel" hidden>
             <div class="drawer-header">
               <div>
-                <span class="drawer-kicker">Paso 04 · Prevención y Responsabilidad Proactiva (Accountability)</span>
+                <span class="drawer-kicker">Etapa 04 · Prevención y Responsabilidad Proactiva (Accountability)</span>
                 <h3>Mecanismos de prevención, medición de riesgo residual y mitigación</h3>
               </div>
               <button type="button" class="drawer-close-btn" data-close-drawer>Cerrar ✕</button>
@@ -1610,12 +1601,10 @@
       </div>
     </section>
 
-    <!-- 5. LLAMADO A LA ACCIÓN SOBRIO -->
     <!-- 5. LLAMADO A LA ACCIÓN CON RED DE DATOS EN MOVIMIENTO -->
     <section class="consultation-cta">
       <div class="container">
         <div class="consultation-box" id="cta-network-box">
-          <!-- Lienzo animado de fondo -->
           <canvas id="data-network-canvas" class="data-network-canvas" aria-hidden="true"></canvas>
 
           <div class="consultation-content">
@@ -1696,7 +1685,7 @@
     </div>
   </footer>
 
-  <!-- Script Menú Móvil + Interacción de los 4 Bloques de Metodología -->
+  <!-- Script Menú Móvil + Despliegue Inteligente PC/Móvil + Red de Datos -->
   <script>
     // 1. Menú Móvil
     const menuBtn = document.getElementById("mobile-menu-button");
@@ -1721,67 +1710,93 @@
       });
     }
 
-    // 2. Despliegue interactivo de los 4 pasos de Metodología
+    // 2. Despliegue de los 4 pasos (En móvil se inserta justo debajo del botón tocado; en PC bajo la fila)
     const stepCards = document.querySelectorAll(".step-card");
     const stepPanels = document.querySelectorAll(".step-drawer-panel");
     const drawerContainer = document.getElementById("step-drawer-container");
     const closeDrawerBtns = document.querySelectorAll("[data-close-drawer]");
 
+    function closeAllSteps() {
+      stepCards.forEach((c) => {
+        c.classList.remove("is-active");
+        c.setAttribute("aria-selected", "false");
+        const label = c.querySelector(".step-action-label");
+        if (label) label.textContent = "Revisar etapa";
+      });
+      stepPanels.forEach((p) => {
+        p.setAttribute("hidden", "");
+        drawerContainer.appendChild(p);
+      });
+      drawerContainer.setAttribute("hidden", "");
+    }
+
     function toggleStep(stepNum) {
       const clickedCard = document.querySelector(`.step-card[data-step="${stepNum}"]`);
-      const isAlreadyActive = clickedCard && clickedCard.classList.contains("is-active") && !drawerContainer.hasAttribute("hidden");
+      const targetPanel = document.querySelector(`.step-drawer-panel[data-panel="${stepNum}"]`);
+      if (!clickedCard || !targetPanel) return;
 
-      // Si presiona el mismo paso que ya está abierto, lo plegamos limpiamente
+      const isAlreadyActive = clickedCard.classList.contains("is-active");
+
       if (isAlreadyActive) {
-        stepCards.forEach((c) => {
-          c.classList.remove("is-active");
-          c.setAttribute("aria-selected", "false");
-          const label = c.querySelector(".step-action-label");
-          if (label) label.textContent = "Ver detalle jurídico";
-        });
-        drawerContainer.setAttribute("hidden", "");
+        closeAllSteps();
         return;
       }
 
-      // Activamos el paso presionado y mostramos su contenido completo
-      drawerContainer.removeAttribute("hidden");
-
+      // Cerramos el resto
       stepCards.forEach((c) => {
         const active = c.getAttribute("data-step") === String(stepNum);
         c.classList.toggle("is-active", active);
         c.setAttribute("aria-selected", active ? "true" : "false");
         const label = c.querySelector(".step-action-label");
-        if (label) label.textContent = active ? "Ocultar detalle" : "Ver detalle jurídico";
+        if (label) label.textContent = active ? "Ocultar etapa" : "Revisar etapa";
       });
 
       stepPanels.forEach((p) => {
-        if (p.getAttribute("data-panel") === String(stepNum)) {
-          p.removeAttribute("hidden");
-        } else {
-          p.setAttribute("hidden", "");
-        }
+        p.setAttribute("hidden", "");
+        drawerContainer.appendChild(p);
       });
+
+      targetPanel.removeAttribute("hidden");
+
+      // Si está en celular/tablet (<= 1020px), colocamos el panel inmediatamente debajo de la tarjeta presionada
+      if (window.innerWidth <= 1020) {
+        drawerContainer.setAttribute("hidden", "");
+        clickedCard.insertAdjacentElement("afterend", targetPanel);
+        targetPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      } else {
+        drawerContainer.removeAttribute("hidden");
+        drawerContainer.appendChild(targetPanel);
+      }
     }
 
     stepCards.forEach((card) => {
       card.addEventListener("click", () => {
-        const step = card.getAttribute("data-step");
-        toggleStep(step);
+        toggleStep(card.getAttribute("data-step"));
       });
     });
 
     closeDrawerBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        stepCards.forEach((c) => {
-          c.classList.remove("is-active");
-          c.setAttribute("aria-selected", "false");
-          const label = c.querySelector(".step-action-label");
-          if (label) label.textContent = "Ver detalle jurídico";
-        });
-        drawerContainer.setAttribute("hidden", "");
-      });
+      btn.addEventListener("click", closeAllSteps);
     });
-    // 3. Animación de Red de Datos y Conectores (Efecto Seudonimización Ley 21.719)
+
+    // Si cambia el tamaño de pantalla con un paso abierto, reubicamos el panel limpiamente
+    window.addEventListener("resize", () => {
+      const activeCard = document.querySelector(".step-card.is-active");
+      if (!activeCard) return;
+      const stepNum = activeCard.getAttribute("data-step");
+      const activePanel = document.querySelector(`.step-drawer-panel[data-panel="${stepNum}"]`);
+      if (!activePanel) return;
+
+      if (window.innerWidth <= 1020) {
+        drawerContainer.setAttribute("hidden", "");
+        activeCard.insertAdjacentElement("afterend", activePanel);
+      } else {
+        drawerContainer.removeAttribute("hidden");
+        drawerContainer.appendChild(activePanel);
+      }
+    });
+
+    // 3. Animación de Red de Datos y Conectores
     (function initDataNetwork() {
       const canvas = document.getElementById("data-network-canvas");
       const box = document.getElementById("cta-network-box");
@@ -1793,10 +1808,8 @@
       let particles = [];
       const mouse = { x: null, y: null, radius: 130 };
 
-      // Colores extraídos del logo "Datos" + acentos técnicos
       const palette = ["#4f8ef7", "#737df9", "#966ffb", "#b565fc", "#38bdf8", "#94a3b8"];
 
-      // Fragmentos de datos seudonimizados y referencias legales chilenas
       const dataTokens = [
         "Nombres", "Rut", "Obligaciones Legales", "Anónimxxx",
         "correos electrónicos", "Videograbaciones", "planillas", "Contratos",
@@ -1819,10 +1832,9 @@
         const count = window.innerWidth < 768 ? 22 : 42;
         particles = [];
         for (let i = 0; i < count; i++) {
-          // Concentramos más densidad hacia el centro-derecha para dejar muy limpia la lectura del título izquierdo
           const x = Math.random() * width;
           const y = Math.random() * height;
-          const hasLabel = i % 2 === 0; // La mitad lleva etiqueta de código/dato, la otra mitad son nodos puros
+          const hasLabel = i % 2 === 0;
           particles.push({
             x,
             y,
@@ -1849,7 +1861,6 @@
       function animate() {
         ctx.clearRect(0, 0, width, height);
 
-        // 1. Dibujar líneas conectoras entre nodos cercanos
         for (let i = 0; i < particles.length; i++) {
           for (let j = i + 1; j < particles.length; j++) {
             const dx = particles[i].x - particles[j].x;
@@ -1869,18 +1880,15 @@
           }
         }
 
-        // 2. Actualizar posición y dibujar cada nodo + texto seudonimizado
         ctx.font = '500 10.5px "JetBrains Mono", monospace';
         for (let i = 0; i < particles.length; i++) {
           const p = particles[i];
           p.x += p.vx;
           p.y += p.vy;
 
-          // Rebote suave en los bordes del bloque
           if (p.x < 0 || p.x > width) p.vx *= -1;
           if (p.y < 0 || p.y > height) p.vy *= -1;
 
-          // Conexión interactiva con el cursor cuando pasa por encima del bloque
           if (mouse.x !== null && mouse.y !== null) {
             const mdx = mouse.x - p.x;
             const mdy = mouse.y - p.y;
@@ -1895,13 +1903,11 @@
             }
           }
 
-          // Punto (nodo)
           ctx.fillStyle = p.color;
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
           ctx.fill();
 
-          // Etiqueta de dato enmascarado / artículo legal
           if (p.label) {
             ctx.fillStyle = "rgba(203, 213, 225, 0.34)";
             ctx.fillText(p.label, p.x + 6, p.y + 3);
