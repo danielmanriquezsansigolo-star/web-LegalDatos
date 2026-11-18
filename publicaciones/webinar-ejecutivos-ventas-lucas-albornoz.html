@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Ley 21.719 explicada a Ejecutivos de Ventas: ¿Se pueden comprar bases de datos? (Webinar con Lucas Albornoz) | LegalDatos</title>
+  <meta name="description" content="Webinar en vivo presentado por Lucas Albornoz (Academia de Ejecutivos de Élite) junto al abogado Daniel Manríquez sobre cómo afecta la Ley 21.719 a la venta de seguros, planes de salud e intangibles y el riesgo legal de comprar bases de datos." />
+  <link rel="canonical" href="https://www.legaldatos.cl/publicaciones/webinar-ejecutivos-ventas-lucas-albornoz" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.legaldatos.cl/favicon.png" />
+
+  <!-- =================================================================
+       METADATOS PARA EL DETECTOR AUTOMÁTICO DE publicaciones.html
+       Fecha 2026-07-23 para ordenamiento cronológico automático
+       ================================================================= -->
+  <meta name="article-title" content="La Ley 21.719 explicada a los Ejecutivos de Ventas: ¿Se pueden comprar bases de datos para contactar en frío?" />
+  <meta name="article-date" content="2026-07-23" />
+  <meta name="article-date-label" content="23 de julio de 2026" />
+  <meta name="article-category" content="Seminarios y Webinars · Equipos Comerciales" />
+  <meta name="article-image" content="/img/LUCAS%20ALBORNOZ/LA1.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="La Ley 21.719 explicada a los Ejecutivos de Ventas | Webinar Daniel Manríquez y Lucas Albornoz" />
+  <meta property="og:description" content="¿Vendes seguros, planes de salud o intangibles? Revisa por qué comprar bases de datos para contactar en frío te expone ante la nueva Agencia de Protección de Datos." />
+  <meta property="og:image" content="https://www.legaldatos.cl/img/LUCAS%20ALBORNOZ/LA1.png" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- Tipografías: Misma línea editorial del sitio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy-deep: #0b132b;
+      --navy-primary: #132247;
+      --navy-muted: #1e3264;
+      --blue-brand: #1d5bd6;
+      --cyan-accent: #0091d5;
+      
+      --paper-bg: #f8f9fb;
+      --paper-warm: #f1f4f9;
+      --white: #ffffff;
+      
+      --ink-dark: #0f172a;
+      --ink-body: #334155;
+      --ink-muted: #64748b;
+      
+      --rule-solid: #cbd5e1;
+      --rule-light: #e2e8f0;
+      
+      --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--ink-dark);
+      background-color: var(--paper-bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* ==========================================
+       HEADER (Intacto)
+       ========================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 19, 43, 0.98);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-fallback {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 21px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      background: var(--blue-brand);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-serif);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--white);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      padding: 6px 0;
+      position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.is-active {
+      color: var(--white);
+    }
+
+    .nav-link.is-active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--cyan-accent);
+    }
+
+    .menu-button {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-icon {
+      width: 18px;
+      height: 2px;
+      background: var(--white);
+      position: relative;
+      display: block;
+    }
+
+    .menu-icon::before,
+    .menu-icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background: var(--white);
+    }
+
+    .menu-icon::before { top: -6px; }
+    .menu-icon::after { top: 6px; }
+
+    .mobile-panel {
+      background: var(--navy-deep);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 16px 0 24px;
+    }
+
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-link {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* ==========================================
+       1. CABECERA EDITORIAL DEL ARTÍCULO
+       ========================================== */
+    .article-hero {
+      background-color: var(--navy-deep);
+      color: var(--white);
+      padding: 64px 0 56px;
+      border-bottom: 4px solid var(--blue-brand);
+    }
+
+    .article-hero-inner {
+      max-width: 860px;
+    }
+
+    .breadcrumb {
+      font-size: 13.5px;
+      color: #94a3b8;
+      margin-bottom: 24px;
+    }
+
+    .breadcrumb ol {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .breadcrumb a {
+      color: #cbd5e1;
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--white);
+    }
+
+    .breadcrumb .sep {
+      color: #64748b;
+    }
+
+    .article-kicker {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 19px;
+      color: #93c5fd;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .article-hero h1 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+
+    .article-byline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+
+    .article-byline strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* ==========================================
+       2. CUERPO DEL ARTÍCULO (FORMATO DOSSIER)
+       ========================================== */
+    .article-wrapper {
+      padding: 72px 0 88px;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 310px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .article-sheet {
+      background-color: var(--white);
+      border: 1px solid var(--rule-solid);
+      border-top: 3px solid var(--navy-deep);
+      padding: 52px 56px;
+    }
+
+    .article-lead {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      line-height: 1.6;
+      color: var(--navy-deep);
+      margin-bottom: 36px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--rule-solid);
+    }
+
+    /* Bloques fotográficos para LA1.png y LA2.png */
+    .event-photo-block {
+      margin: 0 0 36px;
+      border: 1px solid var(--rule-solid);
+      background-color: var(--navy-deep);
+      box-shadow: 0 12px 28px -14px rgba(11, 19, 43, 0.16);
+    }
+
+    .event-photo-block img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .event-photo-caption {
+      padding: 12px 18px;
+      font-size: 13.5px;
+      color: var(--ink-muted);
+      border-top: 1px solid var(--rule-light);
+      background-color: var(--white);
+    }
+
+    /* Reproductor de YouTube embebido con estética de Estudio */
+    .video-embed-box {
+      margin: 32px 0 38px;
+      border: 1px solid var(--rule-solid);
+      background-color: var(--navy-deep);
+    }
+
+    .video-aspect {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-aspect iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-embed-footer {
+      padding: 14px 20px;
+      background-color: var(--paper-warm);
+      border-top: 1px solid var(--rule-solid);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13.5px;
+      color: var(--ink-body);
+    }
+
+    .video-embed-footer a {
+      font-weight: 700;
+      color: var(--blue-brand);
+    }
+
+    .video-embed-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .article-content h2 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--navy-deep);
+      line-height: 1.25;
+      margin: 44px 0 18px;
+      padding-top: 28px;
+      border-top: 1px solid var(--rule-light);
+    }
+
+    .article-content h2:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .article-content p {
+      font-size: 16.5px;
+      color: var(--ink-body);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .article-content p strong {
+      color: var(--ink-dark);
+      font-weight: 600;
+    }
+
+    /* Callout de análisis jurídico sobre compra de bases de datos */
+    .legal-callout {
+      background-color: var(--paper-warm);
+      border: 1px solid var(--rule-solid);
+      border-left: 4px solid var(--navy-deep);
+      padding: 26px 30px;
+      margin: 28px 0 36px;
+    }
+
+    .legal-callout h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 10px;
+    }
+
+    .legal-callout p {
+      font-size: 15.5px;
+      color: var(--ink-body);
+      line-height: 1.72;
+      margin-bottom: 12px;
+    }
+
+    .legal-callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Tarjetas numeradas para los 6 bloques con marcas de tiempo */
+    .examples-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin: 28px 0 36px;
+    }
+
+    .example-box {
+      background-color: var(--paper-bg);
+      border: 1px solid var(--rule-solid);
+      border-left: 3px solid var(--blue-brand);
+      padding: 22px 26px;
+    }
+
+    .timestamp-tag {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--blue-brand);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .example-box h3 {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      margin-bottom: 8px;
+    }
+
+    .example-box p {
+      font-size: 15px;
+      color: var(--ink-body);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* Columna Lateral (Sidebar del Estudio) */
+    .article-sidebar {
+      position: sticky;
+      top: 108px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .sidebar-box {
+      background-color: var(--white);
+      border: 1px solid var(--rule-solid);
+      border-top: 3px solid var(--blue-brand);
+      padding: 28px 26px;
+    }
+
+    .sidebar-box h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--navy-deep);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .sidebar-box p {
+      font-size: 14px;
+      color: var(--ink-body);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .btn-sidebar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: var(--blue-brand);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 13px 20px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-sidebar:hover {
+      background-color: #1e40af;
+    }
+
+    .back-link-box {
+      background-color: var(--paper-warm);
+      border: 1px solid var(--rule-solid);
+      padding: 18px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy-deep);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: border-color 0.2s ease;
+    }
+
+    .back-link-box:hover {
+      border-color: var(--blue-brand);
+      color: var(--blue-brand);
+    }
+
+    /* ==========================================
+       FOOTER (Intacto con "Santiago")
+       ========================================== */
+    .site-footer {
+      background: #070d1f;
+      color: rgba(255, 255, 255, 0.75);
+      padding: 64px 0 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .site-footer .col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .site-footer .desc {
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.65;
+      margin: 8px 0 12px;
+      max-width: 38ch;
+    }
+
+    .site-footer .title {
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .site-footer .link {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    .site-footer .link:hover {
+      color: var(--cyan-accent);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-item .icon {
+      color: var(--cyan-accent);
+      flex-shrink: 0;
+    }
+
+    .site-footer .bottom {
+      padding-top: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ==========================================
+       RESPONSIVE
+       ========================================== */
+    @media (max-width: 980px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .article-sidebar {
+        position: static;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+      .menu-button {
+        display: inline-flex;
+      }
+      .article-sheet {
+        padding: 32px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="LegalDatos">
+        <img src="https://www.legaldatos.cl/logo-legaldatos.png" width="136" alt="LegalDatos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="brand-fallback" style="display: none;">
+          <span class="brand-mark">LD</span>
+          <span>LegalDatos</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav-link" href="/">Inicio</a>
+        <a class="nav-link" href="/nosotros/">Nosotros</a>
+        <a class="nav-link" href="/servicios/">Servicios</a>
+        <a class="nav-link is-active" href="/publicaciones/">Publicaciones</a>
+        <a class="nav-link" href="/contacto/">Contacto</a>
+      </nav>
+      <button id="mobile-menu-button" type="button" class="menu-button" aria-label="Abrir menú" aria-controls="mobile-menu-panel" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div id="mobile-menu-panel" class="mobile-panel" hidden>
+      <div class="container mobile-panel-inner">
+        <nav class="mobile-nav" aria-label="Navegación móvil">
+          <a class="mobile-link" href="/">Inicio</a>
+          <a class="mobile-link" href="/nosotros/">Nosotros</a>
+          <a class="mobile-link" href="/servicios/">Servicios</a>
+          <a class="mobile-link is-active" href="/publicaciones/">Publicaciones</a>
+          <a class="mobile-link" href="/contacto/">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. CABECERA DEL ARTÍCULO -->
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-hero-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Inicio</a> <span class="sep">/</span></li>
+              <li><a href="/publicaciones/">Publicaciones</a> <span class="sep">/</span></li>
+              <li><span aria-current="page">Webinar Ejecutivos de Ventas</span></li>
+            </ol>
+          </nav>
+
+          <span class="article-kicker">Seminarios y Webinars · Equipos Comerciales</span>
+          <h1>La Ley 21.719 explicada a los Ejecutivos de Ventas: ¿Se pueden comprar bases de datos para contactar en frío?</h1>
+
+          <div class="article-byline">
+            <span>Expone: <strong>Daniel Manríquez Sansigolo</strong> junto a <strong>Lucas Albornoz</strong> (Academia de Ejecutivos de Élite)</span>
+            <span>·</span>
+            <span>23 de julio de 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. CONTENIDO DEL ARTÍCULO -->
+    <section class="article-wrapper">
+      <div class="container article-layout">
+
+        <article class="article-sheet">
+          <p class="article-lead">
+            El pasado 23 de julio de 2026 participamos en un webinar en vivo presentado por <strong>Lucas Albornoz</strong>, fundador de la <em>Academia de Ejecutivos de Élite</em>, junto al abogado <strong>Daniel Manríquez Sansigolo</strong>, socio director de <strong>LegalDatos</strong>. El encuentro tuvo por objetivo educar a ejecutivos comerciales —especialmente de los rubros de seguros, planes de salud y venta de intangibles— sobre cómo la nueva <strong>Ley N° 21.719 de Protección de Datos Personales</strong> transforma la prospección comercial en Chile.
+          </p>
+
+          <!-- Fotografía 1: /img/LUCAS ALBORNOZ/LA1.png -->
+          <figure class="event-photo-block" id="la-photo-1">
+            <img 
+              src="/img/LUCAS%20ALBORNOZ/LA1.png" 
+              alt="Webinar en vivo: ¿Puedo comprar bases de datos? Explicación de Daniel Manríquez junto a Lucas Albornoz" 
+              onerror="document.getElementById('la-photo-1').style.display='none';" 
+            />
+            <figcaption class="event-photo-caption">
+              Análisis en vivo sobre la compra de bases de datos, el uso de fuentes como el Servel o «rutificadores» y la exigencia de acreditar una base de licitud válida.
+            </figcaption>
+          </figure>
+
+          <div class="article-content">
+            <h2>El dilema central de las áreas comerciales: ¿Es legal comprar bases de datos?</h2>
+            <p>
+              Durante años, una práctica habitual en equipos de venta de intangibles ha sido adquirir listados o bases de datos de terceros —o recurrir a plataformas de búsqueda de RUT— para ejecutar campañas de llamadas y mensajería en frío. Con el nuevo estándar normativo, continuar operando de esa forma expone directamente tanto al ejecutivo como a la empresa.
+            </p>
+
+            <div class="legal-callout">
+              <h3>La respuesta jurídica: Trazabilidad, finalidad y base de licitud (Min. 38:44 - 40:41)</h3>
+              <p>
+                La Ley N° 21.719 no contiene un artículo que prohíba literalmente la compraventa de una base de datos como acto comercial aislado, pero <strong>impone la obligación estricta de contar con una «base de licitud» para cualquier tratamiento de datos personales</strong>. Al adquirir una base de datos y utilizarla para prospectar, el comprador se convierte automáticamente en <strong>Responsable del Tratamiento</strong> y asume la carga legal de acreditar que esos datos fueron recolectados en su origen bajo un marco lícito (como el consentimiento libre, específico e informado del titular).
+              </p>
+              <p>
+                La lógica detrás de esta regla radica en el <strong>derecho de autodeterminación informativa y el principio de finalidad</strong>: los datos personales se entregan para un fin determinado. Si ese fin cambia hacia ventas en frío no consentidas, o si la base provino de fuentes sin autorización para fines comerciales (como padrones electorales o «rutificadores»), el tratamiento deviene ilícito. El comprador no puede eximirse de responsabilidad ante la Agencia alegando simplemente que compró el listado a un proveedor externo.
+              </p>
+            </div>
+
+            <!-- Fotografía 2: /img/LUCAS ALBORNOZ/LA2.png -->
+            <figure class="event-photo-block" id="la-photo-2">
+              <img 
+                src="/img/LUCAS%20ALBORNOZ/LA2.png" 
+                alt="La nueva autoridad: Agencia de Protección de Datos Personales explicada en el webinar con Lucas Albornoz" 
+                onerror="document.getElementById('la-photo-2').style.display='none';" 
+              />
+              <figcaption class="event-photo-caption">
+                Revisión de las tres funciones esenciales de la nueva Agencia de Protección de Datos Personales: fiscalizar el cumplimiento, garantizar los derechos de los titulares y promover una cultura de cumplimiento.
+              </figcaption>
+            </figure>
+
+            <h2>Los 6 ejes temáticos abordados en la transmisión</h2>
+            <p>
+              A lo largo de una hora de conversación y preguntas en directo, desglosamos paso a paso lo que todo equipo comercial necesita comprender:
+            </p>
+
+            <div class="examples-grid">
+              <div class="example-box">
+                <span class="timestamp-tag">MINUTO 14:01 – 14:46</span>
+                <h3>1. Cambio de paradigma cultural y autodeterminación informativa</h3>
+                <p>
+                  Cómo la nueva ley traslada el control efectivo de los datos personales hacia las personas naturales (titulares), obligando a las organizaciones y fuerzas de venta a transparentar de dónde obtuvieron el contacto y con qué autorización lo utilizan.
+                </p>
+              </div>
+
+              <div class="example-box">
+                <span class="timestamp-tag">MINUTO 19:37 – 24:51</span>
+                <h3>2. Definiciones esenciales: Tratamiento, Responsable y Encargado</h3>
+                <p>
+                  Explicación práctica de qué significa «tratar un dato» (desde guardarlo en un CRM o planilla Excel hasta llamar o enviar un WhatsApp comercial) y cuál es la diferencia de responsabilidad legal entre el Responsable de los datos y el Encargado o mandatario.
+                </p>
+              </div>
+
+              <div class="example-box">
+                <span class="timestamp-tag">MINUTO 26:40 – 32:08</span>
+                <h3>3. La Base de Licitud como pilar de toda prospección legal</h3>
+                <p>
+                  Por qué todo contacto comercial debe sustentarse en una fuente legítima verificable: el consentimiento específico del prospecto, la ejecución de medidas precontractuales solicitadas por el cliente, una obligación legal o un interés legítimo debidamente ponderado.
+                </p>
+              </div>
+
+              <div class="example-box">
+                <span class="timestamp-tag">MINUTO 38:44 – 40:41</span>
+                <h3>4. El riesgo real de comprar bases de datos para contacto en frío</h3>
+                <p>
+                  Por qué adquirir listados informales sin trazabilidad de consentimiento deja a la empresa y al ejecutivo fuera de la ley, y por qué la carga de la prueba recae siempre sobre quien utiliza los datos.
+                </p>
+              </div>
+
+              <div class="example-box">
+                <span class="timestamp-tag">MINUTO 40:52 – 44:42</span>
+                <h3>5. La nueva Agencia de Protección de Datos y el régimen de sanciones</h3>
+                <p>
+                  Análisis de las facultades fiscalizadoras y sancionatorias de la nueva autoridad de control, con multas graduadas según la gravedad de la infracción (leves, graves y gravísimas, llegando hasta las 20.000 UTM en los casos de mayor entidad).
+                </p>
+              </div>
+
+              <div class="example-box">
+                <span class="timestamp-tag">MINUTO 46:53 – 1:00:29</span>
+                <h3>6. Preguntas en vivo: LinkedIn, bases históricas y formularios con trazabilidad</h3>
+                <p>
+                  Resolución de consultas reales de los ejecutivos conectados sobre cómo prospectar lícitamente a través de redes profesionales como LinkedIn, qué hacer con carteras de contactos antiguas y cómo diseñar formularios de captación de leads (inbound) que dejen registro auditable del consentimiento.
+                </p>
+              </div>
+            </div>
+
+            <h2>Vea la grabación completa del Webinar</h2>
+            <p>
+              Puede revisar la transmisión íntegra de la sesión en el siguiente reproductor o directamente en YouTube:
+            </p>
+
+            <!-- Video de YouTube Embebido -->
+            <div class="video-embed-box">
+              <div class="video-aspect">
+                <iframe 
+                  src="https://www.youtube.com/embed/2_ezBpGVvFw" 
+                  title="Abogado explica la Ley 21.719 a los ejecutivos de ventas | Daniel Manríquez | Webinar en vivo" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerpolicy="strict-origin-when-cross-origin" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <div class="video-embed-footer">
+                <span>Webinar completo en YouTube (1 hora de duración)</span>
+                <a href="https://www.youtube.com/watch?v=2_ezBpGVvFw" target="_blank" rel="noopener noreferrer">Abrir en YouTube ↗</a>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- BARRA LATERAL -->
+        <aside class="article-sidebar">
+          <a href="/publicaciones/" class="back-link-box">
+            <span>← Volver a Publicaciones</span>
+          </a>
+
+          <div class="sidebar-box">
+            <h3>¿Necesita adecuar los procesos comerciales de su empresa?</h3>
+            <p>
+              En LegalDatos capacitamos a fuerzas de venta y auditamos sus flujos de captación de prospectos, formularios web y CRM para que su equipo comercial siga vendiendo bajo total resguardo jurídico.
+            </p>
+            <a href="/contacto/" class="btn-sidebar">Solicitar diagnóstico →</a>
+          </div>
+
+          <div class="sidebar-box">
+            <h3>Ver en YouTube</h3>
+            <p>
+              Acceda directamente al video original en el canal de Lucas Albornoz para revisar la ronda completa de preguntas de ejecutivos de ventas.
+            </p>
+            <a href="https://www.youtube.com/watch?v=2_ezBpGVvFw" target="_blank" rel="noopener noreferrer" class="btn-sidebar" style="background-color: var(--navy-deep); border-color: var(--navy-deep);">Ver video en YouTube ↗</a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (Intacto con "Santiago") -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <a class="brand" href="/" aria-label="LegalDatos">
+          <img src="https://www.legaldatos.cl/logo-legaldatos.png" width="136" alt="LegalDatos" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="brand-fallback" style="display: none;">
+            <span class="brand-mark">LD</span>
+            <span>LegalDatos</span>
+          </div>
+        </a>
+        <p class="desc" style="font-size: 16px;">
+          Nuestra consultora ofrece asesorías a todo tipo de organizaciones en la adopción de mejores prácticas para la protección de datos, integrando la actual normativa de datos personales y compliance de datos en el núcleo de su gobernanza.
+        </p>
+        <a class="link" href="/nosotros/">Nosotros</a>
+      </div>
+
+      <div class="col">
+        <h3 class="title">Nuestros servicios</h3>
+        <a class="link" href="/servicios/">Ver servicios</a>
+        <a class="link" href="/contacto/">Solicitar asesoría</a>
+        <a class="link" href="/publicaciones/">Publicaciones</a>
+      </div>
+
+      <div class="col">
+        <h3 class="title">Datos de contacto</h3>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <a class="link" href="tel:+56968434272">+56 9 6843 4272</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <a class="link" href="mailto:contacto@legaldatos.cl">contacto@legaldatos.cl</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span class="link">Santiago</span>
+        </div>
+
+        <h3 class="title" style="padding-top: 24px;">Redes Sociales</h3>
+        <a class="link" href="https://www.linkedin.com/company/legaldatoscl/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="link" href="https://www.instagram.com/legaldatos" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+
+    <div class="container bottom">
+      <p class="copyright">© 2026 LegalDatos · División de Manríquez Sansigolo Abogados</p>
+      <a class="link" href="/politica-de-privacidad/">Política de Privacidad</a>
+    </div>
+  </footer>
+
+  <!-- Script Menú Móvil -->
+  <script>
+    const menuBtn = document.getElementById("mobile-menu-button");
+    const mobilePanel = document.getElementById("mobile-menu-panel");
+    if (menuBtn && mobilePanel) {
+      const closeMenu = () => {
+        menuBtn.setAttribute("aria-expanded", "false");
+        mobilePanel.setAttribute("hidden", "");
+      };
+      const openMenu = () => {
+        menuBtn.setAttribute("aria-expanded", "true");
+        mobilePanel.removeAttribute("hidden");
+      };
+      menuBtn.addEventListener("click", () => {
+        menuBtn.getAttribute("aria-expanded") === "true" ? closeMenu() : openMenu();
+      });
+      mobilePanel.addEventListener("click", (e) => {
+        if (e.target instanceof Element && e.target.tagName === "A") closeMenu();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+      });
+    }
+  </script>
+</body>
+</html>
